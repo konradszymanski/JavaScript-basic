@@ -42,7 +42,15 @@ window.onload = function(){
         var ar = (aa+bb+cc)/2;
         var area =  Math.sqrt(ar*((ar-aa)*(ar-bb)*(ar-cc)));
     
-        document.getElementById("task4").innerHTML=  area;}
+        document.getElementById("task4").innerHTML=  area;
+    //task 7        
+            // loop from 2014 to 2050, count every year
+            for (var year = 2014; year <= 2050; year++){
+                // find specific month and day 
+                var firstJan = new Date(year, 0, 1);
+                if ( firstJan.getDay() === 0 )
+                    document.getElementById("task7").innerHTML = "1st January is being a Sunday  "+ year;};
+    }
     //task 5 
     //task 6
     function checkYear(){
@@ -67,16 +75,30 @@ window.onload = function(){
          //if (leap % leapFour != 0)  
             document.getElementById("againLeap").innerHTML = "This is not Leap Year!"; 
             document.getElementById("task6").style.backgroundColor = "#f0ad4e";
-        }}
-    //task 7
-    // loop from 2014 to 2050, count every year
-        for (var year = 2014; year <= 2050; year++){
-    // find specific month and day 
-            var firstJan = new Date(year, 0, 1);
-            if ( firstJan.getDay() === 0 )
-                document.getElementById("task7").innerHTML = "1st January is being a Sunday  "+ year;
-            };
+        }};
     //task8
+    function guessNumber(){
+    // take value
+        var givenNumber = document.getElementById("takeNumber").value;
+     // random from 1-10
+        var rand = Math.floor(Math.random() *10);
+            document.getElementById("guessOutcome").innerHTML = rand;
+        if (isNaN(givenNumber)){
+            document.getElementById("guessOutcome").innerHTML = "Type number!";
+            document.getElementById("task8").style.backgroundColor = "#f0ad4e";
+            document.getElementById("takeNumber").value = '' ;
+        } else if(givenNumber == rand){
+            document.getElementById("guessOutcome").innerHTML = "Good work! You hit " + rand;
+            document.getElementById("task8").style.backgroundColor = "#5cb85c";
+            document.getElementById("takeNumber").value = '' ;
+        }else {
+            document.getElementById("guessOutcome").innerHTML = "Not matched! The number was: " + rand;
+            document.getElementById("task8").style.backgroundColor = "#d9534f";
+            document.getElementById("takeNumber").value = '' ;
+            
+        }
+        } 
+    
     
     
     
