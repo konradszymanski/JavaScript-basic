@@ -15,3 +15,9 @@ but...
 I dont want to give up! 
 
 https://codepen.io/konradszymanski/pen/BaoyRoj
+
+
+#14.04.2020. thats my 4th day. going slow - but forward. #8 just finished :) im doing other excersised as well:
+https://github.com/konradszymanski/100-JavaScript-projects
+need to back to #5 soon
+I decided to work on JS excerises first (morning/afternoon) and after doing the other things (webtech reading, fcc, web dev stuff). 
