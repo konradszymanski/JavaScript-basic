@@ -50,6 +50,17 @@ window.onload = function(){
                 var firstJan = new Date(year, 0, 1);
                 if ( firstJan.getDay() === 0 )
                     document.getElementById("task7").innerHTML = "1st January is being a Sunday  "+ year;};
+    //task9
+    var dayNow = new Date();
+                        var toDay = dayNow.getTime();
+                        // var christmas_day = new Date(present_date.getFullYear(), 11, 25)
+                        var xmas = new Date("2020,12,25");
+                        var xmasDay = xmas.getTime();
+                    //one day in miliseconds
+                        var oneDay = 1000*60*60*24;                     
+                        var howManyDays = (Math.ceil((xmasDay-toDay)/(oneDay)));
+                        document.getElementById("task9").innerHTML = howManyDays;
+                    
     }
     //task 5 
     //task 6
@@ -76,6 +87,7 @@ window.onload = function(){
             document.getElementById("againLeap").innerHTML = "This is not Leap Year!"; 
             document.getElementById("task6").style.backgroundColor = "#f0ad4e";
         }};
+    //task 7 inside window.onload
     //task8
     function guessNumber(){
     // take value
@@ -97,7 +109,8 @@ window.onload = function(){
             document.getElementById("takeNumber").value = '' ;
             
         }
-        } 
+        }
+    //task 9 inside window.onload
     
     
     
