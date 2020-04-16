@@ -95,7 +95,7 @@ window.onload = function(){
      // random from 1-10
         var rand = Math.floor(Math.random() *10);
             document.getElementById("guessOutcome").innerHTML = rand;
-        if (isNaN(givenNumber)){
+    if (isNaN(givenNumber)){
             document.getElementById("guessOutcome").innerHTML = "Type number!";
             document.getElementById("task8").style.backgroundColor = "#f0ad4e";
             document.getElementById("takeNumber").value = '' ;
@@ -111,6 +111,17 @@ window.onload = function(){
         }
         }
     //task 9 inside window.onload
+    //task 10 
+    function multiply(){
+        firstNumber = document.getElementById("firstNumber").value;
+        secondNumber = document.getElementById("secondNumber").value;
+        document.getElementById("task10outcome").innerHTML = firstNumber * secondNumber;
+    };
+    function divide(){
+        firstNumber = document.getElementById("firstNumber").value;
+        secondNumber = document.getElementById("secondNumber").value;
+        document.getElementById("task10outcome").innerHTML = firstNumber / secondNumber;
+    }
     
     
     
