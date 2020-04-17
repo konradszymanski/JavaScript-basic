@@ -121,6 +121,29 @@ window.onload = function(){
         firstNumber = document.getElementById("firstNumber").value;
         secondNumber = document.getElementById("secondNumber").value;
         document.getElementById("task10outcome").innerHTML = firstNumber / secondNumber;
+    };
+    //task11
+    function celsius(){
+        cel = document.getElementById("celsius").value;
+        if (cel == ""){
+            document.getElementById("celfah").innerHTML = "Emplty value! Try again"; 
+        }else{
+        celConv = (cel -32) / 1.8;
+        document.getElementById("celfah").innerHTML =  cel + " Celsius is:"  +'</br>' + celConv+ '</br>' +"Fahrenheit";
+        document.getElementById("fahrenheit").value = '' ;
+    }};
+                    function fahrenheit(){
+        fah = document.getElementById("fahrenheit").value;
+        if(fah == ""){
+            document.getElementById("celfah").innerHTML = "Emplty value! Try again"; 
+        }else {
+        fahConv = (fah * 9/5) + 32;
+        document.getElementById("celfah").innerHTML = fah + " Fahrenheit is:" +'</br>' + fahConv+ '</br>' +"Celsius";
+        document.getElementById("celsius").value = '' ;
+    } };
+    //task12
+    function getUrl (){
+        document.getElementById("outcomeUrl").innerHTML= window.location.href;
     }
     
     
