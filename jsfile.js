@@ -144,7 +144,13 @@ window.onload = function(){
     //task12
     function getUrl (){
         document.getElementById("outcomeUrl").innerHTML= window.location.href;
-    }
+    };
+    //task13
+    //task14
+    function getExtension(filename) {
+        filename ="index.html";
+        document.getElementById("extension").innerHTML=filename.split('.').pop();
+    };
     
     
     
