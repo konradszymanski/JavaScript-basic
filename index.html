@@ -18,13 +18,14 @@
         <small class="text-muted">Exercises, Practice, Solution</small>
     </h3>
         <a href="https://www.w3resource.com/javascript-exercises/javascript-basic-exercises.php" class="btn btn-outline-dark active  " role="button" aria-pressed="true" target="_blank">Link: w3resource.com</a>
+
         <table class="table .table-responsive table-bordered text-center table-striped">
             <thead class="thead-dark">
-            <tr>
-                <th scope="col">#</th>
-                <th scope="col">Task</th>
-                <th scope="col">Output</th>
-            </tr>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Task</th>
+                    <th scope="col">Output</th>
+                </tr>
             </thead>
             <tbody >
 <!-- task -->
@@ -123,6 +124,7 @@
                 <th scope="row">11</th>
                 <td>Write a JavaScript program to convert temperatures to and from Celsius, Fahrenheit.</td>
                 <td id="task11">
+                    
                     <input type="text" id="celsius" class="form-control" placeholder="Write Celsius" aria-label="" aria-describedby="basic-addon2" >
                     <input type="text" id="fahrenheit" class="form-control" placeholder="Write Fahrenheit" aria-label="" aria-describedby="basic-addon2">
                 </br>
@@ -131,12 +133,12 @@
                 </br></br>
                 <p id="celfah"></p>
                 </td>
-            </tr>Write a JavaScript program to get the website URL (loading page)
+            </tr>
 <!--task-->
             <tr>
                 <th scope="row">12</th>
                 <td>Write a JavaScript program to get the website URL (loading page)</td>
-                <td id="task">
+                <td id="task12">
                     <button type="button" class="btn btn-dark btn-sm" onclick="getUrl()">Get URL</button>
                 </br></br>
                 <p id="outcomeUrl"></p>
@@ -146,7 +148,7 @@
             <tr>
                 <th scope="row">13</th>
                 <td>Write a JavaScript exercise to create a variable using a user-defined name.</td>
-                <td id="task"></td>
+                <td id="task13"></td>
             </tr>
 <!--task-->
             <tr>
@@ -161,7 +163,27 @@
             <tr>
                 <th scope="row">15</th>
                 <td>Write a JavaScript program to get the difference between a given number and 13, if the number is greater than 13 return double the absolute difference.</td>
-                <td id="task15"></td>
+                <td id="task15">
+                    <p>Type Number</p>
+                    <div class="input-group">
+                        <input type="text" id="thirteen" pattern="" maxlength="" class="form-control" placeholder="#" aria-label="" aria-describedby="basic-addon2">
+                        <button type="button" class="btn btn-dark btn-sm" onclick="divideThirteen()">Difference</button>
+                        <div class="input-group-append"></div>
+                    </div>
+                    <p id="showthirteen"></p>
+                </td>
+            </tr>
+<!--task-->
+            <tr>
+                <th scope="row">16</th>
+                <td>Write a JavaScript program to compute the sum of the two given integers. If the two values are same, then returns triple their sum.</td>
+                <td id="task16">
+                    <input type="text" id="sumNumberone" class="form-control" placeholder="1st number" aria-label="" aria-describedby="basic-addon2" >
+                    <input type="text" id="sumNumbertwo" class="form-control" placeholder="2nd number" aria-label="" aria-describedby="basic-addon2">
+                </br>
+                    <button type="button" class="btn btn-dark btn-sm" onclick="sumNumber()">Sum</button>
+                    <p id="sumAnswer"></p>
+                </td>
             </tr>
 <!--task-->
 <!--
