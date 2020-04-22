@@ -44,22 +44,22 @@ window.onload = function(){
     
         document.getElementById("task4").innerHTML=  area;
     //task 7        
-            // loop from 2014 to 2050, count every year
-            for (var year = 2014; year <= 2050; year++){
-                // find specific month and day 
-                var firstJan = new Date(year, 0, 1);
-                if ( firstJan.getDay() === 0 )
-                    document.getElementById("task7").innerHTML = "1st January is being a Sunday  "+ year;};
+    // loop from 2014 to 2050, count every year
+    for (var year = 2014; year <= 2050; year++){
+        // find specific month and day 
+        var firstJan = new Date(year, 0, 1);
+        if ( firstJan.getDay() === 0 )
+    document.getElementById("task7").innerHTML = "1st January is being a Sunday  "+ year;};
     //task9
     var dayNow = new Date();
-                        var toDay = dayNow.getTime();
-                        // var christmas_day = new Date(present_date.getFullYear(), 11, 25)
-                        var xmas = new Date("2020,12,25");
-                        var xmasDay = xmas.getTime();
-                    //one day in miliseconds
-                        var oneDay = 1000*60*60*24;                     
-                        var howManyDays = (Math.ceil((xmasDay-toDay)/(oneDay)));
-                        document.getElementById("task9").innerHTML = howManyDays;
+    var toDay = dayNow.getTime();
+    // var christmas_day = new Date(present_date.getFullYear(), 11, 25)
+    var xmas = new Date("2020,12,25");
+    var xmasDay = xmas.getTime();
+//one day in miliseconds
+    var oneDay = 1000*60*60*24;                     
+    var howManyDays = (Math.ceil((xmasDay-toDay)/(oneDay)));
+    document.getElementById("task9").innerHTML = howManyDays;
                     
     }
     //task 5 
@@ -142,16 +142,45 @@ window.onload = function(){
         document.getElementById("celsius").value = '' ;
     } };
     //task12
-    function getUrl (){
-        document.getElementById("outcomeUrl").innerHTML= window.location.href;
-    };
+    //function getUrl (){
+    //    document.getElementById("outcomeUrl").innerHTML= window.location.href;
+    //};
     //task13
+    var var_name = 'userName';
+    var n = 120;
+    this[var_name] = n;    
+    //console.log(this[var_name])
     //task14
     function getExtension(filename) {
         filename ="index.html";
         document.getElementById("extension").innerHTML=filename.split('.').pop();
     };
-    
-    
+    //task15
+    function divideThirteen(){
+        someNumber = document.getElementById("thirteen").value;
+        difference = someNumber - 13;
+        if(someNumber > 13){
+        document.getElementById("showthirteen").innerHTML = difference * 2;
+        }else if(someNumber < 13) {
+            document.getElementById("showthirteen").innerHTML = difference;
+        } else {
+            document.getElementById("showthirteen").innerHTML = "Type number only";
+        }
+    }
+    //task16
+    function sumNumber(){
+        sumNumberone = document.getElementById("sumNumberone").value;
+        sumNumbertwo = document.getElementById("sumNumbertwo").value;
+        sumNumbers = parseInt(sumNumberone) + parseInt(sumNumbertwo);
+        if (isNaN(sumNumberone)){
+            document.getElementById("sumAnswer").innerHTML = "Numbers only";
+        } else if (isNaN(sumNumbertwo)){
+            document.getElementById("sumAnswer").innerHTML = "Numbers only";
+        } else if (sumNumbertwo === sumNumberone){
+            document.getElementById("sumAnswer").innerHTML = sumNumbers * 3;
+        } else {
+            document.getElementById("sumAnswer").innerHTML = sumNumbers;
+        }
+        };
     
     
