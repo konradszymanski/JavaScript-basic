@@ -41,7 +41,6 @@ window.onload = function(){
     // hernon formula for triangle area 
         var ar = (aa+bb+cc)/2;
         var area =  Math.sqrt(ar*((ar-aa)*(ar-bb)*(ar-cc)));
-    
         document.getElementById("task4").innerHTML=  area;
     //task 7        
     // loop from 2014 to 2050, count every year
@@ -56,7 +55,7 @@ window.onload = function(){
     // var christmas_day = new Date(present_date.getFullYear(), 11, 25)
     var xmas = new Date("2020,12,25");
     var xmasDay = xmas.getTime();
-//one day in miliseconds
+    //one day in miliseconds
     var oneDay = 1000*60*60*24;                     
     var howManyDays = (Math.ceil((xmasDay-toDay)/(oneDay)));
     document.getElementById("task9").innerHTML = howManyDays;
@@ -176,11 +175,27 @@ window.onload = function(){
             document.getElementById("sumAnswer").innerHTML = "Numbers only";
         } else if (isNaN(sumNumbertwo)){
             document.getElementById("sumAnswer").innerHTML = "Numbers only";
-        } else if (sumNumbertwo === sumNumberone){
+        } else if (sumNumbers > sumNumberone){
             document.getElementById("sumAnswer").innerHTML = sumNumbers * 3;
         } else {
             document.getElementById("sumAnswer").innerHTML = sumNumbers;
         }
         };
+    //taks17
+    function computeNum(){
+        computeOne = document.getElementById("computeOne").value;
+        computeTwo = document.getElementById("computeTwo").value;
+        diffNumber = parseInt(computeOne) - parseInt(computeTwo);
+        if (isNaN(computeOne)){
+            document.getElementById("compute").innerHTML = "Numbers only";
+        } else if (isNaN(computeTwo)){
+            document.getElementById("compute").innerHTML = "Numbers only";
+        } else if (diffNumber > 19 ){
+            document.getElementById("compute").innerHTML = diffNumber * 3;
+        } else {
+            document.getElementById("compute").innerHTML = diffNumber;
+        }
+        };
+
     
     
