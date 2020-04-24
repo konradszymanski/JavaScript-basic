@@ -67,13 +67,12 @@
                 <th scope="row">6</th>
                 <td>Write a JavaScript program to determine whether a given year is a leap year in the Gregorian calendar.</td>
                 <td id="task6">
-                    <p>Type Year please</p>
                     <div class="input-group">
                         <input type="text" id="leapYear" pattern="{4}" maxlength="4" class="form-control" placeholder="YYYY" aria-label="" aria-describedby="basic-addon2">
                         <button type="button" class="btn btn-dark btn-sm" onclick="checkYear()">Checker</button>
                         <div class="input-group-append"></div>
                     </div>
-                    <p id="againLeap"></p>
+                    <p class="answer" id="againLeap"></p>
                 </td>
             </tr>
 <!--task7-->
@@ -93,19 +92,19 @@
                         <button type="button" class="btn btn-dark btn-sm" onclick="guessNumber()">Try me!</button>
                         <div class="input-group-append"></div>
                     </div>
-                    <p id="guessOutcome"></p>
+                    <p class="answer" id="guessOutcome"></p>
                 </td>
             </tr>
-<!--task-->
+<!--task9-->
             <tr>
                 <th scope="row">9</th>
                 <td>Write a JavaScript program to calculate days left until next Christmas.</td>
                 <td id="task9">
-                    <p id="one"></p>
-                    <p id="two"></p>
+                    <p class="answer" id="one"></p>
+                    <p class="answer" id="two"></p>
                 </td>
             </tr>
-<!--task-->
+<!--task10-->
             <tr>
                 <th scope="row">10</th>
                 <td>Write a JavaScript program to calculate multiplication and division of two numbers (input from user). </td>
@@ -115,11 +114,10 @@
                 </br>
                     <button type="button" class="btn btn-dark btn-sm" onclick="multiply()">Multiply</button>
                     <button type="button" class="btn btn-dark btn-sm" onclick="divide()">Divide</button>
-                </br></br>
-                    <p id="task10outcome"></p>
+                    <p class="answer" id="task10outcome"></p>
                 </td>
             </tr>
-<!--task-->
+<!--task11-->
             <tr>
                 <th scope="row">11</th>
                 <td>Write a JavaScript program to convert temperatures to and from Celsius, Fahrenheit.</td>
@@ -130,50 +128,48 @@
                 </br>
                     <button type="button" class="btn btn-dark btn-sm" onclick="celsius()">Celsius</button>
                     <button type="button" class="btn btn-dark btn-sm" onclick="fahrenheit()">Fahrenheit</button>
-                </br></br>
-                <p id="celfah"></p>
+                <p class="answer" id="celfah"></p>
                 </td>
             </tr>
-<!--task-->
+<!--task12-->
             <tr>
                 <th scope="row">12</th>
                 <td>Write a JavaScript program to get the website URL (loading page)</td>
                 <td id="task12">
                     <button type="button" class="btn btn-dark btn-sm" onclick="getUrl()">Get URL</button>
-                </br></br>
-                <p id="outcomeUrl"></p>
+                <p class="answer" id="outcomeUrl"></p>
                 </td>
             </tr>
-<!--task-->
+<!--task13-->
             <tr>
                 <th scope="row">13</th>
                 <td>Write a JavaScript exercise to create a variable using a user-defined name.</td>
                 <td id="task13"></td>
             </tr>
-<!--task-->
+<!--task14-->
             <tr>
                 <th scope="row">14</th>
                 <td>Write a JavaScript exercise to get the extension of a filename.</td>
                 <td id="task14">
                     <button type="button" class="btn btn-dark btn-sm" onclick="getExtension()">Get Extension</button>
-                    <p id="extension"></p>
+                    <p class="answer" id="extension"></p>
                 </td>
             </tr>
-<!--task-->
+<!--task15-->
             <tr>
                 <th scope="row">15</th>
                 <td>Write a JavaScript program to get the difference between a given number and 13, if the number is greater than 13 return double the absolute difference.</td>
                 <td id="task15">
-                    <p>Type Number</p>
                     <div class="input-group">
                         <input type="text" id="thirteen" pattern="" maxlength="" class="form-control" placeholder="#" aria-label="" aria-describedby="basic-addon2">
                         <button type="button" class="btn btn-dark btn-sm" onclick="divideThirteen()">Difference</button>
                         <div class="input-group-append"></div>
+                        <p id=""></p>
                     </div>
-                    <p id="showthirteen"></p>
+                    <p class="answer" id="showthirteen"></p>
                 </td>
             </tr>
-<!--task-->
+<!--task16-->
             <tr>
                 <th scope="row">16</th>
                 <td>Write a JavaScript program to compute the sum of the two given integers. If the two values are same, then returns triple their sum.</td>
@@ -182,7 +178,19 @@
                     <input type="text" id="sumNumbertwo" class="form-control" placeholder="2nd number" aria-label="" aria-describedby="basic-addon2">
                 </br>
                     <button type="button" class="btn btn-dark btn-sm" onclick="sumNumber()">Sum</button>
-                    <p id="sumAnswer"></p>
+                    <p class="answer" id="sumAnswer"></p>
+                </td>
+            </tr>
+<!--task17-->
+            <tr>
+                <th scope="row">17</th>
+                <td>Write a JavaScript program to compute the absolute difference between a specified number and 19. Returns triple their absolute difference if the specified number is greater than 19.</td>
+                <td id="task16">
+                    <input type="text" id="computeOne" class="form-control" placeholder="1st number" aria-label="" aria-describedby="basic-addon2" >
+                    <input type="text" id="computeTwo" class="form-control" placeholder="2nd number" aria-label="" aria-describedby="basic-addon2">
+                </br>
+                    <button type="button" class="btn btn-dark btn-sm" onclick="computeNum()">Difference</button>
+                    <p class="answer" id="compute"></p>
                 </td>
             </tr>
 <!--task-->
@@ -190,17 +198,12 @@
             <tr>
                 <th scope="row">#</th>
                 <td></td>
-                <td id="task"></td>
+                <td id="task">
+                    <p class="answer" id=""></p>
+                </td>
             </tr>
 -->
-            <!--task-->
-<!--
-            <tr>
-                <th scope="row">#</th>
-                <td></td>
-                <td id="task"></td>
-            </tr>
--->
+
             </tbody>
         </table>
 </body>
