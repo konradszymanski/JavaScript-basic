@@ -1,22 +1,25 @@
 /* bootsrap :) */
-*{
-    margin: 10px;
+* {
+  margin: 10px;
 }
-body{
-    width: 100%;
-    max-width: 2000px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
- 
+
+body {
+  width: 100%;
+  max-width: 2000px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
-.btn-outline-dark{
-    width: 150px;
+
+.btn-outline-dark {
+  width: 150px;
 }
-table{
-    max-width: 1200px;
-    margin: 10px auto;
-} 
+
+table {
+  max-width: 1200px;
+  margin: 10px auto;
+}
+
 /*  class="align-middle" */
 #myContainer {
   width: 400px;
@@ -24,12 +27,14 @@ table{
   position: relative;
   background: yellow;
 }
+
 #myAnimation {
   width: 50px;
   height: 50px;
   position: absolute;
   background-color: red;
 }
-.answer{
+
+.answer {
   margin-top: 10px;
 }
