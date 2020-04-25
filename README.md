@@ -19,5 +19,5 @@ https://github.com/konradszymanski/100-JavaScript-projects</br>
 need to back to #5 soon</br>
 I decided to work on JS excerises first (morning/afternoon) and after doing the other things (webtech reading, fcc, web dev stuff). </br>
 
-#22.04.2020 13th day. Finished task 16.
-#25/04.2020 finishe task20 and deployed this page on netify => https://javascript-basics.netlify.app/
+#22.04.2020 13th day. Finished task 16.</br>
+#25.04.2020 finished task20 and deployed this page on netify => https://javascript-basics.netlify.app/
