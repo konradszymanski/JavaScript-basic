@@ -249,3 +249,16 @@ function task21() {
         document.getElementById("task21ans").innerHTML = lettersPY.concat(task21value);
     }
 }
+//task22
+function task22() {
+    task22value = document.getElementById("task22").value;
+    task22random = Math.floor(Math.random() * task22value.length) + 1;
+    //document.getElementById("task22ans").innerHTML = task22random;
+    document.getElementById("task22ans").innerHTML = "Removed random character number: " + task22random;
+    // slice method for showing the first part od string 
+    task22firstpart = task22value.slice(0, task22random - 1)
+    // substring will take second part of string and hides the first part - 
+    document.getElementById("task22ansB").innerHTML = "Output: " + task22firstpart + task22value.substring(task22random);
+
+
+}
