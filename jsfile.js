@@ -238,9 +238,14 @@ function task20() {
         document.getElementById("task20ans").innerHTML = "true";
     }
 }
-//task20
-//  ordazu sprawdzamy czy slowo nie ma pierwszych liter "py"przez charAt()metode. albo str[0] - ecma
-//jezeli tak: 
-// przepisujemy to slowo to output
-// jezeli nie:
-// concat first with prefix "Py" 
+//task21
+function task21() {
+    var task21value = document.getElementById("task21").value;
+    var findPY = task21value.charAt(0) + task21value.charAt(1);
+    var lettersPY = "Py";
+    if (findPY == "py" || findPY == "Py") {
+        document.getElementById("task21ans").innerHTML = task21value;
+    } else {
+        document.getElementById("task21ans").innerHTML = lettersPY.concat(task21value);
+    }
+}
