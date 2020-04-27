@@ -259,6 +259,15 @@ function task22() {
     task22firstpart = task22value.slice(0, task22random - 1)
     // substring will take second part of string and hides the first part - 
     document.getElementById("task22ansB").innerHTML = "Output: " + task22firstpart + task22value.substring(task22random);
-
-
+}
+//task23
+function task23() {
+    task23word = document.getElementById("task23").value;
+    document.getElementById("task23ans").innerText = 'in progress';
+    // check if its two char or less
+    // if yes - abort and ask for more than2 char
+    // if no: 
+    // find fisrt char
+    //find last char
+    //swap
 }
