@@ -263,11 +263,12 @@ function task22() {
 //task23
 function task23() {
     task23word = document.getElementById("task23").value;
-    document.getElementById("task23ans").innerText = 'in progress';
-    // check if its two char or less
-    // if yes - abort and ask for more than2 char
-    // if no: 
-    // find fisrt char
-    //find last char
-    //swap
+    //check length of string
+    if (task23word.length <= 1) {
+        document.getElementById("task23ans").innerHTML = "Word has to be longer!"
+    } else {
+        document.getElementById("task23ans").innerHTML = task23word.slice(-1) + task23word.substring(1,
+            task23word.length - 1) + task23word.charAt(0);
+    }
+
 }
