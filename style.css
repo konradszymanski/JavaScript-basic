@@ -36,5 +36,10 @@ table {
 }
 
 .answer {
-  margin-top: 10px;
+  margin: 10px auto 0 auto;
+}
+
+td {
+  margin: 10px auto;
+  text-align-last: center;
 }

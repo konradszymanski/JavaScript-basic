@@ -270,5 +270,20 @@ function task23() {
         document.getElementById("task23ans").innerHTML = task23word.slice(-1) + task23word.substring(1,
             task23word.length - 1) + task23word.charAt(0);
     }
-
+}
+//task24 
+function task24() {
+    task24word = document.getElementById("task24").value;
+    task24letter = task24word.charAt(0);
+    document.getElementById("task24ans").innerHTML = task24letter + task24word + task24letter;
+}
+//task25
+function task25() {
+    task25word = document.getElementById("task25").value;
+    task25letter = task25word.substring(0, 3);
+    if (task25word.length < 3) {
+        document.getElementById("task25ans").innerHTML = "Word is too short!";
+    } else {
+        document.getElementById("task25ans").innerHTML = task25letter + task25word + task25letter;
+    }
 }
