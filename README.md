@@ -21,3 +21,4 @@ I decided to work on JS excerises first (morning/afternoon) and after doing the 
 
 #22.04.2020 13th day. Finished task 16.</br>
 #25.04.2020 finished task20 and deployed this page on netify => https://javascript-basics.netlify.app/
+#01.05.2020 still doing, but much faster. getting confidence. 
