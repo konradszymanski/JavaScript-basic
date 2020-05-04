@@ -287,3 +287,16 @@ function task25() {
         document.getElementById("task25ans").innerHTML = task25letter + task25word + task25letter;
     }
 }
+//task26
+function task26() {
+    task26number = document.getElementById("task26").value;
+    if (isNaN(task26number)) {
+        document.getElementById("task26ans").innerHTML = "Only numbers!"
+    } else if (task26number = " ") {
+        document.getElementById("task26ans").innerHTML = "Write number!"
+    } else if (task26number % 3 === 0 || task26number % 7 === 0) {
+        document.getElementById("task26ans").innerHTML = "true";
+    } else {
+        document.getElementById("task26ans").innerHTML = "false";
+    }
+}
