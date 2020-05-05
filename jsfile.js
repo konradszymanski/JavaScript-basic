@@ -292,11 +292,19 @@ function task26() {
     task26number = document.getElementById("task26").value;
     if (isNaN(task26number)) {
         document.getElementById("task26ans").innerHTML = "Only numbers!"
-    } else if (task26number = " ") {
-        document.getElementById("task26ans").innerHTML = "Write number!"
     } else if (task26number % 3 === 0 || task26number % 7 === 0) {
         document.getElementById("task26ans").innerHTML = "true";
     } else {
         document.getElementById("task26ans").innerHTML = "false";
+    }
+}
+//task27
+function task27() {
+    task27word = document.getElementById("task27").value;
+    check27word = task27word.substring(0, 4);
+    if (check27word === "Java" || check27word === "java") {
+        document.getElementById("task27ans").innerHTML = "true";
+    } else {
+        document.getElementById("task27ans").innerHTML = "false";
     }
 }
