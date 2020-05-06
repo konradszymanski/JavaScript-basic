@@ -308,3 +308,25 @@ function task27() {
         document.getElementById("task27ans").innerHTML = "false";
     }
 }
+//task28 
+function task28() {
+    let fnum = document.getElementById("task28a").value;
+    let snum = document.getElementById("task28b").value;
+    if (
+        (fnum >= 50 && fnum <= 99) && (snum >= 50 && snum <= 99)
+    ) {
+        document.getElementById("task28ans").innerHTML = "true";
+    } else {
+        document.getElementById("task28ans").innerHTML = "false";
+    }
+
+
+
+    // task28number = document.getElementById("task28").value;
+
+    // if (task28number >= 50 && task28number <= 99) {
+    //     document.getElementById("task28ans").innerHTML = "true";
+    // } else {
+    //     document.getElementById("task28ans").innerHTML = "false";
+    // }
+}
