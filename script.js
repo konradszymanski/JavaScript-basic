@@ -310,23 +310,34 @@ function task27() {
 }
 //task28 
 function task28() {
-    let fnum = document.getElementById("task28a").value;
-    let snum = document.getElementById("task28b").value;
-    if (
-        (fnum >= 50 && fnum <= 99) && (snum >= 50 && snum <= 99)
-    ) {
+    var el = document.getElementById("task28a");
+    var val = el.value.split(' ');
+    el.value = val.reduce((a, c) => a + Number(c), 0);
+    if (el.value > 20) {
         document.getElementById("task28ans").innerHTML = "true";
     } else {
         document.getElementById("task28ans").innerHTML = "false";
     }
+}
+//task29
+function task29() {
+    var el = document.getElementById("task29");
+    var val = el.value.split(' ');
+    el.value = val.reduce((a, c) => a + Number(c), 0);
+    if (el.value > 20) {
+        document.getElementById("task29ans").innerHTML = "true";
+    }
+}
 
+function task30() {
+    var task30word = document.getElementById("task30").value;
+    //word30 = task30word.splice(4, 6);
+    word30 = task30word.slice(4, 10);
+    if (word30 == "script") {
+        document.getElementById("task30ans").innerHTML = task30word.substr(0, 4);
+    } else {
+        document.getElementById("task30ans").innerHTML = task30word
+    }
 
-
-    // task28number = document.getElementById("task28").value;
-
-    // if (task28number >= 50 && task28number <= 99) {
-    //     document.getElementById("task28ans").innerHTML = "true";
-    // } else {
-    //     document.getElementById("task28ans").innerHTML = "false";
-    // }
+    //if (task30word  )
 }
