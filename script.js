@@ -346,7 +346,16 @@ function task30() {
 //task31
 function task31() {
     var el = document.getElementById("task31");
-    var val = el.value.split(' ').sort().reverse();
-    document.getElementById("task31ans").innerHTML = val;
-
+    var val = el.value.split(' ').sort();
+    document.getElementById("task31ans").innerHTML = val[val.length - 1];
+}
+//task32
+function task32() {
+    var el = document.getElementById("task32");
+    var val = el.value.split(' ').sort();
+    if (val[0] <= 99 && val[1] <= 99) {
+        document.getElementById("task32ans").innerHTML = val[val.length - 1];
+    } else if (val[0] >= 100 || val[1] >= 100) {
+        document.getElementById("task32ans").innerHTML = "numbers are 100 or over!"
+    }
 }
