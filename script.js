@@ -31,10 +31,11 @@ window.onload = function () {
     // take newDate
     var d = new Date();
     var yy = d.getFullYear();
-    var mo = d.getMonth();
-    var dd = d.getDate();
+    var mo = ("0" + (d.getMonth() + 1)).slice(-2); //d.getMonth() + 1;
+    var dd = ("0" + d.getDate()).slice(-2); // d.getDate();
 
     document.getElementById("task3").innerHTML = dd + "-" + mo + "-" + yy;
+
     //task 4     
     var aa = 5;
     var bb = 6;
@@ -43,6 +44,9 @@ window.onload = function () {
     var ar = (aa + bb + cc) / 2;
     var area = Math.sqrt(ar * ((ar - aa) * (ar - bb) * (ar - cc)));
     document.getElementById("task4").innerHTML = area;
+    //task5
+    task5 = "w3resource"
+    document.getElementById("task5").innerHTML = task5.slice();
     //task 7        
     // loop from 2014 to 2050, count every year
     for (var year = 2014; year <= 2050; year++) {
@@ -330,7 +334,7 @@ function task29() {
 }
 
 function task30() {
-    var task30word = document.getElementById("task30").value;
+    const task30word = document.getElementById("task30").value;
     //word30 = task30word.splice(4, 6);
     word30 = task30word.slice(4, 10);
     if (word30 == "script") {
@@ -338,6 +342,13 @@ function task30() {
     } else {
         document.getElementById("task30ans").innerHTML = task30word
     }
-
-    //if (task30word  )
+}
+//task31
+function task31() {
+    var el = document.getElementById("task31").value;
+    var val = el.value.split(' ');
+    // el.value = val.reduce((a, c) => a + Number(c), 0);
+    if (isNaN(t31)) {
+        document.getElementById("task31ans").innerHTML = val
+    }
 }
