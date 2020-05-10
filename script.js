@@ -345,10 +345,8 @@ function task30() {
 }
 //task31
 function task31() {
-    var el = document.getElementById("task31").value;
-    var val = el.value.split(' ');
-    // el.value = val.reduce((a, c) => a + Number(c), 0);
-    if (isNaN(t31)) {
-        document.getElementById("task31ans").innerHTML = val
-    }
+    var el = document.getElementById("task31");
+    var val = el.value.split(' ').sort().reverse();
+    document.getElementById("task31ans").innerHTML = val;
+
 }
