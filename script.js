@@ -305,7 +305,7 @@ function task26() {
 //task27
 function task27() {
     task27word = document.getElementById("task27").value;
-    check27word = task27word.substring(0, 4);
+    check27word = task27word.substring(0, 4); //take first 4 letters
     if (check27word === "Java" || check27word === "java") {
         document.getElementById("task27ans").innerHTML = "true";
     } else {
@@ -315,8 +315,8 @@ function task27() {
 //task28 
 function task28() {
     var el = document.getElementById("task28a");
-    var val = el.value.split(' ');
-    el.value = val.reduce((a, c) => a + Number(c), 0);
+    var val = el.value.split(' '); //seperate string to array, divided by space
+    el.value = val.reduce((a, c) => a + Number(c), 0); // reduce will add two or more numbers
     if (el.value > 20) {
         document.getElementById("task28ans").innerHTML = "true";
     } else {
@@ -335,8 +335,7 @@ function task29() {
 
 function task30() {
     const task30word = document.getElementById("task30").value;
-    //word30 = task30word.splice(4, 6);
-    word30 = task30word.slice(4, 10);
+    word30 = task30word.slice(4, 10); //take "letters"
     if (word30 == "script") {
         document.getElementById("task30ans").innerHTML = task30word.substr(0, 4);
     } else {
@@ -346,8 +345,8 @@ function task30() {
 //task31
 function task31() {
     var el = document.getElementById("task31");
-    var val = el.value.split(' ').sort();
-    document.getElementById("task31ans").innerHTML = val[val.length - 1];
+    var val = el.value.split(' ').sort(); //arrays first, and sort for put numbers in order
+    document.getElementById("task31ans").innerHTML = val[val.length - 1]; //show last number - the highest
 }
 //task32
 function task32() {
