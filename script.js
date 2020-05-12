@@ -362,10 +362,9 @@ function task32() {
 function task33() {
     var el = document.getElementById("task33");
     var val = el.value.split(' ').sort();
-    if ((val[0] >= 40 && val[0] <= 60 && val[1] >= 40 && val[1] <= 60) || (val[0] >= 70 && val[0] <= 100 && val[1] >= 70 && val[1] <= 100)) {
+    if ((val[0] >= 40 || val[0] <= 60 || val[1] >= 40 || val[1] <= 60) && (val[0] >= 70 || val[0] <= 100 || val[1] >= 70 || val[1] <= 100)) {
         document.getElementById("task33ans").innerHTML = `true, these numbers are: ${val[0]} and ${val[1]}`;
     } else {
         document.getElementById("task33ans").innerHTML = "false";
     }
 }
-// || (val[1] > 39 && val[1] <= 60) && (val[0] > 69 && val[0] <= 100)
