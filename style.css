@@ -1,7 +1,7 @@
 /* bootsrap :) */
-* {
+/* * {
   margin: 10px;
-}
+} */
 
 body {
   width: 100%;
@@ -9,6 +9,10 @@ body {
   display: flex;
   justify-content: center;
   flex-direction: column;
+}
+
+footer {
+  width: 100%;
 }
 
 .btn-outline-dark {
