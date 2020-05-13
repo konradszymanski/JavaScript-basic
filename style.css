@@ -15,6 +15,11 @@ footer {
   width: 100%;
 }
 
+h3,
+.link {
+  margin-left: 50px;
+}
+
 .btn-outline-dark {
   width: 150px;
 }

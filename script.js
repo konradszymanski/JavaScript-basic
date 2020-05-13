@@ -384,3 +384,18 @@ function task34() {
         document.getElementById("task34ans").innerHTML = "not in range 40 - 60";
     }
 }
+// //task35
+function task35() {
+    task35word = document.getElementById("task35a").value;
+    task35char = document.getElementById("task35b").value;
+
+    takecharOne = task35word.charAt(1);
+    takecharTwo = task35word.charAt(3);
+
+
+    if (task35char === takecharTwo && task35char === takecharTwo) {
+        document.getElementById("task35ans").innerHTML = "true";
+    } else {
+        document.getElementById("task35ans").innerHTML = "false";
+    }
+}
