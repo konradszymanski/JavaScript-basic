@@ -399,3 +399,12 @@ function task35() {
         document.getElementById("task35ans").innerHTML = "false";
     }
 }
+//task36
+function task36() {
+    const el = document.getElementById("task36");
+    const val = el.value.split(' '); //spilt by space
+
+    //take 3 numbers indexes
+    document.getElementById("task36ans").innerHTML = ;
+
+}
