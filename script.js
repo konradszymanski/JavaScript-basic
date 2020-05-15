@@ -403,8 +403,15 @@ function task35() {
 function task36() {
     const el = document.getElementById("task36");
     const val = el.value.split(' '); //spilt by space
+    const first = val[0].slice(-1); //take last digit from each nummbers 
+    const second = val[1].slice(-1);
+    const third = val[2].slice(-1);
 
-    //take 3 numbers indexes
-    document.getElementById("task36ans").innerHTML = ;
+    if (first === second && first === third) {
+        document.getElementById("task36ans").innerHTML = "True: all numbers has " + first;
+    } else {
 
+        document.getElementById("task36ans").innerHTML = `False, all numbers are different: ${first}, ${second}, ${third}`;
+
+    }
 }
