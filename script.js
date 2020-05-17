@@ -417,5 +417,12 @@ function task36() {
 }
 //task37
 task37 = () => {
-    document.getElementById("task37ans").innerHTML = "sasasdads";
+
+    const task37word = document.getElementById("task37").value;
+    if (task37word.length <= 3) {
+        document.getElementById("task37ans").innerHTML = task37word.toUpperCase();
+    } else {
+        document.getElementById("task37ans").innerHTML = task37word.slice(0, 3).toLowerCase() + task37word.substr(3, task37word.length).toUpperCase();
+    }
+
 }
