@@ -415,3 +415,7 @@ function task36() {
 
     }
 }
+//task37
+task37 = () => {
+    document.getElementById("task37ans").innerHTML = "sasasdads";
+}
