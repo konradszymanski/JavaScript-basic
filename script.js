@@ -426,3 +426,11 @@ task37 = () => {
     }
 
 }
+task38 = () => {
+    let rand = Math.floor(Math.random() * 100);
+    if (rand > 89 && rand <= 100) {
+        document.getElementById("task38ans").innerHTML = `Success! Student gets ${rand} points! Grade: A+`;
+    } else {
+        document.getElementById("task38ans").innerHTML = `Student gets ${rand} points, failure`
+    }
+}
