@@ -426,11 +426,23 @@ task37 = () => {
     }
 
 }
+//task38
 task38 = () => {
     let rand = Math.floor(Math.random() * 100);
     if (rand > 89 && rand <= 100) {
         document.getElementById("task38ans").innerHTML = `Success! Student gets ${rand} points! Grade: A+`;
     } else {
         document.getElementById("task38ans").innerHTML = `Student gets ${rand} points, failure`
+    }
+}
+//taks39
+task39 = () => {
+    let el = document.getElementById('task39');
+    let val = el.value.split(' ');
+    el.value = val.reduce((a, c) => a + Number(c), 0);
+    if (el.value >= 50 && el.value <= 99) {
+        document.getElementById('task39ans').innerHTML = "65";
+    } else {
+        document.getElementById('task39ans').innerHTML = "80";
     }
 }
