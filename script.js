@@ -317,7 +317,7 @@ function task28() {
     var el = document.getElementById("task28a");
     var val = el.value.split(' '); //seperate string to array, divided by space
     el.value = val.reduce((a, c) => a + Number(c), 0); // reduce will add two or more numbers
-    if (el.value > 20) {
+    if (el.value >= 50 && el.value <= 99) {
         document.getElementById("task28ans").innerHTML = "true";
     } else {
         document.getElementById("task28ans").innerHTML = "false";
@@ -328,7 +328,7 @@ function task29() {
     var el = document.getElementById("task29");
     var val = el.value.split(' ');
     el.value = val.reduce((a, c) => a + Number(c), 0);
-    if (el.value > 20) {
+    if (el.value >= 50 && el.value <= 99) {
         document.getElementById("task29ans").innerHTML = "true";
     }
 }
