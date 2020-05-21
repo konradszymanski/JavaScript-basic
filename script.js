@@ -446,3 +446,14 @@ task39 = () => {
         document.getElementById('task39ans').innerHTML = "80";
     }
 }
+//task40
+task40 = () => {
+    let el = document.getElementById('task40');
+    let val = el.value.split(' ');
+    el.value = val.reduce((a, c) => a + Number(c), 0);
+    if (val[0] == 8 || val[1] == 8 || el.value == 8) {
+        document.getElementById("task40ans").innerHTML = "true";
+    } else {
+        document.getElementById("task40ans").innerHTML = "false";
+    }
+}
