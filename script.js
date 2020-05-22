@@ -457,3 +457,18 @@ task40 = () => {
         document.getElementById("task40ans").innerHTML = "false";
     }
 }
+//task41
+task41 = () => {
+    let el = document.getElementById('task41');
+    let val = el.value.split(' ');
+    el.value = val.reduce((a, c) => a + Number(c), 0);
+    if (val[0] == val[1] == val[2]) {
+        document.getElementById("task41ans").innerHTML = "30";
+    } else if (val[0] == val[1] ||
+        val[0] == val[2] ||
+        val[1] == val[2]) {
+        document.getElementById("task41ans").innerHTML = "40";
+    } else {
+        document.getElementById("task41ans").innerHTML = "20";
+    }
+}
