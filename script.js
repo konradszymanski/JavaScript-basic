@@ -472,3 +472,13 @@ task41 = () => {
         document.getElementById("task41ans").innerHTML = "20";
     }
 }
+task42 = () => {
+    let el = document.getElementById('task42');
+    let val = el.value.split(' ');
+    //el.value = val.reduce((a, c) => a + Number(c), 0);
+    if (val[0] < val[1] && val[1] < val[2]) {
+        document.getElementById("task42ans").innerHTML = "Strict mode";
+    } else {
+        document.getElementById("task42ans").innerHTML = "Soft mode";
+    }
+}
