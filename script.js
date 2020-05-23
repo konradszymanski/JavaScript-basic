@@ -482,3 +482,24 @@ task42 = () => {
         document.getElementById("task42ans").innerHTML = "Soft mode";
     }
 }
+task43 = () => {
+    let el = document.getElementById('task43');
+    let val = el.value.split(' ');
+    const first = val[0].slice(-1); //take last digit from each nummbers 
+    const second = val[1].slice(-1);
+    const third = val[2].slice(-1);
+    if (first === second || second === third || first === third) {
+        document.getElementById("task43ans").innerHTML = "rightmost digit are same";
+    } else {
+        document.getElementById("tesk43ans").innerHTML = "rightmost digits aren't same";
+    }
+}
+task44 = () => {
+    let el = document.getElementById('task44');
+    let val = el.value.split(' ');
+    if (val[0] >= 20 && (val[0] < val[1] && val[0] < val[2])) {
+        document.getElementById("task44ans").innerHTML = "true";
+    } else {
+        document.getElementById("task44ans").innerHTML = "false";
+    }
+}
