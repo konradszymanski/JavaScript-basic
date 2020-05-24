@@ -531,3 +531,8 @@ task47 = () => {
         document.getElementById("task47ans").innerHTML = "false";
     }
 }
+task48 = () => {
+    task48word = document.getElementById("task48").value;
+    document.getElementById("task48ans").innerHTML = task48word.split("").reverse().join("");
+    //devide string to single characters, than reverse characters. join method will delete commas from array. 
+}
