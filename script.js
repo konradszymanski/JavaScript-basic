@@ -513,3 +513,21 @@ task45 = () => {
         document.getElementById("task45ans").innerHTML = "false"
     }
 }
+task46 = () => {
+    let el = document.getElementById('task46');
+    let val = el.value.split(' ');
+    if ((val[0] % 7 == 0 || val[0] % 11 == 0) && (val[1] % 7 == 0 || val[1] % 11 == 0)) {
+        document.getElementById("task46ans").innerHTML = "true"
+    } else {
+        document.getElementById("task46ans").innerHTML = "false"
+    }
+}
+task47 = () => {
+    let el = document.getElementById('task47');
+    let val = el.value.split(' ');
+    if (val[0] >= 40 && val[0] <= 10000) {
+        document.getElementById("task47ans").innerHTML = "true";
+    } else {
+        document.getElementById("task47ans").innerHTML = "false";
+    }
+}
