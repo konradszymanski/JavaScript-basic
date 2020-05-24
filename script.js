@@ -503,3 +503,13 @@ task44 = () => {
         document.getElementById("task44ans").innerHTML = "false";
     }
 }
+task45 = () => {
+    let el = document.getElementById('task45');
+    let val = el.value.split(' ');
+    el.value = val.reduce((a, c) => a + Number(c), 0);
+    if ((val[0] == 15 || val[1] == 15) || el.value == 15 || val[0] - val[1] == 15) {
+        document.getElementById("task45ans").innerHTML = "true"
+    } else {
+        document.getElementById("task45ans").innerHTML = "false"
+    }
+}
