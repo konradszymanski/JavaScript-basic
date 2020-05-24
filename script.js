@@ -541,4 +541,8 @@ task49 = () => {
     let blabla = task49word.charCodeAt() + 1;
     let pluslitera = String.fromCharCode(blabla);
     document.getElementById("task49ans").innerHTML = pluslitera;
+
+    //     for (var i = 0; i < task49word.length; i++) {
+    //         document.getElementById("task49ans").innerHTML = task49word.charAt(i);
+    //     }
 }
