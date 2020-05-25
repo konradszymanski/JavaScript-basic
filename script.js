@@ -538,11 +538,18 @@ task48 = () => {
 }
 task49 = () => {
     let task49word = document.getElementById("task49").value;
-    let blabla = task49word.charCodeAt() + 1;
-    let pluslitera = String.fromCharCode(blabla);
-    document.getElementById("task49ans").innerHTML = pluslitera;
+    let arr = task49word.toLowerCase().split("");
+    //document.getElementById("task49ans").innerHTML = arr;
+    // for (let i = 0; i < arr.length; i++) {
+    //     // arr[i] = String.charCodeAt();
+    //     // document.getElementById("task49ans").innerHTML = arr[i]
+    //     s[i] = String.fromCharCode(1 + s[i].charCodeAt(0));
+    //     document.getElementById("task49ans").innerHTML = s[i];
+    // }
 
-    //     for (var i = 0; i < task49word.length; i++) {
-    //         document.getElementById("task49ans").innerHTML = task49word.charAt(i);
-    //     }
+
+    //sprawdzic kazda litere w unicode
+    // fromCharCode Convert a Unicode number into a character:
+    //charCodeAt Return the Unicode of the first character in a string (the Unicode value for "H"):
+
 }
