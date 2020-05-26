@@ -538,7 +538,10 @@ task48 = () => {
 }
 task49 = () => {
     let task49word = document.getElementById("task49").value;
-    let arr = task49word.toLowerCase().split("");
+    //let arr = task49word.toLowerCase().split("");
+    for (let i = 0; i < task49word.length; i++) {
+        document.getElementById("task49ans").innerHTML = task49word.charCodeAt(i);
+    }
     //document.getElementById("task49ans").innerHTML = arr;
     // for (let i = 0; i < arr.length; i++) {
     //     // arr[i] = String.charCodeAt();
