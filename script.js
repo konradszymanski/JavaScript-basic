@@ -542,17 +542,4 @@ task49 = () => {
     for (let i = 0; i < task49word.length; i++) {
         document.getElementById("task49ans").innerHTML = task49word.charCodeAt(i);
     }
-    //document.getElementById("task49ans").innerHTML = arr;
-    // for (let i = 0; i < arr.length; i++) {
-    //     // arr[i] = String.charCodeAt();
-    //     // document.getElementById("task49ans").innerHTML = arr[i]
-    //     s[i] = String.fromCharCode(1 + s[i].charCodeAt(0));
-    //     document.getElementById("task49ans").innerHTML = s[i];
-    // }
-
-
-    //sprawdzic kazda litere w unicode
-    // fromCharCode Convert a Unicode number into a character:
-    //charCodeAt Return the Unicode of the first character in a string (the Unicode value for "H"):
-
 }
