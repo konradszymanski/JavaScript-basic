@@ -537,9 +537,13 @@ task48 = () => {
     //devide string to single characters, than reverse characters. join method will delete commas from array. 
 }
 task49 = () => {
-    let task49word = document.getElementById("task49").value;
-    //let arr = task49word.toLowerCase().split("");
-    for (let i = 0; i < task49word.length; i++) {
-        document.getElementById("task49ans").innerHTML = task49word.charCodeAt(i);
+    let letters = document.getElementById("task49").value;
+    let arr = letters.toLowerCase().split(" ").join(",");
+    // document.getElementById("task49ans").textContent = arr;
+    for (let i = 0; i < arr.length; i++) {
+        //document.getElementById("task49ans").textContent += arr.charCodeAt(i);
+        // document.getElementById("task49ans").textContent += letters.String.fromCharCode(letters.charCodeAt(i + 1));
+        document.getElementById("task49ans").textContent += String.fromCharCode(1 + letters.charCodeAt(i));
     }
 }
+//(String.fromCharCode(100, 101, 110, 98));
