@@ -538,12 +538,14 @@ task48 = () => {
 }
 task49 = () => {
     let letters = document.getElementById("task49").value;
-    let arr = letters.toLowerCase().split(" ").join(",");
-    // document.getElementById("task49ans").textContent = arr;
+    // let arr will change letter to small
+    // divided to array and joined to string
+    //let arr = letters.toLowerCase().split(" ").join(",");
+    //
+    let arr = letters.toLowerCase()
     for (let i = 0; i < arr.length; i++) {
-        //document.getElementById("task49ans").textContent += arr.charCodeAt(i);
-        // document.getElementById("task49ans").textContent += letters.String.fromCharCode(letters.charCodeAt(i + 1));
+        // fromcharcode is to find letter by Unicode 
+        //charcodeat is to find unicode by letter
         document.getElementById("task49ans").textContent += String.fromCharCode(1 + letters.charCodeAt(i));
     }
 }
-//(String.fromCharCode(100, 101, 110, 98));
