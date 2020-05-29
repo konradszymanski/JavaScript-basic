@@ -552,17 +552,19 @@ task49 = () => {
 }
 // capitalize the first letter of each word
 task50 = () => {
+    // let task50word = document.getElementById("task50").value;
+    // let newletter = task50word.toLowerCase().substring(1);
+    // let litera = task50word.toUpperCase().charAt(0);
+    // for (let i = 0; i < task50word.length; i++) {
+    //     document.getElementById("task50ans").textContent = litera + newletter;
+    // this version turns only the first lettter in only one world.
+    // }
+
     let task50word = document.getElementById("task50").value;
-    let newletter = task50word.toLowerCase().substring(1);
-    let litera = task50word.toUpperCase().charAt(0);
-    for (let i = 0; i < task50word.length; i++) {
-        document.getElementById("task50ans").textContent = litera + newletter;
-
+    let arr = task50word.toLowerCase().split(" "); //first to small letters 
+    for (let i = 0; i <= arr.length; i++) {
+        arr[i] = arr[i][0].toUpperCase() + arr[i].substr(1);
+        // divided string to array and every element inside array arr[i], will give big first letter [0] and will be concatenate with the rest of the arr.
+        document.getElementById("task50ans").textContent = arr.join(" ");
     }
-
-    //  document.getElementById("task50ans").textContent = litera + newletter;
-
-
-
-
 }
