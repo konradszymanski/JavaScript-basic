@@ -568,3 +568,15 @@ task50 = () => {
         document.getElementById("task50ans").textContent = arr.join(" ");
     }
 }
+//convert a given number to hours and minutes
+task51 = () => {
+    let task51number = document.getElementById("task51").value;
+    let godziny = task51number / 60
+    if (isNaN(task51number)) {
+        document.getElementById("task51ans").textContent = "numbers only";
+    } else {
+        document.getElementById("task51ans").textContent = task51number + " is " + parseInt(godziny) + " hours and " + (task51number - parseInt(godziny) * 60) + " minutes"
+        //parseInt(godziny) + (task51number - parseInt(godziny) * 60);
+    }
+}
+//document.getElementById("task51ans").textContent = task51number;
