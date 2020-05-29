@@ -536,6 +536,7 @@ task48 = () => {
     document.getElementById("task48ans").innerHTML = task48word.split("").reverse().join("");
     //devide string to single characters, than reverse characters. join method will delete commas from array. 
 }
+//replace every character in a given string with the character following it in the alphabet
 task49 = () => {
     let letters = document.getElementById("task49").value;
     // let arr will change letter to small
@@ -548,4 +549,20 @@ task49 = () => {
         //charcodeat is to find unicode by letter
         document.getElementById("task49ans").textContent += String.fromCharCode(1 + letters.charCodeAt(i));
     }
+}
+// capitalize the first letter of each word
+task50 = () => {
+    let task50word = document.getElementById("task50").value;
+    let newletter = task50word.toLowerCase().substring(1);
+    let litera = task50word.toUpperCase().charAt(0);
+    for (let i = 0; i < task50word.length; i++) {
+        document.getElementById("task50ans").textContent = litera + newletter;
+
+    }
+
+    //  document.getElementById("task50ans").textContent = litera + newletter;
+
+
+
+
 }
