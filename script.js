@@ -584,7 +584,16 @@ task52 = () => {
     let task52word = document.getElementById("task52").value;
     document.getElementById("task52ans").textContent = task52word.split("").sort().join("");
 }
-//
+// check characters a and b are separated by 3 places exactly
 task53 = () => {
-
+    let task53word = document.getElementById("task53").value;
+    let task53a = task53word.indexOf("a")
+    let task53b = task53word.indexOf("b")
+    //|| task53b - task53a == 0 || (task53a + 1) - task53b == 3
+    if (task53b - (task53a + 1) == 3 || (task53a - 1) - task53b == 3) {
+        document.getElementById("task53ans").textContent = "true"
+    } else {
+        document.getElementById("task53ans").textContent = task53a + " " +
+            task53b
+    }
 }
