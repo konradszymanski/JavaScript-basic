@@ -584,3 +584,7 @@ task52 = () => {
     let task52word = document.getElementById("task52").value;
     document.getElementById("task52ans").textContent = task52word.split("").sort().join("");
 }
+//
+task53 = () => {
+
+}
