@@ -579,4 +579,8 @@ task51 = () => {
         //parseInt(godziny) + (task51number - parseInt(godziny) * 60);
     }
 }
-//document.getElementById("task51ans").textContent = task51number;
+//convert the letters of a given string in alphabetical order
+task52 = () => {
+    let task52word = document.getElementById("task52").value;
+    document.getElementById("task52ans").textContent = task52word.split("").sort().join("");
+}
