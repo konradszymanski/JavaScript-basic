@@ -22,6 +22,7 @@ h3,
 
 .btn-outline-dark {
   width: 150px;
+  margin-top: 5px;
 }
 
 table {
@@ -51,4 +52,8 @@ table {
 td {
   margin: 10px auto;
   text-align-last: center;
+}
+
+.goToTop {
+  margin-bottom: 15px;
 }
