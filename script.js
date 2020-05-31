@@ -597,3 +597,7 @@ task53 = () => {
             task53b
     }
 }
+//count the number of vowels in a given string.
+task54 = () => {
+
+}
