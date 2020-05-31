@@ -599,5 +599,10 @@ task53 = () => {
 }
 //count the number of vowels in a given string.
 task54 = () => {
+    let task54word = document.getElementById("task54").value;
+    let vowel = task54word.match(/[aeiou]/g);
+    document.getElementById("task54ans").textContent = `String has ${vowel} which is ${vowel.length}`
+    //aeiou
+
 
 }
