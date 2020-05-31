@@ -614,5 +614,10 @@ task55 = () => {
     } else {
         document.getElementById("task55ans").textContent = `false`
     }
-
+} //divide two positive numbers and return a string with properly formatted commas
+task56 = () => {
+    let task56word = document.getElementById("task56");
+    let num56 = task56word.value.split(" ")
+    let commas = num56[0] / num56[1]
+    document.getElementById("task56ans").textContent = commas.toString().split("")
 }
