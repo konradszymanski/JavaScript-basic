@@ -598,11 +598,21 @@ task53 = () => {
     }
 }
 //count the number of vowels in a given string.
+//aeiou
 task54 = () => {
     let task54word = document.getElementById("task54").value;
-    let vowel = task54word.match(/[aeiou]/g);
+    let vowel = task54word.toLowerCase().match(/[aeiou]/g);
     document.getElementById("task54ans").textContent = `String has ${vowel} which is ${vowel.length}`
-    //aeiou
-
+}
+//given string contains equal number of p's and t's
+task55 = () => {
+    let task55word = document.getElementById("task55").value;
+    let wordP = task55word.toLowerCase().match(/p/g);
+    let wordT = task55word.toLowerCase().match(/t/g);
+    if (wordP.lenght == wordP.lenght) {
+        document.getElementById("task55ans").textContent = `True! There is ${wordP.length} pairs`;
+    } else {
+        document.getElementById("task55ans").textContent = `false`
+    }
 
 }
