@@ -647,3 +647,8 @@ task59 = () => {
         document.getElementById("task59ans").textContent = `Divide is not possible`
     }
 }
+//reate a new string without the first and last character of a given string
+task60 = () => {
+    let task60word = document.getElementById("task60").value;
+    document.getElementById("task60ans").textContent = task60word.slice(1, (task60word.length - 1))
+}
