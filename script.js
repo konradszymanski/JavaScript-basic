@@ -621,3 +621,23 @@ task56 = () => {
     let commas = num56[0] / num56[1]
     document.getElementById("task56ans").textContent = commas.toString().split("")
 }
+//create a new string of specified copies (positive number) of a given string.
+task57 = () => {
+    let task57word = document.getElementById("task57").value;
+    let num57 = task57word.split(" ");
+    document.getElementById("task57ans").textContent = num57[0].repeat(num57[1]);
+}
+// create a new string of 4 copies of the last 3 characters of a given original string.
+task58 = () => {
+    let task58word = document.getElementById("task58").value;
+    let piece = task58word.slice(-3);
+    if (task58word.length < 3) {
+        document.getElementById("task58ans").textContent = "Word is too short."
+    } else {
+        document.getElementById("task58ans").textContent = piece.repeat(4)
+    }
+}
+//
+task59 = () => {
+
+}
