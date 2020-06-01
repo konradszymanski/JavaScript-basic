@@ -637,7 +637,13 @@ task58 = () => {
         document.getElementById("task58ans").textContent = piece.repeat(4)
     }
 }
-//
+//extract the first half of a string of even length
 task59 = () => {
-
+    let task59word = document.getElementById("task59").value;
+    let half = task59word.length / 2;
+    if (task59word.length % 2 === 0) {
+        document.getElementById("task59ans").textContent = task59word.slice(0, half)
+    } else {
+        document.getElementById("task59ans").textContent = `Divide is not possible`
+    }
 }
