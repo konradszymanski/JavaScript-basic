@@ -652,3 +652,10 @@ task60 = () => {
     let task60word = document.getElementById("task60").value;
     document.getElementById("task60ans").textContent = task60word.slice(1, (task60word.length - 1))
 }
+//concatenate two strings except their first character
+task61 = () => {
+    let task61word = document.getElementById("task61").value;
+    let word = task61word.split(' ')
+    let conc = word[0].toString().slice(1).concat(word[1].slice(1))
+    document.getElementById("task61ans").textContent = conc;
+}
