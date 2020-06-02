@@ -659,3 +659,14 @@ task61 = () => {
     let conc = word[0].toString().slice(1).concat(word[1].slice(1))
     document.getElementById("task61ans").textContent = conc;
 }
+//move last three character to the start of a given string. The string length must be greater or equal to three.
+task62 = () => {
+    let task62word = document.getElementById("task62").value;
+    let word = task62word.slice(-3)
+    let conc = task62word.substring(0, -3)
+    if (task62word.length < 3) {
+        document.getElementById("task62ans").textContent = `word should have 3 or more letters`;
+    } else {
+        document.getElementById("task62ans").textContent = word + conc;
+    }
+}
