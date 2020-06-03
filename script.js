@@ -44,9 +44,6 @@ window.onload = function () {
     var ar = (aa + bb + cc) / 2;
     var area = Math.sqrt(ar * ((ar - aa) * (ar - bb) * (ar - cc)));
     document.getElementById("task4").innerHTML = area;
-    //task5
-    task5 = "w3resource"
-    document.getElementById("task5").innerHTML = task5.slice();
     //task 7        
     // loop from 2014 to 2050, count every year
     for (var year = 2014; year <= 2050; year++) {
@@ -66,8 +63,19 @@ window.onload = function () {
     var howManyDays = (Math.ceil((xmasDay - toDay) / (oneDay)));
     document.getElementById("task9").innerHTML = howManyDays;
 
+
+    //task 5 
+    //let cos = "w3resource"
+    var cos = document.getElementById("task5");
+    // document.getElementById("ans").innerHTML = cos.slice(-1)
+
+    setInterval(function () {
+        document.getElementById("ans").innerHTML = cos[cos.length - 1] + cos.substr(0, (cos.length - 1))
+    }, 100);
+
 }
-//task 5 
+
+
 //task 6
 function checkYear() {
     //take value
@@ -384,7 +392,7 @@ function task34() {
         document.getElementById("task34ans").innerHTML = "not in range 40 - 60";
     }
 }
-// //task35
+//task35
 function task35() {
     task35word = document.getElementById("task35a").value;
     task35char = document.getElementById("task35b").value;
@@ -663,10 +671,23 @@ task61 = () => {
 task62 = () => {
     let task62word = document.getElementById("task62").value;
     let word = task62word.slice(-3)
-    let conc = task62word.substring(0, -3)
+    let conc = task62word.substring(0, (task62word.length - 3))
     if (task62word.length < 3) {
         document.getElementById("task62ans").textContent = `word should have 3 or more letters`;
     } else {
         document.getElementById("task62ans").textContent = word + conc;
+    }
+}
+//create a string using the middle three characters of a given string of odd length
+task63 = () => {
+    let task63word = document.getElementById("task63").value;
+    //let word = task63word.slice(-3)
+    //let conc = task63word.substring(0, (task63word.length - 3))
+    if (task63word.length < 3) {
+        document.getElementById("task63ans").textContent = `word should have 3 or more letters`;
+    } else if (task63word.length % 2 === 0) {
+        document.getElementById("task63ans").textContent = task63word;
+    } else {
+        document.getElementById("task63ans").textContent = task63word.substr((task63word.length / 2) - 1, 3);
     }
 }
