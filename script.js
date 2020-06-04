@@ -691,3 +691,15 @@ task63 = () => {
         document.getElementById("task63ans").textContent = task63word.substr((task63word.length / 2) - 1, 3);
     }
 }
+//concatenate two strings and return the result. If the length of the strings are not same then remove the characters from the longer string
+task64 = () => {
+    let task64word = document.getElementById("task64");
+    let ww = task64word.value.split(" ")
+    if (ww[0].length > ww[1].length) {
+        document.getElementById("task64ans").textContent = ww[0].toString().slice(ww[1].length) + w[1]
+    } else if (ww[0].length < ww[1].length) {
+        document.getElementById("task64ans").textContent = w[0] + ww[1].toString().slice(ww[0].length)
+    } else {
+        document.getElementById("task64ans").textContent = ww[0] + ww[1]
+    }
+}
