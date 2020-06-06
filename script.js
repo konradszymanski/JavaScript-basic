@@ -705,4 +705,7 @@ task64 = () => {
         document.getElementById("task64ans").textContent = ww[0] + ww[1]
     }
 }
-//task65
+//test whether a string end with "Script"
+task65 = () => {
+    let task64word = document.getElementById("task64");
+}
