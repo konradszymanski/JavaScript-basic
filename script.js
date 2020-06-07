@@ -707,5 +707,14 @@ task64 = () => {
 }
 //test whether a string end with "Script"
 task65 = () => {
-    let task64word = document.getElementById("task64");
+    let task65word = document.getElementById("task65").value;
+    let pword = task65word.toLowerCase().slice(-6);
+    if (task65word.length < 6) {
+        document.getElementById("task65ans").textContent = "word is too short! 6 letters is minimum";
+    } else if (pword === "script") {
+        document.getElementById("task65ans").textContent = "true";
+    } else {
+        document.getElementById("task65ans").textContent = "false";
+    }
+
 }
