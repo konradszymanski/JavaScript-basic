@@ -64,67 +64,68 @@ window.onload = function () {
     document.getElementById("task9").innerHTML = howManyDays;
 
 
-    //task 5 
-    //let cos = "w3resource"
-    var cos = document.getElementById("task5");
-    // document.getElementById("ans").innerHTML = cos.slice(-1)
+    //     //task 5 
+    //     //let cos = "w3resource"
+    //     var cos = document.getElementById("task5");
+    //     // document.getElementById("ans").innerHTML = cos.slice(-1)
 
-    setInterval(function () {
-        document.getElementById("ans").innerHTML = cos[cos.length - 1] + cos.substr(0, (cos.length - 1))
-    }, 100);
+    //     setInterval(function () {
+    //         document.getElementById("ans").innerHTML = cos[cos.length - 1] + cos.substr(0, (cos.length - 1))
+    //     }, 100);
 
+    // }
+
+
+    //task 6
+    function checkYear() {
+        //take value
+        var leap = document.getElementById("leapYear").value;
+        // document.getElementById("againLeap").innerHTML = leap;
+        var leapFour = 4;
+        // check if value is number
+        if (isNaN(leap)) {
+            document.getElementById("againLeap").innerHTML = "Type numbers only";
+            document.getElementById("task6").style.backgroundColor = "#d9534f";
+            // check if its empty string
+        } else if (leap == "") {
+            document.getElementById("againLeap").innerHTML = "Type any number";
+            document.getElementById("task6").style.backgroundColor = "#5bc0de";
+        }
+        // leap year is divisionable by4
+        else if (leap % leapFour == 0) {
+            document.getElementById("againLeap").innerHTML = "This is Leap Year!";
+            document.getElementById("task6").style.backgroundColor = "#5cb85c";
+        } else {
+            //if (leap % leapFour != 0)  
+            document.getElementById("againLeap").innerHTML = "This is not Leap Year!";
+            document.getElementById("task6").style.backgroundColor = "#f0ad4e";
+        }
+    };
+    //task 7 inside window.onload
+    //task8
+    function guessNumber() {
+        // take value
+        var givenNumber = document.getElementById("takeNumber").value;
+        // random from 1-10
+        var rand = Math.floor(Math.random() * 10);
+        document.getElementById("guessOutcome").innerHTML = rand;
+        if (isNaN(givenNumber)) {
+            document.getElementById("guessOutcome").innerHTML = "Type number!";
+            document.getElementById("task8").style.backgroundColor = "#f0ad4e";
+            document.getElementById("takeNumber").value = '';
+        } else if (givenNumber == rand) {
+            document.getElementById("guessOutcome").innerHTML = "Good work! You hit " + rand;
+            document.getElementById("task8").style.backgroundColor = "#5cb85c";
+            document.getElementById("takeNumber").value = '';
+        } else {
+            document.getElementById("guessOutcome").innerHTML = "Not matched! The number was: " + rand;
+            document.getElementById("task8").style.backgroundColor = "#d9534f";
+            document.getElementById("takeNumber").value = '';
+
+        }
+    }
+    //task 9 inside window.onload
 }
-
-
-//task 6
-function checkYear() {
-    //take value
-    var leap = document.getElementById("leapYear").value;
-    // document.getElementById("againLeap").innerHTML = leap;
-    var leapFour = 4;
-    // check if value is number
-    if (isNaN(leap)) {
-        document.getElementById("againLeap").innerHTML = "Type numbers only";
-        document.getElementById("task6").style.backgroundColor = "#d9534f";
-        // check if its empty string
-    } else if (leap == "") {
-        document.getElementById("againLeap").innerHTML = "Type any number";
-        document.getElementById("task6").style.backgroundColor = "#5bc0de";
-    }
-    // leap year is divisionable by4
-    else if (leap % leapFour == 0) {
-        document.getElementById("againLeap").innerHTML = "This is Leap Year!";
-        document.getElementById("task6").style.backgroundColor = "#5cb85c";
-    } else {
-        //if (leap % leapFour != 0)  
-        document.getElementById("againLeap").innerHTML = "This is not Leap Year!";
-        document.getElementById("task6").style.backgroundColor = "#f0ad4e";
-    }
-};
-//task 7 inside window.onload
-//task8
-function guessNumber() {
-    // take value
-    var givenNumber = document.getElementById("takeNumber").value;
-    // random from 1-10
-    var rand = Math.floor(Math.random() * 10);
-    document.getElementById("guessOutcome").innerHTML = rand;
-    if (isNaN(givenNumber)) {
-        document.getElementById("guessOutcome").innerHTML = "Type number!";
-        document.getElementById("task8").style.backgroundColor = "#f0ad4e";
-        document.getElementById("takeNumber").value = '';
-    } else if (givenNumber == rand) {
-        document.getElementById("guessOutcome").innerHTML = "Good work! You hit " + rand;
-        document.getElementById("task8").style.backgroundColor = "#5cb85c";
-        document.getElementById("takeNumber").value = '';
-    } else {
-        document.getElementById("guessOutcome").innerHTML = "Not matched! The number was: " + rand;
-        document.getElementById("task8").style.backgroundColor = "#d9534f";
-        document.getElementById("takeNumber").value = '';
-
-    }
-}
-//task 9 inside window.onload
 //task 10 
 function multiply() {
     firstNumber = document.getElementById("firstNumber").value;
@@ -720,6 +721,10 @@ task65 = () => {
 //display the city name if the string begins with "Los" or "New"
 task66 = () => {
     let task66word = document.getElementById("task66").value;
-    let piece = task66word.slice(0, 3);
-    document.getElementById("task66ans").textContent = piece;
+    let piece = task66word.toLowerCase().slice(0, 3);
+    if (piece == "new" || piece == "los") {
+        document.getElementById("task66ans").textContent = "true";
+    } else {
+        document.getElementById("task66ans").textContent = "";
+    }
 }
