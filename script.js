@@ -716,5 +716,10 @@ task65 = () => {
     } else {
         document.getElementById("task65ans").textContent = "false";
     }
-
+}
+//display the city name if the string begins with "Los" or "New"
+task66 = () => {
+    let task66word = document.getElementById("task66").value;
+    let piece = task66word.slice(0, 3);
+    document.getElementById("task66ans").textContent = piece;
 }
