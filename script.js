@@ -728,3 +728,4 @@ task66 = () => {
         document.getElementById("task66ans").textContent = "";
     }
 }
+//task67
