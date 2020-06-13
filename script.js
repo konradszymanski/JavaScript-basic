@@ -728,4 +728,13 @@ task66 = () => {
         document.getElementById("task66ans").textContent = "";
     }
 }
-//task67
+//create a new string from a given string, removing the first and last characters of the string if the first or last character are 'P'
+task67 = () => {
+    let task67word = document.getElementById("task67").value;
+    let piece = task67word.toLowerCase().charAt(0)
+    if (piece === "p") {
+        document.getElementById("task67ans").textContent = task67word.slice(1, (task67word.length - 1));
+    } else {
+        document.getElementById("task67ans").textContent = task67word
+    }
+}
