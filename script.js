@@ -738,3 +738,13 @@ task67 = () => {
         document.getElementById("task67ans").textContent = task67word
     }
 }
+//create a new string using the first and last n characters from a given sting.The string length must be greater or equal to n.
+task68 = () => {
+    let task68w = document.getElementById("task68w").value;
+    let n68 = document.getElementById("task68n").value;
+    if (task68w.length >= n68) {
+        document.getElementById("task68ans").textContent = task68w.slice(n68, task68w.length - n68)
+    } else {
+        document.getElementById("task68ans").textContent = "The string length must be greater or equal to n."
+    }
+}
