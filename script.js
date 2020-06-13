@@ -748,3 +748,9 @@ task68 = () => {
         document.getElementById("task68ans").textContent = "The string length must be greater or equal to n."
     }
 }
+//compute the sum of three elements of a given array of integers of length 3.
+task69 = () => {
+    let task69numbers = document.getElementById("task69").value
+    let num = task69numbers.split(" ");
+    document.getElementById("task69ans").textContent = num.reduce((a, c) => a + Number(c), 0);
+}
