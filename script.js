@@ -754,3 +754,7 @@ task69 = () => {
     let num = task69numbers.split(" ");
     document.getElementById("task69ans").textContent = num.reduce((a, c) => a + Number(c), 0);
 }
+//rotate the elements left of a given array of integers of length 3.
+task70 = () => {
+
+}
