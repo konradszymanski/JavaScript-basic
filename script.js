@@ -756,5 +756,11 @@ task69 = () => {
 }
 //rotate the elements left of a given array of integers of length 3.
 task70 = () => {
-
+    let task70number = document.getElementById("task70").value;
+    if (task70number.length === 3) {
+        let nowy = task70number.split("");
+        document.getElementById("task70ans").textContent = ` ${nowy[1]} ${nowy[2]} ${nowy[0]} `;
+    } else {
+        document.getElementById("task70ans").textContent = `3 numbers only!`
+    }
 }
