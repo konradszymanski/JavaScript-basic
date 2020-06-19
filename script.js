@@ -851,9 +851,9 @@ task70 = () => {
 task71 = () => {
   let task71number = document.getElementById("task71").value;
   let nowy = task71number.split("");
-  if (nowy[0] === 1) {
+  if (nowy[0] == 1) {
     document.getElementById("task71ans").textContent = `true`;
   } else {
-    document.getElementById("task71ans").textContent = ``
+    document.getElementById("task71ans").textContent = `false`;
   }
 }
