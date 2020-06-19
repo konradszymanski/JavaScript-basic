@@ -62,7 +62,7 @@ window.onload = function () {
     var firstJan = new Date(year, 0, 1);
     if (firstJan.getDay() === 0)
       document.getElementById("task7").innerHTML =
-        "1st January is being a Sunday  " + year;
+      "1st January is being a Sunday  " + year;
   }
   //task9
   var dayNow = new Date();
@@ -848,3 +848,12 @@ task70 = () => {
   }
 };
 //check whether 1 appears in first or last position of a given array of integers. The array length must be greater or equal to 1.
+task71 = () => {
+  let task71number = document.getElementById("task71").value;
+  let nowy = task71number.split("");
+  if (nowy[0] === 1) {
+    document.getElementById("task71ans").textContent = `true`;
+  } else {
+    document.getElementById("task71ans").textContent = ``
+  }
+}
