@@ -867,3 +867,13 @@ task72 = () => {
     document.getElementById("task72ans").textContent = `false`;
   }
 };
+//reverse the elements of a given array of integers length 3.
+task73 = () => {
+  let task73number = document.getElementById("task73").value;
+  let nowy = task73number.split(" ");
+  if (nowy.length === 3) {
+    document.getElementById("task73ans").textContent = nowy.reverse();
+  } else {
+    document.getElementById("task73ans").textContent = `3 integers only!`;
+  }
+};
