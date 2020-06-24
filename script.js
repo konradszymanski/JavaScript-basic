@@ -877,3 +877,14 @@ task73 = () => {
     document.getElementById("task73ans").textContent = `3 integers only!`;
   }
 };
+//find the larger value between the first or last and set all the other elements with that value. Display the new array.
+task74 = () => {
+  let task74number = document.getElementById("task74").value;
+  let nowy = task74number.split(" ");
+  nowy.sort(function (a, b) {
+    return a - b;
+  });
+  document.getElementById(
+    "task74ans"
+  ).textContent = `${nowy[2]}  ${nowy[2]} ${nowy[2]}`;
+};
