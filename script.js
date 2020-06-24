@@ -888,3 +888,11 @@ task74 = () => {
     "task74ans"
   ).textContent = `${nowy[2]}  ${nowy[2]} ${nowy[2]}`;
 };
+//create a new array taking the middle elements of the two arrays of integer and each length 3.
+task75 = () => {
+  let task75number = document.getElementById("task75a").value;
+  let task75numberb = document.getElementById("task75b").value;
+  let nowy = task75number.split(" ");
+  let nowyb = task75numberb.split(" ");
+  document.getElementById("task75ans").textContent = `${nowy[1]} ${nowyb[1]} `;
+};
