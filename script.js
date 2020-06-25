@@ -896,3 +896,11 @@ task75 = () => {
   let nowyb = task75numberb.split(" ");
   document.getElementById("task75ans").textContent = `${nowy[1]} ${nowyb[1]} `;
 };
+//create a new array taking the first and last elements from a given array of integers and length must be greater or equal to 1.
+task76 = () => {
+  let task76number = document.getElementById("task76").value;
+  let nowy = task76number.split(" ");
+  document.getElementById("task76ans").textContent = `${nowy[0]}  ${
+    nowy[nowy.length - 1]
+  }`;
+};
