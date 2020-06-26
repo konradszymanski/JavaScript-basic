@@ -904,3 +904,13 @@ task76 = () => {
     nowy[nowy.length - 1]
   }`;
 };
+//test whether an array of integers of length 2 contains 1 or a 3.
+task77 = () => {
+  let task77number = document.getElementById("task77").value;
+  let nowy = task77number.split(" ");
+  if (nowy[0] == 1 || nowy[0] == 3 || nowy[1] == 1 || nowy[1] == 3) {
+    document.getElementById("task77ans").textContent = `true`;
+  } else {
+    document.getElementById("task77ans").textContent = `false`;
+  }
+};
