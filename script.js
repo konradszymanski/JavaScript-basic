@@ -914,3 +914,13 @@ task77 = () => {
     document.getElementById("task77ans").textContent = `false`;
   }
 };
+//test whether an array of integers of length 2 does not contain 1 or a 3.
+task78 = () => {
+  let task78number = document.getElementById("task78").value;
+  let nowy = task78number.split(" ");
+  if (nowy[0] != 1 || nowy[0] != 3 || nowy[1] != 1 || nowy[1] != 3) {
+    document.getElementById("task78ans").textContent = `true`;
+  } else {
+    document.getElementById("task78ans").textContent = `false`;
+  }
+};
