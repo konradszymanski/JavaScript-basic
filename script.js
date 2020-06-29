@@ -924,3 +924,9 @@ task78 = () => {
     document.getElementById("task78ans").textContent = `false`;
   }
 };
+//test whether a given array of integers contains 30 and 40 twice. The array length should be 0,1, or 2
+task79 = () => {
+  let task79number = document.getElementById("task79").value;
+  let nowy = task79number.split(" ");
+  document.getElementById("task79ans").textContent = nowy;
+};
