@@ -928,10 +928,10 @@ task78 = () => {
 task79 = () => {
   let task79number = document.getElementById("task79").value;
   let nowy = task79number.split(" ");
-  document.getElementById("task79ans").textContent = nowy;
-  // if (nowy.include("30")) {
-  //   document.getElementById("task79ans").textContent = nowy;
-  // } else {
-  //   document.getElementById("task79ans").textContent = `false`;
-  // }
+
+  if ((nowy[0] == 30 && nowy[1] == 30) || (nowy[0] == 40 && nowy[1] == 40)) {
+    document.getElementById("task79ans").textContent = `true`;
+  } else {
+    document.getElementById("task79ans").textContent = `false`;
+  }
 };
