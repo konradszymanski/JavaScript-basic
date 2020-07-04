@@ -928,10 +928,17 @@ task78 = () => {
 task79 = () => {
   let task79number = document.getElementById("task79").value;
   let nowy = task79number.split(" ");
-
   if ((nowy[0] == 30 && nowy[1] == 30) || (nowy[0] == 40 && nowy[1] == 40)) {
     document.getElementById("task79ans").textContent = `true`;
   } else {
     document.getElementById("task79ans").textContent = `false`;
   }
+};
+//swap the first and the last elements of given array of integers. The array length should be at least 1.
+task80 = () => {
+  let task80number = document.getElementById("task80").value;
+  let nowy = task80number.split(" ");
+  document.getElementById("task80ans").textContent = `${
+    nowy[nowy.length - 1]
+  },${nowy.slice(1, -1)},${nowy[0]}`;
 };
