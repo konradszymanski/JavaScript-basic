@@ -942,3 +942,16 @@ task80 = () => {
     nowy[nowy.length - 1]
   },${nowy.slice(1, -1)},${nowy[0]}`;
 };
+//add two digits of a given positive integer of length two.
+task81 = () => {
+  let task81number = document.getElementById("task81").value;
+  //let nowy = task81number.parseInt();
+  if (task81number.length != 2) {
+    document.getElementById(
+      "task81ans"
+    ).textContent = `Integer shoud have 2 digits only`;
+  } else {
+    document.getElementById("task81ans").textContent =
+      parseInt(task81number.charAt(0)) + parseInt(task81number.charAt(1));
+  }
+};
