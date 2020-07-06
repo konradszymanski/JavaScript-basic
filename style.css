@@ -57,3 +57,9 @@ td {
 .goToTop {
   margin-bottom: 15px;
 }
+
+@media only screen and (max-width: 1240px) {
+  table {
+    max-width: 90%;
+  }
+}
