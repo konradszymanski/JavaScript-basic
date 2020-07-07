@@ -956,3 +956,11 @@ task81 = () => {
   }
 };
 //Write a JavaScript to add two positive integers without carry.
+task82 = () => {
+  let task82number = document.getElementById("task82").value;
+  let nowy = task82number.split(" ");
+  result = parseInt(nowy[0]) + parseInt(nowy[1]);
+
+  //nowyadd = parseInt(nowy[0]) + parseInt(nowy[1]);
+  document.getElementById("task82ans").textContent = result;
+};
