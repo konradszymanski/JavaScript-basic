@@ -52,6 +52,7 @@ table {
 td {
   margin: 10px auto;
   text-align-last: center;
+  vertical-align: baseline;
 }
 
 .goToTop {
