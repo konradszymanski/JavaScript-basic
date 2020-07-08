@@ -959,9 +959,6 @@ task81 = () => {
 task82 = () => {
   let task82number = document.getElementById("task82").value;
   let nowy = task82number.split(" ");
-  // result = parseInt(nowy[0]) + parseInt(nowy[1]);
-
-  //nowyadd = parseInt(nowy[0]) + parseInt(nowy[1]);
   var result = 0,
     xx = 1;
   while (nowy[0] > 0 && nowy[1] > 0) {
@@ -972,4 +969,13 @@ task82 = () => {
   }
 
   document.getElementById("task82ans").textContent = result;
+};
+//Write a JavaScript to find the longest string from a given array of strings.
+task83 = () => {
+  let task83number = document.getElementById("task83").value;
+  let nowy = task83number.split(" ").sort();
+  nowy.sort(function (a, b) {
+    return a - b;
+  });
+  document.getElementById("task83ans").textContent = nowy[nowy.length - 1];
 };
