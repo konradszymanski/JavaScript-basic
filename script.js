@@ -959,8 +959,17 @@ task81 = () => {
 task82 = () => {
   let task82number = document.getElementById("task82").value;
   let nowy = task82number.split(" ");
-  result = parseInt(nowy[0]) + parseInt(nowy[1]);
+  // result = parseInt(nowy[0]) + parseInt(nowy[1]);
 
   //nowyadd = parseInt(nowy[0]) + parseInt(nowy[1]);
+  var result = 0,
+    xx = 1;
+  while (nowy[0] > 0 && nowy[1] > 0) {
+    result += xx * ((nowy[0] + nowy[1]) % 10);
+    n1 = Math.floor(nowy[0] / 10);
+    n2 = Math.floor(nowy[1] / 10);
+    xx *= 10;
+  }
+
   document.getElementById("task82ans").textContent = result;
 };
