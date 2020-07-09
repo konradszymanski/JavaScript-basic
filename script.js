@@ -980,4 +980,13 @@ task83 = () => {
   document.getElementById("task83ans").textContent = nowy[nowy.length - 1];
 };
 //replace each character of a given string by the next one in the English alphabet.
-task84 = () => {};
+task84 = () => {
+  const task84word = document.getElementById("task84").value;
+  for (let i = 0; i < task84word.length; i++) {
+    // fromcharcode is to find letter by Unicode
+    //charcodeat is to find unicode by letter
+    document.getElementById("task84ans").textContent += String.fromCharCode(
+      1 + task84word.charCodeAt(i)
+    );
+  }
+};
