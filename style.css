@@ -45,6 +45,11 @@ table {
   background-color: red;
 }
 
+.nowaklasa {
+  font-size: 100px;
+  border: 10px solib black
+}
+
 .answer {
   margin: 10px auto 0 auto;
 }

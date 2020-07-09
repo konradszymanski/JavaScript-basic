@@ -979,3 +979,5 @@ task83 = () => {
   });
   document.getElementById("task83ans").textContent = nowy[nowy.length - 1];
 };
+//replace each character of a given string by the next one in the English alphabet.
+task84 = () => {};
