@@ -990,3 +990,4 @@ task84 = () => {
     );
   }
 };
+//divide a given array of positive integers into two parts. First element goes to first part, second element goes to second part, and third element goes to first part and so on. Now compute the sum of two parts and store into an array of size two.
