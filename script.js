@@ -991,3 +991,14 @@ task84 = () => {
   }
 };
 //divide a given array of positive integers into two parts. First element goes to first part, second element goes to second part, and third element goes to first part and so on. Now compute the sum of two parts and store into an array of size two.
+task85 = () => {
+  let task85number = document.getElementById("task85");
+  let nowy = task85number.split(" ");
+  document.getElementById("task85ans").textContent = nowy;
+
+  // const sum = 0;
+  // for (let i = 0; i < arr.length; i++) {
+  //   sum += arr[i];
+  //   document.getElementById("task85ans").textContent = sum;
+  // }
+};
