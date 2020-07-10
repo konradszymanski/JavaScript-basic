@@ -996,14 +996,16 @@ task85 = () => {
   let nowy = task85number.split(" ");
   let odd = 0;
   let even = 0;
-  let sum = 0;
+
   for (let i = 0; i < nowy.length; i++) {
     if (i % 2 === 0) {
       odd += nowy[i];
-      sum = odd[i];
+      // sum = nowy. reduce(function(a, b){
+      //       return a + b;}
     } else {
       even += nowy[i];
     }
   }
+
   document.getElementById("task85ans").textContent = `${odd} and ${even}`;
 };
