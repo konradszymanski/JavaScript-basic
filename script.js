@@ -62,7 +62,7 @@ window.onload = function () {
     var firstJan = new Date(year, 0, 1);
     if (firstJan.getDay() === 0)
       document.getElementById("task7").innerHTML =
-        "1st January is being a Sunday  " + year;
+      "1st January is being a Sunday  " + year;
   }
   //task9
   var dayNow = new Date();
@@ -993,13 +993,14 @@ task84 = () => {
 //divide a given array of positive integers into two parts. First element goes to first part, second element goes to second part, and third element goes to first part and so on. Now compute the sum of two parts and store into an array of size two.
 task85 = () => {
   let task85number = document.getElementById("task85").value;
-  let nowy = task85number.split(" ");
+  let nowy = task85number.split("");
   let odd = 0;
   let even = 0;
 
   for (let i = 0; i < nowy.length; i++) {
     if (i % 2 === 0) {
       odd += nowy[i];
+
       // sum = nowy. reduce(function(a, b){
       //       return a + b;}
     } else {
@@ -1008,4 +1009,15 @@ task85 = () => {
   }
 
   document.getElementById("task85ans").textContent = `${odd} and ${even}`;
-};
+}
+//   const result = [0, 0];
+//   for (let i = 0; i < nowy.length; i++) {
+//     if (i % 2) result[1] += nowy[i];
+//     else
+//       result[0] += nowy[i];
+//   }
+//   document.getElementById("task85ans").textContent += result
+// };
+
+
+//find the types of a given angle. Types of angles:
