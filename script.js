@@ -1032,3 +1032,5 @@ task86 = () => {
     document.getElementById("task86ans").textContent = `Write numbers from 0 to 180 only`;
   }
 };
+//check whether two arrays of integers of same length are similar or not.
+task87 = () => {}
