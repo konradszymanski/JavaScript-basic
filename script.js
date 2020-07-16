@@ -1033,4 +1033,18 @@ task86 = () => {
   }
 };
 //check whether two arrays of integers of same length are similar or not.
-task87 = () => {}
+task87 = () => {
+  let task87number = document.getElementById("task87").value;
+  let nowy = task87number.split("");
+  const nums = nowy[0].some((val) => nowy[1].indexOf(val) !== -1);
+
+  if (nowy[0].length != nowy[1].length) {
+    document.getElementById("task87ans").textContent = `false`
+  } else if (nowy[0].length == nowy[1].length) {
+    if (nums == true) {
+      document.getElementById("task87ans").textContent = `true`
+    } else {
+      document.getElementById("task87ans").textContent = `false`
+    }
+  }
+}
