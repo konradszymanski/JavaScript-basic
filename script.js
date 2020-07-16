@@ -994,30 +994,41 @@ task84 = () => {
 task85 = () => {
   let task85number = document.getElementById("task85").value;
   let nowy = task85number.split("");
-  let odd = 0;
-  let even = 0;
+  //   let odd = 0;
+  //   let even = 0;
 
+  //   for (let i = 0; i < nowy.length; i++) {
+  //     if (i % 2 === 0) {
+  //       odd += nowy[i];
+
+  //       // sum = nowy. reduce(function(a, b){
+  //       //       return a + b;}
+  //     } else {
+  //       even += nowy[i];
+  //     }
+  //   }
+  //   document.getElementById("task85ans").textContent = `${odd} and ${even}`;
+  // }
+  const result = [0, 0];
   for (let i = 0; i < nowy.length; i++) {
-    if (i % 2 === 0) {
-      odd += nowy[i];
-
-      // sum = nowy. reduce(function(a, b){
-      //       return a + b;}
-    } else {
-      even += nowy[i];
-    }
+    if (i % 2) result[1] += nowy[i];
+    else
+      result[0] += nowy[i];
   }
-
-  document.getElementById("task85ans").textContent = `${odd} and ${even}`;
-}
-//   const result = [0, 0];
-//   for (let i = 0; i < nowy.length; i++) {
-//     if (i % 2) result[1] += nowy[i];
-//     else
-//       result[0] += nowy[i];
-//   }
-//   document.getElementById("task85ans").textContent += result
-// };
-
-
+  document.getElementById("task85ans").textContent = result
+};
 //find the types of a given angle. Types of angles:
+task86 = () => {
+  let angle = document.getElementById("task86").value;
+  if (angle >= 0 && angle < 90) {
+    document.getElementById("task86ans").textContent = `Acute angle`;
+  } else if (angle == 90) {
+    document.getElementById("task86ans").textContent = `Right angle`;
+  } else if (angle > 90 && angle < 180) {
+    document.getElementById("task86ans").textContent = `Obtuse angle`;
+  } else if (angle == 180) {
+    document.getElementById("task86ans").textContent = `Straight angle`;
+  } else {
+    document.getElementById("task86ans").textContent = `Write numbers from 0 to 180 only`;
+  }
+};
