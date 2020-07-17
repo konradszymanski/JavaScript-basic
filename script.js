@@ -62,7 +62,7 @@ window.onload = function () {
     var firstJan = new Date(year, 0, 1);
     if (firstJan.getDay() === 0)
       document.getElementById("task7").innerHTML =
-      "1st January is being a Sunday  " + year;
+        "1st January is being a Sunday  " + year;
   }
   //task9
   var dayNow = new Date();
@@ -1012,10 +1012,9 @@ task85 = () => {
   const result = [0, 0];
   for (let i = 0; i < nowy.length; i++) {
     if (i % 2) result[1] += nowy[i];
-    else
-      result[0] += nowy[i];
+    else result[0] += nowy[i];
   }
-  document.getElementById("task85ans").textContent = result
+  document.getElementById("task85ans").textContent = result;
 };
 //find the types of a given angle. Types of angles:
 task86 = () => {
@@ -1029,7 +1028,9 @@ task86 = () => {
   } else if (angle == 180) {
     document.getElementById("task86ans").textContent = `Straight angle`;
   } else {
-    document.getElementById("task86ans").textContent = `Write numbers from 0 to 180 only`;
+    document.getElementById(
+      "task86ans"
+    ).textContent = `Write numbers from 0 to 180 only`;
   }
 };
 //check whether two arrays of integers of same length are similar or not.
@@ -1039,12 +1040,13 @@ task87 = () => {
   const nums = nowy[0].some((val) => nowy[1].indexOf(val) !== -1);
 
   if (nowy[0].length != nowy[1].length) {
-    document.getElementById("task87ans").textContent = `false`
+    document.getElementById("task87ans").textContent = `false`;
   } else if (nowy[0].length == nowy[1].length) {
     if (nums == true) {
-      document.getElementById("task87ans").textContent = `true`
+      document.getElementById("task87ans").textContent = `true`;
     } else {
-      document.getElementById("task87ans").textContent = `false`
+      document.getElementById("task87ans").textContent = `false`;
     }
   }
-}
+};
+//check whether two given integers are similar or not, if a given divisor divides both integers and it does not divide either.
