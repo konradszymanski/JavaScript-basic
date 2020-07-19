@@ -1050,3 +1050,12 @@ task87 = () => {
   }
 };
 //check whether two given integers are similar or not, if a given divisor divides both integers and it does not divide either.
+task88 = () => {
+  let task88number = document.getElementById("task88").value;
+  let nowy = task88number.split(" ");
+  if (nowy[0] % nowy[2] == 0 && nowy[1] % nowy[2] == 0) {
+    document.getElementById("task88ans").textContent = "true";
+  } else {
+    document.getElementById("task88ans").textContent = "false";
+  }
+};
