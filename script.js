@@ -1053,7 +1053,10 @@ task87 = () => {
 task88 = () => {
   let task88number = document.getElementById("task88").value;
   let nowy = task88number.split(" ");
-  if (nowy[0] % nowy[2] == 0 && nowy[1] % nowy[2] == 0) {
+  if (nowy[2] == null) {
+    document.getElementById("task88ans").textContent =
+      "It has to be 3 integers separate by a space";
+  } else if (nowy[0] % nowy[2] == 0 && nowy[1] % nowy[2] == 0) {
     document.getElementById("task88ans").textContent = "true";
   } else {
     document.getElementById("task88ans").textContent = "false";
