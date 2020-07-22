@@ -1062,3 +1062,4 @@ task88 = () => {
     document.getElementById("task88ans").textContent = "false";
   }
 };
+//check whether it is possible to replace $ in a given expression x $ y = z with one of the four signs +, -, * or / to obtain a correct expression.
