@@ -1083,17 +1083,18 @@ task89 = () => {
 task90 = () => {
   let task90arr = document.getElementById("task90a").value;
   let kth = document.getElementById("task90b").value;
-  liczba = parseInt(kth + 1);
   let arr = task90arr.split(" ").sort();
   arr.sort(function (a, b) {
     return b - a;
   });
+  kth1 = parseInt(kth) - 1;
+  // document.getElementById("task90ans").textContent = liczba;
 
   if (kth > arr.length) {
     document.getElementById(
       "task90ans"
     ).textContent = `Kth should be lower/equal than array of integers`;
   } else {
-    document.getElementById("task90ans").textContent = arr[liczba];
+    document.getElementById("task90ans").textContent = arr[kth1];
   }
 };
