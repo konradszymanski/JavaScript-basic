@@ -1063,3 +1063,19 @@ task88 = () => {
   }
 };
 //check whether it is possible to replace $ in a given expression x $ y = z with one of the four signs +, -, * or / to obtain a correct expression.
+task89 = () => {
+  let task89number = document.getElementById("task89").value;
+  let nowy = task89number.split(" ");
+  const xx = parseInt(nowy[0]);
+  const yx = parseInt(nowy[1]);
+  const zx = parseInt(nowy[2]);
+
+  if (xx == null) {
+    document.getElementById("task89ans").textContent =
+      "It has to be 3 integers separate by a space";
+  } else if (xx + yx == zx || xx - yx == zx || xx * yx == zx || xx / yx == zx) {
+    document.getElementById("task89ans").textContent = "true";
+  } else {
+    document.getElementById("task89ans").textContent = "false";
+  }
+};
