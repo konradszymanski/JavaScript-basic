@@ -1079,3 +1079,21 @@ task89 = () => {
     document.getElementById("task89ans").textContent = "false";
   }
 };
+//find the kth greatest element of a given array of integers
+task90 = () => {
+  let task90arr = document.getElementById("task90a").value;
+  let kth = document.getElementById("task90b").value;
+  liczba = parseInt(kth + 1);
+  let arr = task90arr.split(" ").sort();
+  arr.sort(function (a, b) {
+    return b - a;
+  });
+
+  if (kth > arr.length) {
+    document.getElementById(
+      "task90ans"
+    ).textContent = `Kth should be lower/equal than array of integers`;
+  } else {
+    document.getElementById("task90ans").textContent = arr[liczba];
+  }
+};
