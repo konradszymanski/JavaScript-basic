@@ -1098,4 +1098,25 @@ task90 = () => {
   }
 };
 //find the maximum possible sum of some of its k consecutive numbers (numbers that follow each other in order.) of a given array of positive integers
-task91 = () => {};
+task91 = () => {
+  let task91arr = document.getElementById("task91a").value;
+  let kth = document.getElementById("task91b").value;
+  let arr = task91arr.split(" ").sort();
+
+  // for (let i = 0; i < arr.length; i++) {
+  //   document.getElementById("task91ans").textContent = k + arr[i];
+  // }
+
+  //document.getElementById("task91ans").textContent = kth + arr;
+
+  // for (let i = 0; i < kth; i++) {
+  //   document.getElementById(
+  //     "task91ans"
+  //   ).textContent = `liczby ${kth[i]} oraz ${arr}`;
+  // }
+  // const items = arr;
+
+  // for (let i = 0; i < arr.length; i++) {
+  //   document.getElementById("task91ans").textContent = `${i}. ${items[i]}`;
+  // }
+};
