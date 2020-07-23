@@ -1088,7 +1088,6 @@ task90 = () => {
     return b - a;
   });
   kth1 = parseInt(kth) - 1;
-  // document.getElementById("task90ans").textContent = liczba;
 
   if (kth > arr.length) {
     document.getElementById(
@@ -1098,3 +1097,5 @@ task90 = () => {
     document.getElementById("task90ans").textContent = arr[kth1];
   }
 };
+//find the maximum possible sum of some of its k consecutive numbers (numbers that follow each other in order.) of a given array of positive integers
+task91 = () => {};
