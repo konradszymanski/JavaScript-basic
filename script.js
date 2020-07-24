@@ -1102,21 +1102,8 @@ task91 = () => {
   let task91arr = document.getElementById("task91a").value;
   let kth = document.getElementById("task91b").value;
   let arr = task91arr.split(" ").sort();
+  let newarr = [];
+  // for(let i = 0; i < ){
 
-  // for (let i = 0; i < arr.length; i++) {
-  //   document.getElementById("task91ans").textContent = k + arr[i];
-  // }
-
-  //document.getElementById("task91ans").textContent = kth + arr;
-
-  // for (let i = 0; i < kth; i++) {
-  //   document.getElementById(
-  //     "task91ans"
-  //   ).textContent = `liczby ${kth[i]} oraz ${arr}`;
-  // }
-  // const items = arr;
-
-  // for (let i = 0; i < arr.length; i++) {
-  //   document.getElementById("task91ans").textContent = `${i}. ${items[i]}`;
   // }
 };
