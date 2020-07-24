@@ -1102,8 +1102,11 @@ task91 = () => {
   let task91arr = document.getElementById("task91a").value;
   let kth = document.getElementById("task91b").value;
   let arr = task91arr.split(" ").sort();
-  let newarr = [];
-  // for(let i = 0; i < ){
-
-  // }
+  let max = arr.reduce(function (a, b) {
+    return Math.max(a, b);
+  });
+  for (let i = 0; i < kth - 1; i++) {
+    document.getElemeSntById("task91ans").textContent += max;
+  }
 };
+//find the maximal difference between any two adjacent elements of a given array of integers.
