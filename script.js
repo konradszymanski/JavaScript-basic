@@ -1101,7 +1101,7 @@ task90 = () => {
 task91 = () => {
   let task91arr = document.getElementById("task91a").value;
   let kth = document.getElementById("task91b").value;
-  let arr = task91arr.split(" ").sort();
+  let arr = task91arr.split(" ");
   let max = arr.reduce(function (a, b) {
     return Math.max(a, b);
   });
