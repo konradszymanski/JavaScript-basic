@@ -1106,7 +1106,16 @@ task91 = () => {
     return Math.max(a, b);
   });
   for (let i = 0; i < kth - 1; i++) {
-    document.getElemeSntById("task91ans").textContent += max;
+    document.getElementById("task91ans").textContent += max;
   }
 };
 //find the maximal difference between any two adjacent elements of a given array of integers.
+task92 = () => {
+  const task92arr = document.getElementById("task92").value;
+  const arr92 = task92arr.split(" ");
+  for (let i = 0; i < arr92.length; i++) {
+    const maxa = arr92[i] - arr92[i + 1];
+    const maxu = maxa.sort();
+    document.getElementById("task92ans").textContent += maxu;
+  }
+};
