@@ -62,7 +62,7 @@ window.onload = function () {
     var firstJan = new Date(year, 0, 1);
     if (firstJan.getDay() === 0)
       document.getElementById("task7").innerHTML =
-        "1st January is being a Sunday  " + year;
+      "1st January is being a Sunday  " + year;
   }
   //task9
   var dayNow = new Date();
@@ -1084,6 +1084,8 @@ task90 = () => {
   let task90arr = document.getElementById("task90a").value;
   let kth = document.getElementById("task90b").value;
   let arr = task90arr.split(" ").sort();
+  // another way of give answers in "taskans"
+  let ans = document.getElementById("task90ans")
   arr.sort(function (a, b) {
     return b - a;
   });
@@ -1094,7 +1096,9 @@ task90 = () => {
       "task90ans"
     ).textContent = `Kth should be lower/equal than array of integers`;
   } else {
-    document.getElementById("task90ans").textContent = arr[kth1];
+    // another way of give answers in "taskans"
+    ans.textContent = arr[kth1]
+    //document.getElementById("task90ans").textContent = arr[kth1];
   }
 };
 //find the maximum possible sum of some of its k consecutive numbers (numbers that follow each other in order.) of a given array of positive integers
