@@ -62,7 +62,7 @@ window.onload = function () {
     var firstJan = new Date(year, 0, 1);
     if (firstJan.getDay() === 0)
       document.getElementById("task7").innerHTML =
-      "1st January is being a Sunday  " + year;
+        "1st January is being a Sunday  " + year;
   }
   //task9
   var dayNow = new Date();
@@ -1085,7 +1085,7 @@ task90 = () => {
   let kth = document.getElementById("task90b").value;
   let arr = task90arr.split(" ").sort();
   // another way of give answers in "taskans"
-  let ans = document.getElementById("task90ans")
+  let ans = document.getElementById("task90ans");
   arr.sort(function (a, b) {
     return b - a;
   });
@@ -1097,20 +1097,24 @@ task90 = () => {
     ).textContent = `Kth should be lower/equal than array of integers`;
   } else {
     // another way of give answers in "taskans"
-    ans.textContent = arr[kth1]
+    ans.textContent = arr[kth1];
     //document.getElementById("task90ans").textContent = arr[kth1];
   }
 };
 //find the maximum possible sum of some of its k consecutive numbers (numbers that follow each other in order.) of a given array of positive integers
 task91 = () => {
   let task91arr = document.getElementById("task91a").value;
-  let kth = document.getElementById("task91b").value;
   let arr = task91arr.split(" ");
-  let max = arr.reduce(function (a, b) {
-    return Math.max(a, b);
-  });
-  for (let i = 0; i < kth - 1; i++) {
-    document.getElementById("task91ans").textContent += max;
+
+  let kth = document.getElementById("task91b").value;
+  //document.getElementById("task91ans").textContent = arr[kth - 1]  + arr[i];
+  for (let i = 0; i < kth; i++) {
+    // let max = arr.reduce(function (a, b) {
+    //   return Math.max(a, b);
+    // });
+    document.getElementById("task91ans").textContent =
+      parseInt(arr[i]) + arr[i];
+    //document.getElementById("task91ans").textContent += max;
   }
 };
 //find the maximal difference between any two adjacent elements of a given array of integers.
@@ -1119,7 +1123,7 @@ task92 = () => {
   const arr92 = task92arr.split(" ");
   for (let i = 0; i < arr92.length; i++) {
     const maxa = arr92[i] - arr92[i + 1];
-    const maxu = maxa.sort();
-    document.getElementById("task92ans").textContent += maxu;
+    //const maxu = maxa.sort();
+    document.getElementById("task92ans").textContent = parseInt(maxa);
   }
 };
