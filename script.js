@@ -1105,14 +1105,14 @@ task90 = () => {
 task91 = () => {
   const task91arr = document.getElementById("task91a").value;
   const arr91 = task91arr.split(" ");
-  //let kth = document.getElementById("task91b").value;
+  const kth = document.getElementById("task91b").value;
   const task91ans = document.getElementById("task91ans");
 
   const newArr = arr91.map(
     (items, k) => parseFloat(arr91[k]) + parseFloat(arr91[k + 1])
   );
 
-  task91ans.textContent = `sddfsjd ${newArr}`;
+  task91ans.textContent = `Maximum possible sum is: ${newArr[kth]}`;
 };
 //find the maximal difference between any two adjacent elements of a given array of integers.
 task92 = () => {
