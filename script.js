@@ -1105,17 +1105,7 @@ task90 = () => {
 task91 = () => {
   let task91arr = document.getElementById("task91a").value;
   let arr = task91arr.split(" ");
-
   let kth = document.getElementById("task91b").value;
-  //document.getElementById("task91ans").textContent = arr[kth - 1]  + arr[i];
-  for (let i = 0; i < kth; i++) {
-    // let max = arr.reduce(function (a, b) {
-    //   return Math.max(a, b);
-    // });
-    document.getElementById("task91ans").textContent =
-      parseInt(arr[i]) + arr[i];
-    //document.getElementById("task91ans").textContent += max;
-  }
 };
 //find the maximal difference between any two adjacent elements of a given array of integers.
 task92 = () => {
@@ -1128,10 +1118,4 @@ task92 = () => {
     return b - a;
   });
   task92ans.textContent = `Maximal difference is ${newArr92[0]} `;
-
-  // for (let i = 0; i < arr92.length; i++) {
-  //   const maxa = arr92[i] - arr92[i + 1];
-  //   //const maxu = maxa.sort();
-  //   document.getElementById("task92ans").textContent = parseInt(maxa);
-  // }
 };
