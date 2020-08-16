@@ -1121,9 +1121,17 @@ task91 = () => {
 task92 = () => {
   const task92arr = document.getElementById("task92").value;
   const arr92 = task92arr.split(" ");
-  for (let i = 0; i < arr92.length; i++) {
-    const maxa = arr92[i] - arr92[i + 1];
-    //const maxu = maxa.sort();
-    document.getElementById("task92ans").textContent = parseInt(maxa);
-  }
+  const task92ans = document.getElementById("task92ans");
+
+  const newArr92 = arr92.map((items, i) => arr92[i] - arr92[i + 1]);
+  newArr92.sort(function (b, a) {
+    return b - a;
+  });
+  task92ans.textContent = `Maximal difference is ${newArr92[0]} `;
+
+  // for (let i = 0; i < arr92.length; i++) {
+  //   const maxa = arr92[i] - arr92[i + 1];
+  //   //const maxu = maxa.sort();
+  //   document.getElementById("task92ans").textContent = parseInt(maxa);
+  // }
 };
