@@ -1126,3 +1126,14 @@ task92 = () => {
   });
   task92ans.textContent = `Maximal difference is ${newArr92[0]} `;
 };
+//  Write a JavaScript program to find the maximal difference among all possible pairs of a given array of integers.
+task93 = () => {
+  const task93 = document.getElementById("task93").value;
+  const arr93 = task93.split(" ");
+  const task93ans = document.getElementById("task93ans");
+
+  const max = Math.max(...arr93);
+  const min = Math.min(...arr93);
+
+  task93ans.textContent = Math.abs(max - min);
+};
