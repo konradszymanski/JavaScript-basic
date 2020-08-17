@@ -1122,7 +1122,7 @@ task92 = () => {
 
   const newArr92 = arr92.map((items, i) => arr92[i] - arr92[i + 1]);
   newArr92.sort(function (b, a) {
-    return b - a;
+    return a - b;
   });
   task92ans.textContent = `Maximal difference is ${newArr92[0]} `;
 };
