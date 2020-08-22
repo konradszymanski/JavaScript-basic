@@ -1137,3 +1137,12 @@ task93 = () => {
 
   task93ans.textContent = Math.abs(max - min);
 };
+//Write a JavaScript program to find the number which appears most in a given array of integers.
+task94 = () => {
+  const task94 = document.getElementById("task94").value;
+  const arr94 = task94.split(" ");
+  //task94.split(",");
+  const task94ans = document.getElementById("task94ans");
+  //task94ans.textContent = task94;
+  task94ans.textContent = arr94;
+};
