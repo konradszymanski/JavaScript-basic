@@ -62,7 +62,7 @@ window.onload = function () {
     var firstJan = new Date(year, 0, 1);
     if (firstJan.getDay() === 0)
       document.getElementById("task7").innerHTML =
-        "1st January is being a Sunday  " + year;
+      "1st January is being a Sunday  " + year;
   }
   //task9
   var dayNow = new Date();
@@ -1141,8 +1141,25 @@ task93 = () => {
 task94 = () => {
   const task94 = document.getElementById("task94").value;
   const arr94 = task94.split(" ");
-  //task94.split(",");
   const task94ans = document.getElementById("task94ans");
-  //task94ans.textContent = task94;
-  task94ans.textContent = arr94;
+
+  let item;
+  let m = 0;
+  let mf = 0;
+
+  for (let i = 0; i < arr94.length; i++) {
+    for (let j = i; j < arr94.length; j++) {
+      if (arr94[i] == arr94[j]) {
+        m++;
+        if (m > mf) {
+          mf = m;
+          item = arr94[i]
+        }
+      }
+
+    }
+    m = 0;
+  }
+  task94ans.textContent = item;
+  //return item;
 };
