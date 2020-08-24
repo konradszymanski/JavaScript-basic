@@ -62,7 +62,7 @@ window.onload = function () {
     var firstJan = new Date(year, 0, 1);
     if (firstJan.getDay() === 0)
       document.getElementById("task7").innerHTML =
-      "1st January is being a Sunday  " + year;
+        "1st January is being a Sunday  " + year;
   }
   //task9
   var dayNow = new Date();
@@ -112,31 +112,32 @@ window.onload = function () {
     }
   }
   //task 7 inside window.onload
-  //task8
-  function guessNumber() {
-    // take value
-    var givenNumber = document.getElementById("takeNumber").value;
-    // random from 1-10
-    var rand = Math.floor(Math.random() * 10);
-    document.getElementById("guessOutcome").innerHTML = rand;
-    if (isNaN(givenNumber)) {
-      document.getElementById("guessOutcome").innerHTML = "Type number!";
-      document.getElementById("task8").style.backgroundColor = "#f0ad4e";
-      document.getElementById("takeNumber").value = "";
-    } else if (givenNumber == rand) {
-      document.getElementById("guessOutcome").innerHTML =
-        "Good work! You hit " + rand;
-      document.getElementById("task8").style.backgroundColor = "#5cb85c";
-      document.getElementById("takeNumber").value = "";
-    } else {
-      document.getElementById("guessOutcome").innerHTML =
-        "Not matched! The number was: " + rand;
-      document.getElementById("task8").style.backgroundColor = "#d9534f";
-      document.getElementById("takeNumber").value = "";
-    }
-  }
+
   //task 9 inside window.onload
 };
+//task8
+function guessNumber() {
+  // take value
+  var givenNumber = document.getElementById("takeNumber").value;
+  // random from 1-10
+  var rand = Math.floor(Math.random() * 10);
+  document.getElementById("guessOutcome").innerHTML = rand;
+  if (isNaN(givenNumber)) {
+    document.getElementById("guessOutcome").innerHTML = "Type number!";
+    document.getElementById("task8").style.backgroundColor = "#f0ad4e";
+    document.getElementById("takeNumber").value = "";
+  } else if (givenNumber == rand) {
+    document.getElementById("guessOutcome").innerHTML =
+      "Good work! You hit " + rand;
+    document.getElementById("task8").style.backgroundColor = "#5cb85c";
+    document.getElementById("takeNumber").value = "";
+  } else {
+    document.getElementById("guessOutcome").innerHTML =
+      "Not matched! The number was: " + rand;
+    document.getElementById("task8").style.backgroundColor = "#d9534f";
+    document.getElementById("takeNumber").value = "";
+  }
+}
 //task 10
 function multiply() {
   firstNumber = document.getElementById("firstNumber").value;
@@ -1153,13 +1154,13 @@ task94 = () => {
         m++;
         if (m > mf) {
           mf = m;
-          item = arr94[i]
+          item = arr94[i];
         }
       }
-
     }
     m = 0;
   }
   task94ans.textContent = item;
   //return item;
 };
+//replace all the numbers with a specified number of a given array of integers.
