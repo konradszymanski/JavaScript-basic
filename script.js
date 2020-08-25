@@ -1164,19 +1164,25 @@ task94 = () => {
   //return item;
 };
 //replace all the numbers with a specified number of a given array of integers.
+
 function task95randoms() {
-  var randomNrsTask95 = document.querySelector(".rdmNmrsPrgf");
+  const randomNrsTask95 = document.querySelector(".rdmNmrsPrgf");
   const rdm95 = [];
+  //var randomNrsTask95 = document.querySelector(".rdmNmrsPrgf");
+  //const rdm95 = [];
   for (let i = 1; i <= 10; i++) {
     rdm95.push(Math.floor(Math.random(i) * 10 + 1));
     randomNrsTask95.textContent = rdm95;
   }
+  // const task95ans = document.getElementById("task95ans");
+  // task95ans.textContent = `New array: ${rdm95}`;
+  task95 = () => {
+    const task95a = document.querySelector(".rdmNmrsPrgf");
+    //const arr95 = task95.split("");
+    const task95ans = document.getElementById("task95ans");
+    const out95 = document.getElementById("task95out").value;
+    const in95 = document.getElementById("task95out").value;
+    task95ans.textContent = `New array: ${rdm95} old ${out95} and ${in95}`;
+  };
 }
 task95randoms();
-task95 = () => {
-  const task95 = document.querySelector(".rdmNmrsPrgf").value;
-  //const arr95 = task95.split("");
-  const task95ans = document.getElementById("task94ans");
-
-  task95ans.textContent = randomNrsTask95;
-};
