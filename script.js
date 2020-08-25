@@ -1168,21 +1168,23 @@ task94 = () => {
 function task95randoms() {
   const randomNrsTask95 = document.querySelector(".rdmNmrsPrgf");
   const rdm95 = [];
-  //var randomNrsTask95 = document.querySelector(".rdmNmrsPrgf");
-  //const rdm95 = [];
   for (let i = 1; i <= 10; i++) {
     rdm95.push(Math.floor(Math.random(i) * 10 + 1));
     randomNrsTask95.textContent = rdm95;
   }
-  // const task95ans = document.getElementById("task95ans");
-  // task95ans.textContent = `New array: ${rdm95}`;
   task95 = () => {
     const task95a = document.querySelector(".rdmNmrsPrgf");
     //const arr95 = task95.split("");
     const task95ans = document.getElementById("task95ans");
-    const out95 = document.getElementById("task95out").value;
+    const out95 = document.getElementById("task95in").value;
     const in95 = document.getElementById("task95out").value;
-    task95ans.textContent = `New array: ${rdm95} old ${out95} and ${in95}`;
+
+    for (let i = 0; i < rdm95.length; i++) {
+      if (rdm95[i] == out95) {
+        rdm95[i] = in95;
+        task95ans.textContent = `New array: ${rdm95} where the old digit "${out95}" is replaced to "${in95}"`;
+      }
+    }
   };
 }
 task95randoms();
