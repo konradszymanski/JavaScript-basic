@@ -1164,7 +1164,6 @@ task94 = () => {
   //return item;
 };
 //replace all the numbers with a specified number of a given array of integers.
-
 function task95randoms() {
   const randomNrsTask95 = document.querySelector(".rdmNmrsPrgf");
   const rdm95 = [];
@@ -1188,3 +1187,5 @@ function task95randoms() {
   };
 }
 task95randoms();
+//ompute the sum of absolute differences of consecutive numbers of a given array of integers.
+task69 = () => {};
