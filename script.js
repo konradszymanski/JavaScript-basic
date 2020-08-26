@@ -1188,4 +1188,13 @@ function task95randoms() {
 }
 task95randoms();
 //ompute the sum of absolute differences of consecutive numbers of a given array of integers.
-task96 = () => {};
+task96 = () => {
+  const task96 = document.getElementById("task96").value;
+  const arr96 = task96.split(" ");
+  const task96ans = document.getElementById("task96ans");
+  const newArr96 = arr96.map((items, i) => arr96[i] - arr96[i + 1]);
+  const suma = newArr96.slice(0, newArr96.length - 1);
+  task96ans.textContent = suma.reduce(function (a, b) {
+    return a + b;
+  });
+};
