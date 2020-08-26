@@ -1188,4 +1188,4 @@ function task95randoms() {
 }
 task95randoms();
 //ompute the sum of absolute differences of consecutive numbers of a given array of integers.
-task69 = () => {};
+task96 = () => {};
