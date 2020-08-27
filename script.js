@@ -1198,3 +1198,5 @@ task96 = () => {
     return a + b;
   });
 };
+//find the shortest possible string which can create a string to make it a palindrome by adding characters to the end of it.
+task97 = () => {};
