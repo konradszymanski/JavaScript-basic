@@ -1199,4 +1199,8 @@ task96 = () => {
   });
 };
 //find the shortest possible string which can create a string to make it a palindrome by adding characters to the end of it.
-task97 = () => {};
+task97 = () => {
+  document.getElementById("task97ans").textContent = `task is not finished yet`;
+};
+// program to switch case of the minimum possible number of letters to make a given string written in the upper case or in the lower case.
+task98 = () => {};
