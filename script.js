@@ -65,7 +65,9 @@ window.onload = function () {
       document.getElementById("task7").innerHTML =
         "1st January is being a Sunday  " + year;
   }
-  //task9
+};
+//task9
+function task9() {
   var dayNow = new Date();
   var toDay = dayNow.getTime();
   // var christmas_day = new Date(present_date.getFullYear(), 11, 25)
@@ -75,24 +77,21 @@ window.onload = function () {
   var oneDay = 1000 * 60 * 60 * 24;
   var howManyDays = Math.ceil((xmasDay - toDay) / oneDay);
   document.getElementById("task9").innerHTML = howManyDays;
+}
+task9();
+//     //task 5
+//     //let cos = "w3resource"
+//     var cos = document.getElementById("task5");
+//     // document.getElementById("ans").innerHTML = cos.slice(-1)
 
-  //     //task 5
-  //     //let cos = "w3resource"
-  //     var cos = document.getElementById("task5");
-  //     // document.getElementById("ans").innerHTML = cos.slice(-1)
-
-  //     setInterval(function () {
-  //         document.getElementById("ans").innerHTML = cos[cos.length - 1] + cos.substr(0, (cos.length - 1))
-  //     }, 100);
-
-  // }
-
-  //task 6
-
-  //task 7 inside window.onload
-
-  //task 9 inside window.onload
-};
+//     setInterval(function () {
+//         document.getElementById("ans").innerHTML = cos[cos.length - 1] + cos.substr(0, (cos.length - 1))
+//     }, 100);
+// }
+//task 6
+//task 7 inside window.onload
+//task 9 inside window.onload
+//task6
 function checkYear() {
   //take value
   var leap = document.getElementById("leapYear").value;
