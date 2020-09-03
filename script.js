@@ -47,9 +47,8 @@ window.onload = function () {
   var dd = ("0" + d.getDate()).slice(-2); // d.getDate();
 
   document.getElementById("task3").innerHTML = dd + "-" + mo + "-" + yy;
-};
-//task 4
-function task4() {
+
+  //task 4
   var aa = 5;
   var bb = 6;
   var cc = 7;
@@ -57,21 +56,16 @@ function task4() {
   var ar = (aa + bb + cc) / 2;
   var area = Math.sqrt(ar * ((ar - aa) * (ar - bb) * (ar - cc)));
   document.getElementById("task4").innerHTML = area;
-}
-task4();
-//task 7
-function task7() {
+  //task 7
   // loop from 2014 to 2050, count every year
   for (var year = 2014; year <= 2050; year++) {
     // find specific month and day
     var firstJan = new Date(year, 0, 1);
     if (firstJan.getDay() === 0)
-      document.getElementById("task7").innerHTML += `${year} \n`;
-    // "1st January is being a Sunday  " + year ;
+      document.getElementById("task7").innerHTML =
+        "1st January is being a Sunday  " + year;
   }
-}
-task7();
-
+};
 //task9
 function task9() {
   var dayNow = new Date();
