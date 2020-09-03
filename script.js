@@ -38,6 +38,7 @@ window.onload = function () {
     mm +
     " : " +
     ss;
+
   //task 3
   // take newDate
   var d = new Date();
@@ -87,34 +88,35 @@ window.onload = function () {
   // }
 
   //task 6
-  function checkYear() {
-    //take value
-    var leap = document.getElementById("leapYear").value;
-    // document.getElementById("againLeap").innerHTML = leap;
-    var leapFour = 4;
-    // check if value is number
-    if (isNaN(leap)) {
-      document.getElementById("againLeap").innerHTML = "Type numbers only";
-      document.getElementById("task6").style.backgroundColor = "#d9534f";
-      // check if its empty string
-    } else if (leap == "") {
-      document.getElementById("againLeap").innerHTML = "Type any number";
-      document.getElementById("task6").style.backgroundColor = "#5bc0de";
-    }
-    // leap year is divisionable by4
-    else if (leap % leapFour == 0) {
-      document.getElementById("againLeap").innerHTML = "This is Leap Year!";
-      document.getElementById("task6").style.backgroundColor = "#5cb85c";
-    } else {
-      //if (leap % leapFour != 0)
-      document.getElementById("againLeap").innerHTML = "This is not Leap Year!";
-      document.getElementById("task6").style.backgroundColor = "#f0ad4e";
-    }
-  }
+
   //task 7 inside window.onload
 
   //task 9 inside window.onload
 };
+function checkYear() {
+  //take value
+  var leap = document.getElementById("leapYear").value;
+  // document.getElementById("againLeap").innerHTML = leap;
+  var leapFour = 4;
+  // check if value is number
+  if (isNaN(leap)) {
+    document.getElementById("againLeap").innerHTML = "Type numbers only";
+    document.getElementById("task6").style.backgroundColor = "#d9534f";
+    // check if its empty string
+  } else if (leap == "") {
+    document.getElementById("againLeap").innerHTML = "Type any number";
+    document.getElementById("task6").style.backgroundColor = "#5bc0de";
+  }
+  // leap year is divisionable by4
+  else if (leap % leapFour == 0) {
+    document.getElementById("againLeap").innerHTML = "This is Leap Year!";
+    document.getElementById("task6").style.backgroundColor = "#5cb85c";
+  } else {
+    //if (leap % leapFour != 0)
+    document.getElementById("againLeap").innerHTML = "This is not Leap Year!";
+    document.getElementById("task6").style.backgroundColor = "#f0ad4e";
+  }
+}
 //task8
 function guessNumber() {
   // take value
@@ -1203,4 +1205,34 @@ task97 = () => {
   document.getElementById("task97ans").textContent = `task is not finished yet`;
 };
 // program to switch case of the minimum possible number of letters to make a given string written in the upper case or in the lower case.
-task98 = () => {};
+task98 = () => {
+  const task98 = document.getElementById("task98").value;
+  const task98ans = document.getElementById("task98ans");
+
+  for (let i = 0; i < task98.length; i++) {
+    if (task98.charAt(i) === task98.charAt(i).toUpperCase()) {
+      const newstr = task98.charAt(i);
+
+      task98ans.textContent = newstr.split("").length;
+      //task98ans.textContent += task98.charAt(i);
+    }
+  }
+
+  // const arr96 = task98.split("");
+  // for (let i = 0; i < arr96.length; i++) {
+  //   arr96[i].toLowerCase();
+  //   task98ans.textContent = arr96.length;
+  // }
+
+  // if (task98 === task98.toLowerCase()) {
+  //   task98ans.textContent = "zfAAAdf";
+  // }
+};
+
+//"Write" => write
+//
+//"PHp" => "PHP"
+//sprawdz dlugosc stringa
+//jezeli w stringu jest wiecej duzych liter niz polowa stringa => wyswietl string w duzych literach
+
+//sprawdz ilosc duzych/malych liter
