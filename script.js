@@ -62,8 +62,8 @@ window.onload = function () {
     // find specific month and day
     var firstJan = new Date(year, 0, 1);
     if (firstJan.getDay() === 0)
-      document.getElementById("task7").innerHTML =
-        "1st January is being a Sunday  " + year;
+      document.getElementById("task7").innerHTML += `${year} \n`;
+    //  "1st January is being a Sunday  " + year;
   }
 };
 //task9
