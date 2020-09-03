@@ -1,9 +1,7 @@
 // task 1
-// take newDate
 function task1() {
-  const today = new Date();
-  // make array with day names
-  const dayName = new Array(7);
+  const today = new Date(); // take newDate
+  const dayName = new Array(7); // make array with day names
   dayName[0] = "Sunday";
   dayName[1] = "Monday";
   dayName[2] = "Tuesday";
@@ -11,10 +9,8 @@ function task1() {
   dayName[4] = "Thursday";
   dayName[5] = "Friday";
   dayName[6] = "Saturday";
-  // take specific day from array
-  var n = dayName[today.getDay()];
-  // take the rest of dates
-  const currentTime = new this.Date();
+  var n = dayName[today.getDay()]; // take specific day from array
+  const currentTime = new this.Date(); // take the rest of dates
   const hh = currentTime.getHours() < 10 ? "0" + currentTime.getHours() : currentTime.getHours();
   const mm = currentTime.getMinutes() < 10 ? "0" + currentTime.getMinutes() : currentTime.getMinutes();
   const ss = currentTime.getSeconds() < 10 ? "0" + currentTime.getSeconds() : currentTime.getSeconds();
@@ -50,43 +46,15 @@ function task4() {
   document.getElementById("task4").innerHTML = area;
 }
 task4();
-//
-function task7() {
-  // loop from 2014 to 2050, count every year
-  for (var year = 2014; year <= 2050; year++) {
-    // find specific month and day
-    var firstJan = new Date(year, 0, 1);
-    if (firstJan.getDay() === 0)
-      document.getElementById("task7").innerHTML += `${year} \n`;
-    //  "1st January is being a Sunday  " + year;
-  }
-}
-task7();
-//task9
-function task9() {
-  var dayNow = new Date();
-  var toDay = dayNow.getTime();
-  // var christmas_day = new Date(present_date.getFullYear(), 11, 25)
-  var xmas = new Date("2020,12,25");
-  var xmasDay = xmas.getTime();
-  //one day in miliseconds
-  var oneDay = 1000 * 60 * 60 * 24;
-  var howManyDays = Math.ceil((xmasDay - toDay) / oneDay);
-  document.getElementById("task9").innerHTML = howManyDays;
-}
-task9();
-//     //task 5
-//     //let cos = "w3resource"
-//     var cos = document.getElementById("task5");
-//     // document.getElementById("ans").innerHTML = cos.slice(-1)
 
-//     setInterval(function () {
-//         document.getElementById("ans").innerHTML = cos[cos.length - 1] + cos.substr(0, (cos.length - 1))
-//     }, 100);
-// }
-//task 6
-//task 7 inside window.onload
-//task 9 inside window.onload
+function task5() {
+  const w3 = "w3resource";
+  const ans5 = document.getElementById("task5");
+  ans5.textContent = w3[w3.length - 1] + w3.substring(0, w3.length - 1);
+}
+task5();
+setInterval(task5, 1000)
+
 //task6
 function checkYear() {
   //take value
@@ -112,6 +80,18 @@ function checkYear() {
     document.getElementById("task6").style.backgroundColor = "#f0ad4e";
   }
 }
+
+function task7() {
+  // loop from 2014 to 2050, count every year
+  for (var year = 2014; year <= 2050; year++) {
+    // find specific month and day
+    var firstJan = new Date(year, 0, 1);
+    if (firstJan.getDay() === 0)
+      document.getElementById("task7").innerHTML += `${year} \n`;
+    //  "1st January is being a Sunday  " + year;
+  }
+}
+task7();
 //task8
 function guessNumber() {
   // take value
@@ -135,6 +115,19 @@ function guessNumber() {
     document.getElementById("takeNumber").value = "";
   }
 }
+//task9
+function task9() {
+  var dayNow = new Date();
+  var toDay = dayNow.getTime();
+  // var christmas_day = new Date(present_date.getFullYear(), 11, 25)
+  var xmas = new Date("2020,12,25");
+  var xmasDay = xmas.getTime();
+  //one day in miliseconds
+  var oneDay = 1000 * 60 * 60 * 24;
+  var howManyDays = Math.ceil((xmasDay - toDay) / oneDay);
+  document.getElementById("task9").innerHTML = howManyDays;
+}
+task9();
 //task 10
 function multiply() {
   firstNumber = document.getElementById("firstNumber").value;
