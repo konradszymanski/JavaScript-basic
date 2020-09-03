@@ -1,6 +1,6 @@
 // task 1
-window.onload = function () {
-  // take newDate
+// take newDate
+function task1() {
   const today = new Date();
   // make array with day names
   const dayName = new Array(7);
@@ -15,9 +15,9 @@ window.onload = function () {
   var n = dayName[today.getDay()];
   // take the rest of dates
   const currentTime = new this.Date();
-  const hh = currentTime.getHours();
-  const mm = currentTime.getMinutes();
-  const ss = currentTime.getSeconds();
+  const hh = currentTime.getHours() < 10 ? "0" + currentTime.getHours() : currentTime.getHours();
+  const mm = currentTime.getMinutes() < 10 ? "0" + currentTime.getMinutes() : currentTime.getMinutes();
+  const ss = currentTime.getSeconds() < 10 ? "0" + currentTime.getSeconds() : currentTime.getSeconds();
   // AM /PM cant be const. let is allowed.
   let amPm = " ";
   if (hh >= 12) {
@@ -26,28 +26,19 @@ window.onload = function () {
     amPm += "AM";
   }
   // show outcome inside html element
-  document.getElementById("task1").innerHTML =
-    "Today is: " +
-    n +
-    "</br>" +
-    "Current time is: " +
-    "</br>" +
-    +hh +
-    amPm +
-    " : " +
-    mm +
-    " : " +
-    ss;
-
-  //task 3
-  // take newDate
-  var d = new Date();
-  var yy = d.getFullYear();
-  var mo = ("0" + (d.getMonth() + 1)).slice(-2); //d.getMonth() + 1;
-  var dd = ("0" + d.getDate()).slice(-2); // d.getDate();
-
-  document.getElementById("task3").innerHTML = dd + "-" + mo + "-" + yy;
-};
+  document.getElementById(
+    "task1"
+  ).innerHTML = `Today is:<br/> ${n}<br/> Current time is: <br/> ${hh}${amPm} : ${mm} : ${ss}`;
+}
+setInterval(task1, 1000)
+task1();
+//task 3
+// take newDate
+var d = new Date();
+var yy = d.getFullYear();
+var mo = ("0" + (d.getMonth() + 1)).slice(-2); //d.getMonth() + 1;
+var dd = ("0" + d.getDate()).slice(-2); // d.getDate();
+document.getElementById("task3").innerHTML = dd + "-" + mo + "-" + yy;
 //task 4
 function task4() {
   var aa = 5;
