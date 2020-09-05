@@ -11,9 +11,18 @@ function task1() {
   dayName[6] = "Saturday";
   var n = dayName[today.getDay()]; // take specific day from array
   const currentTime = new this.Date(); // take the rest of dates
-  const hh = currentTime.getHours() < 10 ? "0" + currentTime.getHours() : currentTime.getHours();
-  const mm = currentTime.getMinutes() < 10 ? "0" + currentTime.getMinutes() : currentTime.getMinutes();
-  const ss = currentTime.getSeconds() < 10 ? "0" + currentTime.getSeconds() : currentTime.getSeconds();
+  const hh =
+    currentTime.getHours() < 10 ?
+    "0" + currentTime.getHours() :
+    currentTime.getHours();
+  const mm =
+    currentTime.getMinutes() < 10 ?
+    "0" + currentTime.getMinutes() :
+    currentTime.getMinutes();
+  const ss =
+    currentTime.getSeconds() < 10 ?
+    "0" + currentTime.getSeconds() :
+    currentTime.getSeconds();
   // AM /PM cant be const. let is allowed.
   let amPm = " ";
   if (hh >= 12) {
@@ -26,7 +35,7 @@ function task1() {
     "task1"
   ).innerHTML = `Today is:<br/> ${n}<br/> Current time is: <br/> ${hh}${amPm} : ${mm} : ${ss}`;
 }
-setInterval(task1, 1000)
+setInterval(task1, 1000);
 task1();
 //task 3
 // take newDate
@@ -47,13 +56,18 @@ function task4() {
 }
 task4();
 
-function task5() {
-  const w3 = "w3resource";
-  const ans5 = document.getElementById("task5");
+// function task5() {
+//   const w3 = "w3resource";
+//   const ans5 = document.getElementById("task5");
+//   ans5.textContent = w3[w3.length - 1] + w3.substring(0, w3.length - 1);
+// }
+// task5();
+// setInterval(task5, 1000)
+const w3 = "w3resource";
+const ans5 = document.getElementById("task5");
+setInterval(() => {
   ans5.textContent = w3[w3.length - 1] + w3.substring(0, w3.length - 1);
-}
-task5();
-setInterval(task5, 1000)
+}, 1000);
 
 //task6
 function checkYear() {
@@ -1196,31 +1210,12 @@ task97 = () => {
 task98 = () => {
   const task98 = document.getElementById("task98").value;
   const task98ans = document.getElementById("task98ans");
+  const upper = (task98.match(/[A-Z]/g) || []).length;
+  const lower = (task98.match(/[a-z]/g) || []).length;
 
-  for (let i = 0; i < task98.length; i++) {
-    if (task98.charAt(i) === task98.charAt(i).toUpperCase()) {
-      const newstr = task98.charAt(i);
-
-      task98ans.textContent = newstr.split("").length;
-      //task98ans.textContent += task98.charAt(i);
-    }
+  if (upper > lower) {
+    task98ans.textContent = task98.toUpperCase();
+  } else {
+    task98ans.textContent = task98.toLowerCase();
   }
-
-  // const arr96 = task98.split("");
-  // for (let i = 0; i < arr96.length; i++) {
-  //   arr96[i].toLowerCase();
-  //   task98ans.textContent = arr96.length;
-  // }
-
-  // if (task98 === task98.toLowerCase()) {
-  //   task98ans.textContent = "zfAAAdf";
-  // }
 };
-
-//"Write" => write
-//
-//"PHp" => "PHP"
-//sprawdz dlugosc stringa
-//jezeli w stringu jest wiecej duzych liter niz polowa stringa => wyswietl string w duzych literach
-
-//sprawdz ilosc duzych/malych liter
