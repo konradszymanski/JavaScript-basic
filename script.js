@@ -1042,7 +1042,7 @@ task86 = () => {
 task87 = () => {
   let task87number = document.getElementById("task87").value;
   let nowy = task87number.split("");
-  const nums = nowy[0].some((val) => nowy[1].indexOf(val) !== -1);
+  const nums = nowy[0].filter((val) => nowy[1].indexOf(val) !== -1);
 
   if (nowy[0].length != nowy[1].length) {
     document.getElementById("task87ans").textContent = `false`;
@@ -1225,9 +1225,17 @@ task99 = () => {
   const task99 = document.getElementById("task99").value;
   const task99ans = document.getElementById("task99ans");
   const arr99 = task99.split("");
-  arr99.sort();
-
-  task99ans.textContent = arr99;
+  const a = arr99[0];
+  const b = arr99[1];
+  for (let i = 0; i < a.length; i++) {
+    for (let j = i; j < b.length; j++) {
+      if (a[i] == b[j]) {
+        task99ans.textContent = "false";
+      } else {
+        task99ans.textContent = "true";
+      }
+    }
+  }
 };
 
 // var el = document.getElementById("task32");
