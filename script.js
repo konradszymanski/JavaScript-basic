@@ -12,17 +12,17 @@ function task1() {
   var n = dayName[today.getDay()]; // take specific day from array
   const currentTime = new this.Date(); // take the rest of dates
   const hh =
-    currentTime.getHours() < 10 ?
-    "0" + currentTime.getHours() :
-    currentTime.getHours();
+    currentTime.getHours() < 10
+      ? "0" + currentTime.getHours()
+      : currentTime.getHours();
   const mm =
-    currentTime.getMinutes() < 10 ?
-    "0" + currentTime.getMinutes() :
-    currentTime.getMinutes();
+    currentTime.getMinutes() < 10
+      ? "0" + currentTime.getMinutes()
+      : currentTime.getMinutes();
   const ss =
-    currentTime.getSeconds() < 10 ?
-    "0" + currentTime.getSeconds() :
-    currentTime.getSeconds();
+    currentTime.getSeconds() < 10
+      ? "0" + currentTime.getSeconds()
+      : currentTime.getSeconds();
   // AM /PM cant be const. let is allowed.
   let amPm = " ";
   if (hh >= 12) {
@@ -1219,3 +1219,17 @@ task98 = () => {
     task98ans.textContent = task98.toLowerCase();
   }
 };
+//check whether it is possible to rearrange characters of a given string
+//in such way that it will become equal to another given string.
+task99 = () => {
+  const task99 = document.getElementById("task99").value;
+  const task99ans = document.getElementById("task99ans");
+  const arr99 = task99.split("");
+  arr99.sort();
+
+  task99ans.textContent = arr99;
+};
+
+// var el = document.getElementById("task32");
+// var val = el.value.split(" ").sort();
+// if (val[0] <= 99 && val[1] <= 99) {
