@@ -669,17 +669,37 @@ task54 = () => {
   ).textContent = `String has ${vowel} which is ${vowel.length}`;
 };
 //given string contains equal number of p's and t's
+// task55 = () => {
+//   const task55word = document.getElementById("task55").value;
+//   const task55ans = document.getElementById("task55ans")
+//   const wordP = task55word.toLowerCase().match(/p/g);
+//   const wordT = task55word.toLowerCase().match(/t/g);
+
+//   // let p = wordP.length;
+//   // let t = wordT.length;
+//   if (task55word == "") {
+//     task55ans.textContent = `adasd`
+//   } else if (wordP.length = !wordT.length) {
+//     task55ans.textContent = `not equal`
+//   } else {
+//     task55ans.textContent = `equal`
+//   }
+// };
 task55 = () => {
   const task55word = document.getElementById("task55").value;
-  const task55ans = document.getElementById("task55ans")
-  const wordP = task55word.toLowerCase().match(/p/g);
-  const wordT = task55word.toLowerCase().match(/t/g);
-
-  if (wordT.length == wordP.length) {
-    task55ans.textContent = `equal`;
-  } else {
-    task55ans.textContent = `not equal`;
+  const task55ans = document.getElementById("task55ans");
+  const wordP = task55word.toLowerCase().match(/p/g) || "";
+  const wordT = task55word.toLowerCase().match(/t/g) || "";
+  const p = wordP.length;
+  const t = wordT.length;
+  if (task55word == "") {
+    task55ans.textContent = 'empty';
+  } else if (p == 0 && t == 0) {
+    task55ans.textContent = 'not equal';
+  } else if (p == t) {
+    task55ans.textContent = 'equal';
   }
+  // || p === 0 && t === 0
 };
 //divide two positive numbers and return a string with properly formatted commas
 task56 = () => {
