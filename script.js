@@ -1225,42 +1225,17 @@ function task99() {
   const task99 = document.getElementById("task99").value;
   const task99ans = document.getElementById("task99ans");
   const arr99 = task99.split(" ");
-  const a = arr99[0].split(" ").toString();
-  const b = arr99[1].split(" ").toString();
+  const a = arr99[0].toString();
+  const b = arr99[1].toString();
   if (a.length != b.length) {
-    task99ans.textContent = `Strings are not equal`;
+    task99ans.textContent = `Strings are not equal!`;
   } else {
-
+    for (var i = 0; i < a.length; i++) {
+      if (a[i] == b[i]) {
+        task99ans.textContent = `It is possible!`
+      } else {
+        task99ans.textContent = `It is not possible!`
+      }
+    }
   }
-
-  // if (a.length != b.length) {
-  //   task99ans.textContent = "false"
-  // }
-
-  // else {
-  //   // comapring each element of array 
-  //   for (var i = 0; i < a.length; i++)
-  //     if (a[i] != b[i])
-  //       task99ans.textContent = "asdasd"
-
-  // }
 }
-
-
-
-// task99 = () => {
-//   const task99 = document.getElementById("task99").value;
-//   const task99ans = document.getElementById("task99ans");
-//   const arr99 = task99.split("");
-//   const a = arr99[0];
-//   const b = arr99[1];
-//   if (a.length != b.length)
-//     task99ans.textContent = "false"
-//   else {
-//     // comapring each element of array 
-//     for (var i = 0; i < a.length; i++)
-//       if (a[i] != b[i])
-//         task99ans.textContent = "asdasd"
-
-//   }
-// }
