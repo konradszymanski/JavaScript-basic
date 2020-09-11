@@ -529,16 +529,22 @@ task42 = () => {
   }
 };
 task43 = () => {
-  let el = document.getElementById("task43");
-  let val = el.value.split(" ");
-  const first = val[0].slice(-1); //take last digit from each nummbers
-  const second = val[1].slice(-1);
-  const third = val[2].slice(-1);
-  if (first === second || second === third || first === third) {
-    document.getElementById("task43ans").innerHTML = "rightmost digit are same";
+  const el = document.getElementById("task43");
+  const val = el.value.split(" ");
+  const task43ans = document.getElementById("task43ans");
+  const first = val[0];
+  const second = val[1];
+  const third = val[2];
+  if (first.length === 1 || second.length === 1 || third.length === 1) {
+    if (first === second || second === third) {
+      task43ans.textContent = `Two or more digits are same`
+    } else {
+      task43ans.textContent = "Rightmost digits are not the same"
+    }
+  } else if (first.slice(-1) === second.slice(-1) || first.slice(-1) === third.slice(-1)) {
+    task43ans.textContent = `Two or more digits are same`
   } else {
-    document.getElementById("tesk43ans").innerHTML =
-      "rightmost digits aren't same";
+    task43ans.textContent = "Rightmost digits are not the same"
   }
 };
 task44 = () => {
