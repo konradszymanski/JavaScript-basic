@@ -613,13 +613,6 @@ task49 = () => {
 };
 // capitalize the first letter of each word
 task50 = () => {
-  // let task50word = document.getElementById("task50").value;
-  // let newletter = task50word.toLowerCase().substring(1);
-  // let litera = task50word.toUpperCase().charAt(0);
-  // for (let i = 0; i < task50word.length; i++) {
-  //     document.getElementById("task50ans").textContent = litera + newletter;
-  // this version turns only the first lettter in only one world.
-  // }
 
   let task50word = document.getElementById("task50").value;
   let arr = task50word.toLowerCase().split(" "); //first to small letters
@@ -677,17 +670,18 @@ task54 = () => {
 };
 //given string contains equal number of p's and t's
 task55 = () => {
-  let task55word = document.getElementById("task55").value;
-  let wordP = task55word.toLowerCase().match(/p/g);
-  let wordT = task55word.toLowerCase().match(/t/g);
-  if (wordP.lenght == wordP.lenght) {
-    document.getElementById(
-      "task55ans"
-    ).textContent = `True! There is ${wordP.length} pairs`;
+  const task55word = document.getElementById("task55").value;
+  const task55ans = document.getElementById("task55ans")
+  const wordP = task55word.toLowerCase().match(/p/g);
+  const wordT = task55word.toLowerCase().match(/t/g);
+
+  if (wordT.length == wordP.length) {
+    task55ans.textContent = `equal`;
   } else {
-    document.getElementById("task55ans").textContent = `false`;
+    task55ans.textContent = `not equal`;
   }
-}; //divide two positive numbers and return a string with properly formatted commas
+};
+//divide two positive numbers and return a string with properly formatted commas
 task56 = () => {
   let task56word = document.getElementById("task56");
   let num56 = task56word.value.split(" ");
