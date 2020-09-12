@@ -1272,12 +1272,22 @@ function task100arrays() {
   }
   task100 = () => {
     const task100ans = document.getElementById("task100ans");
+
     for (let i = 0; i < rdm100a.length; i++) {
-      if (rdm100a[i] == rdm100b[i]) {
-        task100ans.textContent = `true`;
-      } else {
+      if (rdm100b.includes(rdm100a[i]) == false) {
         task100ans.textContent = `false`;
+      } else {
+        task100ans.textContent = `true`;
       }
     }
+
+    console.log(rdm100a.includes(rdm100b));
+    // for (let i = 0; i < rdm100a.length; i++) {
+    //   if (rdm100a[i] == rdm100b[i]) {
+    //     task100ans.textContent = `true`;
+    //   } else {
+    //     task100ans.textContent = `false`;
+    //   }
+    //}
   };
 }
