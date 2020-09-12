@@ -12,17 +12,17 @@ function task1() {
   var n = dayName[today.getDay()]; // take specific day from array
   const currentTime = new this.Date(); // take the rest of dates
   const hh =
-    currentTime.getHours() < 10 ?
-    "0" + currentTime.getHours() :
-    currentTime.getHours();
+    currentTime.getHours() < 10
+      ? "0" + currentTime.getHours()
+      : currentTime.getHours();
   const mm =
-    currentTime.getMinutes() < 10 ?
-    "0" + currentTime.getMinutes() :
-    currentTime.getMinutes();
+    currentTime.getMinutes() < 10
+      ? "0" + currentTime.getMinutes()
+      : currentTime.getMinutes();
   const ss =
-    currentTime.getSeconds() < 10 ?
-    "0" + currentTime.getSeconds() :
-    currentTime.getSeconds();
+    currentTime.getSeconds() < 10
+      ? "0" + currentTime.getSeconds()
+      : currentTime.getSeconds();
   // AM /PM cant be const. let is allowed.
   let amPm = " ";
   if (hh >= 12) {
@@ -537,14 +537,17 @@ task43 = () => {
   const third = val[2];
   if (first.length === 1 || second.length === 1 || third.length === 1) {
     if (first === second || second === third) {
-      task43ans.textContent = `Two or more digits are same`
+      task43ans.textContent = `Two or more digits are same`;
     } else {
-      task43ans.textContent = "Rightmost digits are not the same"
+      task43ans.textContent = "Rightmost digits are not the same";
     }
-  } else if (first.slice(-1) === second.slice(-1) || first.slice(-1) === third.slice(-1)) {
-    task43ans.textContent = `Two or more digits are same`
+  } else if (
+    first.slice(-1) === second.slice(-1) ||
+    first.slice(-1) === third.slice(-1)
+  ) {
+    task43ans.textContent = `Two or more digits are same`;
   } else {
-    task43ans.textContent = "Rightmost digits are not the same"
+    task43ans.textContent = "Rightmost digits are not the same";
   }
 };
 task44 = () => {
@@ -613,7 +616,6 @@ task49 = () => {
 };
 // capitalize the first letter of each word
 task50 = () => {
-
   let task50word = document.getElementById("task50").value;
   let arr = task50word.toLowerCase().split(" "); //first to small letters
   for (let i = 0; i <= arr.length; i++) {
@@ -693,11 +695,11 @@ task55 = () => {
   const p = wordP.length;
   const t = wordT.length;
   if (task55word == "") {
-    task55ans.textContent = 'empty';
+    task55ans.textContent = "empty";
   } else if (p == 0 && t == 0) {
-    task55ans.textContent = 'not equal';
+    task55ans.textContent = "not equal";
   } else if (p == t) {
-    task55ans.textContent = 'equal';
+    task55ans.textContent = "equal";
   }
   // || p === 0 && t === 0
 };
@@ -1241,7 +1243,6 @@ task98 = () => {
 };
 //check whether it is possible to rearrange characters of a given string in such way that it will become equal to another given string.
 function task99() {
-
   const task99 = document.getElementById("task99").value;
   const task99ans = document.getElementById("task99ans");
   const arr99 = task99.split(" ");
@@ -1252,10 +1253,31 @@ function task99() {
   } else {
     for (var i = 0; i < a.length; i++) {
       if (a[i] == b[i]) {
-        task99ans.textContent = `It is possible!`
+        task99ans.textContent = `It is possible!`;
       } else {
-        task99ans.textContent = `It is not possible!`
+        task99ans.textContent = `It is not possible!`;
       }
     }
   }
+}
+//check whether there is at least one element which occurs in two given sorted arrays of integers.
+function task100arrays() {
+  const task100rdm = document.querySelector(".task100");
+  const rdm100a = [];
+  const rdm100b = [];
+  for (let i = 1; i <= 4; i++) {
+    rdm100a.push(Math.floor(Math.random(i) * 10 + 1));
+    rdm100b.push(Math.floor(Math.random(i) * 10 + 1));
+    task100rdm.textContent = `Random arrays:\n${rdm100a} and ${rdm100b}`;
+  }
+  task100 = () => {
+    const task100ans = document.getElementById("task100ans");
+    for (let i = 0; i < rdm100a.length; i++) {
+      if (rdm100a[i] == rdm100b[i]) {
+        task100ans.textContent = rdm100a;
+      } else {
+        task100ans.textContent = rdm100a;
+      }
+    }
+  };
 }
