@@ -1216,8 +1216,12 @@ task95randoms();
 //ompute the sum of absolute differences of consecutive numbers of a given array of integers.
 task96 = () => {
   const task96 = document.getElementById("task96").value;
-  const arr96 = task96.split(" ");
   const task96ans = document.getElementById("task96ans");
+  if (task96 == "") {
+    task96ans.textContent = `Array is empty!`;
+  }
+  const arr96 = task96.split(" ");
+
   const newArr96 = arr96.map((items, i) => arr96[i] - arr96[i + 1]);
   const suma = newArr96.slice(0, newArr96.length - 1);
   task96ans.textContent = suma.reduce(function (a, b) {
@@ -1245,9 +1249,16 @@ task98 = () => {
 function task99() {
   const task99 = document.getElementById("task99").value;
   const task99ans = document.getElementById("task99ans");
+
+  if (task99 === "") {
+    task99ans.textContent = `String is empty!`;
+  }
+
   const arr99 = task99.split(" ");
-  const a = arr99[0].toString();
-  const b = arr99[1].toString();
+  const a = arr99[0];
+  const b = arr99[1];
+  a = a.toString();
+  b = b.toString();
   if (a.length != b.length) {
     task99ans.textContent = `Strings are not equal!`;
   } else {
@@ -1280,14 +1291,5 @@ function task100arrays() {
         task100ans.textContent = `true`;
       }
     }
-
-    console.log(rdm100a.includes(rdm100b));
-    // for (let i = 0; i < rdm100a.length; i++) {
-    //   if (rdm100a[i] == rdm100b[i]) {
-    //     task100ans.textContent = `true`;
-    //   } else {
-    //     task100ans.textContent = `false`;
-    //   }
-    //}
   };
 }
