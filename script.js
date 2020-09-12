@@ -1274,9 +1274,9 @@ function task100arrays() {
     const task100ans = document.getElementById("task100ans");
     for (let i = 0; i < rdm100a.length; i++) {
       if (rdm100a[i] == rdm100b[i]) {
-        task100ans.textContent = rdm100a;
+        task100ans.textContent = `true`;
       } else {
-        task100ans.textContent = rdm100a;
+        task100ans.textContent = `false`;
       }
     }
   };
