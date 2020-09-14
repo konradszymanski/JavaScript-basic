@@ -12,17 +12,17 @@ function task1() {
   var n = dayName[today.getDay()]; // take specific day from array
   const currentTime = new this.Date(); // take the rest of dates
   const hh =
-    currentTime.getHours() < 10
-      ? "0" + currentTime.getHours()
-      : currentTime.getHours();
+    currentTime.getHours() < 10 ?
+    "0" + currentTime.getHours() :
+    currentTime.getHours();
   const mm =
-    currentTime.getMinutes() < 10
-      ? "0" + currentTime.getMinutes()
-      : currentTime.getMinutes();
+    currentTime.getMinutes() < 10 ?
+    "0" + currentTime.getMinutes() :
+    currentTime.getMinutes();
   const ss =
-    currentTime.getSeconds() < 10
-      ? "0" + currentTime.getSeconds()
-      : currentTime.getSeconds();
+    currentTime.getSeconds() < 10 ?
+    "0" + currentTime.getSeconds() :
+    currentTime.getSeconds();
   // AM /PM cant be const. let is allowed.
   let amPm = " ";
   if (hh >= 12) {
@@ -1255,8 +1255,8 @@ function task99() {
   }
 
   const arr99 = task99.split(" ");
-  const a = arr99[0];
-  const b = arr99[1];
+  let a = arr99[0];
+  let b = arr99[1];
   a = a.toString();
   b = b.toString();
   if (a.length != b.length) {
@@ -1293,3 +1293,15 @@ function task100arrays() {
     }
   };
 }
+//check whether a given string contains only Latin letters and no two uppercase and no two lowercase letters are in adjacent positions.
+
+
+
+const task101 = () => {
+  const task101in = document.querySelector("#task101in").value;
+  const t101ans = document.querySelector("#task101ans");
+
+  t101ans.textContent = task101in
+
+}
+document.querySelector("#task101").addEventListener("click", task101);
