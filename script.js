@@ -1302,9 +1302,13 @@ const task101 = () => {
   if ((task101in.match(/[a-zA-Z]/g) || "").length != task101in.length) {
     t101ans.textContent = `Non Latin letters, try again`;
   } else {
-    t101ans.textContent = "String contain Latin letters";
-    //if lowerCase is next to other lowercase
-    //else if upperCasi is next to upperCase
+    // t101ans.textContent = "String contain Latin letters";
+    for (let i = 0; i < task101in.length; i++) {
+      (task101in[i].match(/[A-Z]/g))
+    }
+
+
+
   }
 };
 document.querySelector("#task101").addEventListener("click", task101);
