@@ -1298,23 +1298,13 @@ function task100arrays() {
 const task101 = () => {
   const task101in = document.querySelector("#task101in").value;
   const t101ans = document.querySelector("#task101ans");
-  //rozdziel string
-  //const arr101 = task101in.split(" ");
-  //const regex = new RegExp(/[b]/g)
 
-  //console.log(arr101.includes(regex));
-
-  // t101ans.textContent = abecadlo;
-  //sprawdz czy sa znaki spoza a-z A-Z
-
-  //
-  var Regex = "/^[^a-zA-Z]*$/";
-
-  //if (/[a-zA-Z]/.test(task101in) > 1) 
   if ((task101in.match(/[a-zA-Z]/g) || "").length != task101in.length) {
     t101ans.textContent = `Non Latin letters, try again`;
   } else {
     t101ans.textContent = "String contain Latin letters";
+    //if lowerCase is next to other lowercase
+    //else if upperCasi is next to upperCase
   }
 };
 document.querySelector("#task101").addEventListener("click", task101);
