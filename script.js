@@ -1302,13 +1302,19 @@ const task101 = () => {
   if ((task101in.match(/[a-zA-Z]/g) || "").length != task101in.length) {
     t101ans.textContent = `Non Latin letters, try again`;
   } else {
-    // t101ans.textContent = "String contain Latin letters";
+
     for (let i = 0; i < task101in.length; i++) {
-      (task101in[i].match(/[A-Z]/g))
+      //check index of uppercase
+      const indexNum = task101in.indexOf(task101in[i].match(/[A-Z]/g));
+      //t101ans.textContent += task101in.indexOf(task101in[i].match(/[A-Z]/g));
+      //if index of upper letter is one: return true
+      //const map1 = t101ans.map(x => x - y);
+      const another = [];
+      another.push(indexNum)
+      const map1 = another.map((items, i) => another[i] - another[i + 1])
+      t101ans.textContent += map1
+      //arr92.map((items, i) => arr92[i] - arr92[i + 1]);
     }
-
-
-
   }
 };
 document.querySelector("#task101").addEventListener("click", task101);
