@@ -1298,23 +1298,50 @@ function task100arrays() {
 const task101 = () => {
   const task101in = document.querySelector("#task101in").value;
   const t101ans = document.querySelector("#task101ans");
-
+  const another = [];
+  //if length of string is not the same as length of latin letters
   if ((task101in.match(/[a-zA-Z]/g) || "").length != task101in.length) {
     t101ans.textContent = `Non Latin letters, try again`;
   } else {
-
+    //looking for uppercase letters
     for (let i = 0; i < task101in.length; i++) {
       //check index of uppercase
       const indexNum = task101in.indexOf(task101in[i].match(/[A-Z]/g));
-      //t101ans.textContent += task101in.indexOf(task101in[i].match(/[A-Z]/g));
-      //if index of upper letter is one: return true
-      //const map1 = t101ans.map(x => x - y);
-      const another = [];
+      //trying to push indexof numbers to an array
       another.push(indexNum)
-      const map1 = another.map((items, i) => another[i] - another[i + 1])
-      t101ans.textContent += map1
-      //arr92.map((items, i) => arr92[i] - arr92[i + 1]);
+      //t101ans.textContent = another
+      const roznica = another.map((items, i) => another[0] - another[i + 1]);
+      t101ans.textContent = roznica
+      console.log(indexNum)
+      console.log(another)
+
+      console.log(roznica)
     }
   }
 };
 document.querySelector("#task101").addEventListener("click", task101);
+
+
+// const task101 = () => {
+//   const task101in = document.querySelector("#task101in").value;
+//   const t101ans = document.querySelector("#task101ans");
+//   const another = [];
+//   //if length of string is not the same as length of latin letters
+//   if ((task101in.match(/[a-zA-Z]/g) || "").length != task101in.length) {
+//     t101ans.textContent = `Non Latin letters, try again`;
+//   } else {
+//     //looking for uppercase letters
+//     for (let i = 0; i < task101in.length; i++) {
+//       //check index of uppercase
+//       const indexNum = task101in.indexOf(task101in[i].match(/[A-Z]/g));
+//       //trying to push indexof numbers to an array
+//       for (let y = 0; y <= indexNum.length; y++) {
+//         // const another = [];
+//         another = another.push(indexNum)
+//         return another
+//       }
+//       t101ans.textContent += indexNum
+//     }
+//   }
+// };
+// document.querySelector("#task101").addEventListener("click", task101);
