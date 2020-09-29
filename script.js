@@ -12,17 +12,17 @@ function task1() {
   var n = dayName[today.getDay()]; // take specific day from array
   const currentTime = new this.Date(); // take the rest of dates
   const hh =
-    currentTime.getHours() < 10
-      ? "0" + currentTime.getHours()
-      : currentTime.getHours();
+    currentTime.getHours() < 10 ?
+    "0" + currentTime.getHours() :
+    currentTime.getHours();
   const mm =
-    currentTime.getMinutes() < 10
-      ? "0" + currentTime.getMinutes()
-      : currentTime.getMinutes();
+    currentTime.getMinutes() < 10 ?
+    "0" + currentTime.getMinutes() :
+    currentTime.getMinutes();
   const ss =
-    currentTime.getSeconds() < 10
-      ? "0" + currentTime.getSeconds()
-      : currentTime.getSeconds();
+    currentTime.getSeconds() < 10 ?
+    "0" + currentTime.getSeconds() :
+    currentTime.getSeconds();
   // AM /PM cant be const. let is allowed.
   let amPm = " ";
   if (hh >= 12) {
@@ -1247,30 +1247,33 @@ task98 = () => {
 };
 //check whether it is possible to rearrange characters of a given string in such way that it will become equal to another given string.
 function task99() {
-  const task99 = document.getElementById("task99").value;
+  const task99w = document.getElementById("task99").value;
   const task99ans = document.getElementById("task99ans");
 
-  if (task99 === "") {
+  if (task99w === "") {
     task99ans.textContent = `String is empty!`;
   }
-
-  const arr99 = task99.split(" ");
-  let a = arr99[0];
-  let b = arr99[1];
-  a = a.toString();
-  b = b.toString();
-  if (a.length != b.length) {
-    task99ans.textContent = `Strings are not equal!`;
-  } else {
-    for (var i = 0; i < a.length; i++) {
-      if (a[i] == b[i]) {
-        task99ans.textContent = `It is possible!`;
-      } else {
-        task99ans.textContent = `It is not possible!`;
-      }
-    }
-  }
 }
+//   const arr99 = task99w.split(" ");
+//   let a = arr99[0];
+//   let b = arr99[1];
+//   if (arr99[1] === " ") {
+//     task99ans.textContent = `Two strings minimum, separate by space`;
+//   }
+//   a.toString();
+//   b.toString();
+//   if (a.length != b.length) {
+//     task99ans.textContent = `Strings are not equal!`;
+//   } else {
+//     for (var i = 0; i < a.length; i++) {
+//       if (a[i] === b[i]) {
+//         task99ans.textContent = `It is possible!`;
+//       } else {
+//         task99ans.textContent = `It is not possible!`;
+//       }
+//     }
+//   }
+// }
 //check whether there is at least one element which occurs in two given sorted arrays of integers.
 function task100arrays() {
   const task100rdm = document.querySelector(".task100");
@@ -1333,3 +1336,4 @@ const task101 = () => {
   }
 };
 document.querySelector("#task101").addEventListener("click", task101);
+//find the number of inversions of a given array of integers.
