@@ -12,17 +12,17 @@ function task1() {
   var n = dayName[today.getDay()]; // take specific day from array
   const currentTime = new this.Date(); // take the rest of dates
   const hh =
-    currentTime.getHours() < 10 ?
-    "0" + currentTime.getHours() :
-    currentTime.getHours();
+    currentTime.getHours() < 10
+      ? "0" + currentTime.getHours()
+      : currentTime.getHours();
   const mm =
-    currentTime.getMinutes() < 10 ?
-    "0" + currentTime.getMinutes() :
-    currentTime.getMinutes();
+    currentTime.getMinutes() < 10
+      ? "0" + currentTime.getMinutes()
+      : currentTime.getMinutes();
   const ss =
-    currentTime.getSeconds() < 10 ?
-    "0" + currentTime.getSeconds() :
-    currentTime.getSeconds();
+    currentTime.getSeconds() < 10
+      ? "0" + currentTime.getSeconds()
+      : currentTime.getSeconds();
   // AM /PM cant be const. let is allowed.
   let amPm = " ";
   if (hh >= 12) {
@@ -1298,50 +1298,38 @@ function task100arrays() {
 const task101 = () => {
   const task101in = document.querySelector("#task101in").value;
   const t101ans = document.querySelector("#task101ans");
-  const another = [];
+  const upperCaseIndexes = [];
+  const lowerCaseIndexes = [];
   //if length of string is not the same as length of latin letters
   if ((task101in.match(/[a-zA-Z]/g) || "").length != task101in.length) {
     t101ans.textContent = `Non Latin letters, try again`;
   } else {
     //looking for uppercase letters
     for (let i = 0; i < task101in.length; i++) {
-      //check index of uppercase
-      const indexNum = task101in.indexOf(task101in[i].match(/[A-Z]/g));
-      //trying to push indexof numbers to an array
-      another.push(indexNum)
-      //t101ans.textContent = another
-      const roznica = another.map((items, i) => another[0] - another[i + 1]);
-      t101ans.textContent = roznica
-      console.log(indexNum)
-      console.log(another)
-
-      console.log(roznica)
+      //pasja inf podpowiedz.
+      //check index of upper/lowerCase inside string
+      const char = task101in[i];
+      if (char.toUpperCase() === char) {
+        upperCaseIndexes.push(i);
+      } else {
+        lowerCaseIndexes.push(i);
+      }
+      //upper/lower indexes are pushed inside array
+      //check how close the sameCase letters are
+      const upperCase = upperCaseIndexes.map(
+        (items, i) => upperCaseIndexes[0] - upperCaseIndexes[i + 1]
+      );
+      const lowerCase = lowerCaseIndexes.map(
+        (items, i) => lowerCaseIndexes[0] - lowerCaseIndexes[i + 1]
+      );
+      if (upperCase.includes(1) || upperCase.includes(-1)) {
+        t101ans.textContent = "There are same letters written adjacent";
+      } else {
+        t101ans.textContent = "No same case letters are written adjacent";
+      }
+      console.log(upperCase);
+      console.log(lowerCase);
     }
   }
 };
 document.querySelector("#task101").addEventListener("click", task101);
-
-
-// const task101 = () => {
-//   const task101in = document.querySelector("#task101in").value;
-//   const t101ans = document.querySelector("#task101ans");
-//   const another = [];
-//   //if length of string is not the same as length of latin letters
-//   if ((task101in.match(/[a-zA-Z]/g) || "").length != task101in.length) {
-//     t101ans.textContent = `Non Latin letters, try again`;
-//   } else {
-//     //looking for uppercase letters
-//     for (let i = 0; i < task101in.length; i++) {
-//       //check index of uppercase
-//       const indexNum = task101in.indexOf(task101in[i].match(/[A-Z]/g));
-//       //trying to push indexof numbers to an array
-//       for (let y = 0; y <= indexNum.length; y++) {
-//         // const another = [];
-//         another = another.push(indexNum)
-//         return another
-//       }
-//       t101ans.textContent += indexNum
-//     }
-//   }
-// };
-// document.querySelector("#task101").addEventListener("click", task101);
