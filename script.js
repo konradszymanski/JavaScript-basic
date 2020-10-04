@@ -1344,5 +1344,15 @@ const task101 = () => {
 };
 document.querySelector("#task101").addEventListener("click", task101);
 //find the number of inversions of a given array of integers.
-const btn102 = () => {};
+function btn102() {
+  const input102 = document.getElementById("input102").value;
+  const answer102 = document.getElementById("answer102");
+  input102.split(" ");
+
+  if (isNaN(input102)) {
+    answer102.textContent = "asdasdsdd";
+  } else {
+    answer102.textContent = input102[1];
+  }
+}
 document.querySelector("#btn102").addEventListener("click", btn102);
