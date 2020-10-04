@@ -12,17 +12,17 @@ function task1() {
   var n = dayName[today.getDay()]; // take specific day from array
   const currentTime = new this.Date(); // take the rest of dates
   const hh =
-    currentTime.getHours() < 10 ?
-    "0" + currentTime.getHours() :
-    currentTime.getHours();
+    currentTime.getHours() < 10
+      ? "0" + currentTime.getHours()
+      : currentTime.getHours();
   const mm =
-    currentTime.getMinutes() < 10 ?
-    "0" + currentTime.getMinutes() :
-    currentTime.getMinutes();
+    currentTime.getMinutes() < 10
+      ? "0" + currentTime.getMinutes()
+      : currentTime.getMinutes();
   const ss =
-    currentTime.getSeconds() < 10 ?
-    "0" + currentTime.getSeconds() :
-    currentTime.getSeconds();
+    currentTime.getSeconds() < 10
+      ? "0" + currentTime.getSeconds()
+      : currentTime.getSeconds();
   // AM /PM cant be const. let is allowed.
   let amPm = " ";
   if (hh >= 12) {
@@ -1249,9 +1249,17 @@ task98 = () => {
 function task99() {
   const task99w = document.getElementById("task99").value;
   const task99ans = document.getElementById("task99ans");
-
+  const arr99 = task99w.split(" ");
+  const arrOne = [];
+  const arrTwo = [];
   if (task99w === "") {
     task99ans.textContent = `String is empty!`;
+  } else {
+    arrOne.push(arr99[0]);
+    arrTwo.push(arr99[1]);
+  }
+  if (arrTwo.length === null) {
+    task99ans.textContent = `Stringasdaddis empty!`;
   }
 }
 //   const arr99 = task99w.split(" ");
@@ -1297,7 +1305,6 @@ function task100arrays() {
   };
 }
 //check whether a given string contains only Latin letters and no two uppercase and no two lowercase letters are in adjacent positions.
-
 const task101 = () => {
   const task101in = document.querySelector("#task101in").value;
   const t101ans = document.querySelector("#task101ans");
@@ -1337,3 +1344,5 @@ const task101 = () => {
 };
 document.querySelector("#task101").addEventListener("click", task101);
 //find the number of inversions of a given array of integers.
+const btn102 = () => {};
+document.querySelector("#btn102").addEventListener("click", btn102);
