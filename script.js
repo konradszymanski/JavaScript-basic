@@ -1347,12 +1347,26 @@ document.querySelector("#task101").addEventListener("click", task101);
 function btn102() {
   const input102 = document.getElementById("input102").value;
   const answer102 = document.getElementById("answer102");
-  input102.split(" ");
+  input102.replace(/^\s+|\s+$/gm, "");
+  const arr102 = input102.split("");
 
+  // if (isNaN(arr102)) {
+  //   answer102.textContent = "asdasdsdd";
+  // } else {
+  //   answer102.textContent = `[${arr102}]
+  //   ${arr102[1]} `;
+  // }
   if (isNaN(input102)) {
-    answer102.textContent = "asdasdsdd";
+    answer102.textContent = "Only numbers please";
   } else {
-    answer102.textContent = input102[1];
+    let inv = 0;
+    for (let i = 0; i < arr102.length; i++) {
+      for (let j = i + 1; j < arr102.length; j++) {
+        if (arr102[i] > arr102[j]) inv++;
+      }
+    }
+
+    answer102.textContent = inv;
   }
 }
 document.querySelector("#btn102").addEventListener("click", btn102);
