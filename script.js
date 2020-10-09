@@ -1364,6 +1364,10 @@ function btn102() {
 }
 document.querySelector("#btn102").addEventListener("click", btn102);
 //maximal number from a given positive integer by deleting exactly one digit of the given number.
-function btn103() {}
-
+function btn103() {
+  const input103 = document.getElementById("input103").value;
+  const answer103 = document.getElementById("answer103");
+  const arr103 = input103.split("");
+  answer103.textContent = input103.remove(input103[2]);
+}
 document.querySelector("#btn103").addEventListener("click", btn103);
