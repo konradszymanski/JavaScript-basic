@@ -1363,3 +1363,4 @@ function btn102() {
   }
 }
 document.querySelector("#btn102").addEventListener("click", btn102);
+//maximal number from a given positive integer by deleting exactly one digit of the given number.
