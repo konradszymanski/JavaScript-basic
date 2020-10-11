@@ -1364,10 +1364,15 @@ function btn102() {
 }
 document.querySelector("#btn102").addEventListener("click", btn102);
 //maximal number from a given positive integer by deleting exactly one digit of the given number.
-function btn103() {
+
+document.querySelector("#btn103").addEventListener("click", () => {
   const input103 = document.getElementById("input103").value;
   const answer103 = document.getElementById("answer103");
-  const arr103 = input103.split("");
-  answer103.textContent = input103.remove(input103[2]);
-}
-document.querySelector("#btn103").addEventListener("click", btn103);
+  // const arr103 = input103.split("");
+  // let value = 3;
+  // // arr103 = arr103.filter((item) => item !== value);
+  // for( var i = 0; i < arr.length; i++)
+  //{ if ( arr[i] === 5) { arr.splice(i, 1); i--; }}
+  //=> [1, 2, 3, 4, 6, 7, 8, 9, 0]
+  answer103.textContent = input103;
+});
