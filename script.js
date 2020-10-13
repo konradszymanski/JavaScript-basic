@@ -1367,10 +1367,13 @@ document.querySelector("#btn102").addEventListener("click", btn102);
 
 document.querySelector("#btn103").addEventListener("click", () => {
   const input103 = document.getElementById("input103").value;
-  const input103num = document.getElementById("input103").value;
   const answer103 = document.getElementById("answer103");
   const arr103 = input103.split("");
-  var filtered = arr103.filter(function(value, index, arr103){ return value != input103num;});
+  arr103.sort(function (a, b) {
+    return b - a;
+  });
+  const highNum= arr103[0]
+  var filtered = arr103.filter(function(value, index, arr103){ return value != highNum;});
   answer103.textContent = filtered.join("")  
 
 });
