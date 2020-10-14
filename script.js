@@ -1376,3 +1376,8 @@ document.querySelector("#btn103").addEventListener("click", () => {
   answer103.textContent = filtered.join("")  
 });
 //find two elements of the array such that their absolute difference is not greater than a given integer but is as close to the said integer.
+
+//console.log(different_values([12, 10, 33, 34], 10)); => 2
+//console.log(different_values([12, 10, 33, 34], 24)); => 24
+//console.log(different_values([12, 10, 33, 44], 40)); => 34
+
