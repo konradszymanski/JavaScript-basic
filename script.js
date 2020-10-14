@@ -1364,7 +1364,6 @@ function btn102() {
 }
 document.querySelector("#btn102").addEventListener("click", btn102);
 //maximal number from a given positive integer by deleting exactly one digit of the given number.
-
 document.querySelector("#btn103").addEventListener("click", () => {
   const input103 = document.getElementById("input103").value;
   const answer103 = document.getElementById("answer103");
@@ -1375,5 +1374,5 @@ document.querySelector("#btn103").addEventListener("click", () => {
   const highNum= arr103[0]
   var filtered = arr103.filter(function(value, index, arr103){ return value != highNum;});
   answer103.textContent = filtered.join("")  
-
 });
+//find two elements of the array such that their absolute difference is not greater than a given integer but is as close to the said integer.
