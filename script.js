@@ -1377,10 +1377,19 @@ document.querySelector("#btn103").addEventListener("click", () => {
   var filtered = arr103.filter(function(value, index, arr103){ return value != highNum;});
   answer103.textContent = filtered.join("")  
 });
-//103
+//104
 //find two elements of the array such that their absolute difference is not greater than a given integer but is as close to the said integer.
-
+document.querySelector("#btn104").addEventListener("click", () =>{
+  const input104 = document.getElementById("input104").value;
+  const input104a = document.getElementById("input104a").value
+  const answer104 = document.getElementById("answer104");
+  //answer104.textContent = input104 + input104a;
+  const arr104 = input104.split(" ");
+  
+   for (let i=0; i<arr104.length; i++){
+        let wyniki = arr104[i]-arr104[1+1]
+   }  answer104.textContent= wyniki ;
+});
 //console.log(different_values([12, 10, 33, 34], 10)); => 2
 //console.log(different_values([12, 10, 33, 34], 24)); => 24
 //console.log(different_values([12, 10, 33, 44], 40)); => 34
-
