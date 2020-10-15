@@ -1343,6 +1343,7 @@ const task101 = () => {
   }
 };
 document.querySelector("#task101").addEventListener("click", task101);
+//102
 //find the number of inversions of a given array of integers.
 function btn102() {
   const input102 = document.getElementById("input102").value;
@@ -1363,6 +1364,7 @@ function btn102() {
   }
 }
 document.querySelector("#btn102").addEventListener("click", btn102);
+//103
 //maximal number from a given positive integer by deleting exactly one digit of the given number.
 document.querySelector("#btn103").addEventListener("click", () => {
   const input103 = document.getElementById("input103").value;
@@ -1375,6 +1377,7 @@ document.querySelector("#btn103").addEventListener("click", () => {
   var filtered = arr103.filter(function(value, index, arr103){ return value != highNum;});
   answer103.textContent = filtered.join("")  
 });
+//103
 //find two elements of the array such that their absolute difference is not greater than a given integer but is as close to the said integer.
 
 //console.log(different_values([12, 10, 33, 34], 10)); => 2
