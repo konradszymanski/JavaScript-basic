@@ -1395,8 +1395,7 @@ document.querySelector("#btn104").addEventListener("click", () =>{
     } 
   } 
 answer104.textContent = max_num;
-//console.log(different_values([12, 10, 33, 34], 10)); => 2
-//console.log(different_values([12, 10, 33, 34], 24)); => 24
-//console.log(different_values([12, 10, 33, 44], 40)); => 34
 });
+//105
+//find the number of times to replace a given number with the sum of its digits until it convert to a single digit number.
 
