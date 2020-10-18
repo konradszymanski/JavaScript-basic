@@ -1404,9 +1404,10 @@ document.querySelector("#btn105").addEventListener("click", () =>{
   const arr105 = input105.split("")
   arr105Nums = arr105.map(Number);
   const new105 = arr105Nums.reduce((a, b) => {return a + b});   
-  ar= new105.split("");
-  answer105.textContent = ar.length;
-
+  var fff =  new105
+  // ar= new105.split("");
+  // answer105.textContent = ar.length;
+answer105.textContent = fff;
 });
     
   
