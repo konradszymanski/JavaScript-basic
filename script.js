@@ -1398,4 +1398,10 @@ answer104.textContent = max_num;
 });
 //105
 //find the number of times to replace a given number with the sum of its digits until it convert to a single digit number.
-
+document.querySelector("#btn105").addEventListener("click", () =>{
+  const input105 = document.getElementById("input105").value;
+  const answer105 = document.getElementById("answer105");
+  answer105.textContent = input105
+});
+    
+  
