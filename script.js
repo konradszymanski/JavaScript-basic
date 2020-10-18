@@ -1401,7 +1401,12 @@ answer104.textContent = max_num;
 document.querySelector("#btn105").addEventListener("click", () =>{
   const input105 = document.getElementById("input105").value;
   const answer105 = document.getElementById("answer105");
-  answer105.textContent = input105
+  const arr105 = input105.split("")
+  arr105Nums = arr105.map(Number);
+  const new105 = arr105Nums.reduce((a, b) => {return a + b});   
+  ar= new105.split("");
+  answer105.textContent = ar.length;
+
 });
     
   
