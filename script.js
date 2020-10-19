@@ -1401,13 +1401,11 @@ answer104.textContent = max_num;
 document.querySelector("#btn105").addEventListener("click", () =>{
   const input105 = document.getElementById("input105").value;
   const answer105 = document.getElementById("answer105");
-  const arr105 = input105.split("")
-  arr105Nums = arr105.map(Number);
-  const new105 = arr105Nums.reduce((a, b) => {return a + b});   
-  var fff =  new105
-  // ar= new105.split("");
-  // answer105.textContent = ar.length;
-answer105.textContent = fff;
+  const arr105 = input105.split("").map(Number);
+  const new105 = arr105.reduce((a, b) => {return a + b});   
+
+  answer105.textContent = new105;
+
 });
     
   
