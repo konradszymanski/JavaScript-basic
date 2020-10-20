@@ -1402,11 +1402,12 @@ document.querySelector("#btn105").addEventListener("click", () =>{
   const input105 = document.getElementById("input105").value;
   const answer105 = document.getElementById("answer105");
   const arr105 = input105.split("").map(Number);
-  const new105 = arr105.reduce((a, b) => {return a + b});   
+  const new105 = [];
+  new105.push(arr105.reduce((a, b) => {return a + b})   )
 
-console.log(typeof(new105))
-console.log(typeof(arr105))
-  answer105.textContent =new105;
+  console.log(typeof(new105))
+  console.log(typeof(arr105))
+  answer105.textContent = new105[0];
 
 });
     
