@@ -1403,19 +1403,10 @@ document.querySelector("#btn105").addEventListener("click", () =>{
   const answer105 = document.getElementById("answer105");
   const arr105 = input105.split("").map(Number);
   const new105 = [];
-  new105.push(arr105.reduce((a, b) => {return a + b}))
-  
+  new105.push(arr105.reduce((a, b) => {return a + b})) 
   const result105 = Array.from(String(new105), Number);
-  //const arrayOfDigits = Array.from(new105);
-  //console.log(arrayOfDigits); 
   console.log(typeof(new105))
   console.log(typeof(arr105))
   answer105.textContent = result105.length;
 
 });
-    
-// const numToSeparate = 12345;
-
-// const arrayOfDigits = Array.from(String(numToSeparate), Number);
-
-// console.log(arrayOfDigits);   //[1,2,3,4,5]
