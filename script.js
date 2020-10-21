@@ -1408,5 +1408,5 @@ document.querySelector("#btn105").addEventListener("click", () =>{
   console.log(typeof(new105))
   console.log(typeof(arr105))
   answer105.textContent = result105.length;
-
 });
+//
