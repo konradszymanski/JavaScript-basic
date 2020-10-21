@@ -1409,4 +1409,13 @@ document.querySelector("#btn105").addEventListener("click", () =>{
   console.log(typeof(arr105))
   answer105.textContent = result105.length;
 });
-//
+//divide an integer by another integer as long as the result is an integer and return the result
+document.querySelector("#btn106").addEventListener("click", () =>{
+  const in106num = document.getElementById("in106num").value;
+  const in106int = document.getElementById("in106int").value;
+  const answer106 = document.getElementById("answer106");
+   
+  while ( (parseInt(in106num) / parseInt(in106int)) == 2) {
+    answer106.textContent = "asd"
+  } 
+})
