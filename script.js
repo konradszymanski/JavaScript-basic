@@ -1415,7 +1415,9 @@ document.querySelector("#btn106").addEventListener("click", () =>{
   const in106int = document.getElementById("in106int").value;
   const answer106 = document.getElementById("answer106");
    
-  while ( (parseInt(in106num) / parseInt(in106int)) == 2) {
-    answer106.textContent = "asd"
-  } 
+  while (in106num % in106int === 0){
+    
+  } break; 
+  
+ 
 })
