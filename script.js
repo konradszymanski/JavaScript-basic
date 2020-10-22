@@ -1414,10 +1414,14 @@ document.querySelector("#btn106").addEventListener("click", () =>{
   const in106num = document.getElementById("in106num").value;
   const in106int = document.getElementById("in106int").value;
   const answer106 = document.getElementById("answer106");
-   
-  while (in106num % in106int === 0){
-    
-  } break; 
+   if (in106int === 1){
+     answer106.textContent = in106num;
+   }else {
+    while (in106num % in106int === 0){
+      in106num /= in106int;
+    }
+   }
+   return  answer106.textContent = in106num;; 
   
  
 })
