@@ -1411,16 +1411,20 @@ document.querySelector("#btn105").addEventListener("click", () =>{
 });
 //divide an integer by another integer as long as the result is an integer and return the result
 document.querySelector("#btn106").addEventListener("click", () =>{
-  const in106num = document.getElementById("in106num").value;
+  let in106num = document.getElementById("in106num").value;
   const in106int = document.getElementById("in106int").value;
   const answer106 = document.getElementById("answer106");
 
    let result = 0;
-   while(parseInt(in106num) >= parseInt(in106int)){
-    in106num -= in106int;
-       result++;
-       console.log(result)
+   if ((parseInt(in106num)% parseInt(in106int)) != 0 ) {
+    answer106.textContent = in106num
+   } else {
+    while(parseInt(in106num) >= parseInt(in106int)){
+      in106num /= in106int;
+         result++;
+         answer106.textContent=result
+     }
+     return result;
    }
-   return result;
    console.log(result)
 })
