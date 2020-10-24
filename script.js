@@ -1409,6 +1409,7 @@ document.querySelector("#btn105").addEventListener("click", () =>{
   console.log(typeof(arr105))
   answer105.textContent = result105.length;
 });
+//106
 //divide an integer by another integer as long as the result is an integer and return the result
 document.querySelector("#btn106").addEventListener("click", () =>{
   let in106num = document.getElementById("in106num").value;
@@ -1428,3 +1429,5 @@ document.querySelector("#btn106").addEventListener("click", () =>{
    }
    console.log(result)
 })
+//107
+//find the number of sorted pairs formed by its elements of a given array of integers such that one element in the pair is divisible by the other one.
