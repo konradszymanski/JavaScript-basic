@@ -1431,3 +1431,14 @@ document.querySelector("#btn106").addEventListener("click", () =>{
 })
 //107
 //find the number of sorted pairs formed by its elements of a given array of integers such that one element in the pair is divisible by the other one.
+document.querySelector("#btn107").addEventListener("click", () =>{
+  const in107num = document.getElementById("in107num").value;
+  const answer107 = document.getElementById("answer107");
+  const arr107 = in107num.split("").map(Number);
+  const new107 = []
+  new107.push(arr107)
+  
+  // const new105 = [];
+  // new105.push(arr105.
+  answer107.textContent = new107;
+})
