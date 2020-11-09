@@ -1437,7 +1437,10 @@ document.querySelector("#btn107").addEventListener("click", () =>{
   const arr107 = in107num.split("").map(Number);
   const new107 = []
   new107.push(arr107)
+
   
+  // [2, 4, 6] -> 2 - (2,4), (2,6)
+  //[2, 4, 16] -> 3 - (2,4), (2,16), (4,16)
   // const new105 = [];
   // new105.push(arr105.
   answer107.textContent = new107;
