@@ -1431,13 +1431,35 @@ document.querySelector("#btn106").addEventListener("click", () =>{
 })
 //107
 //find the number of sorted pairs formed by its elements of a given array of integers such that one element in the pair is divisible by the other one.
+
+// const  new107 = [];
+// const arr107 = in107num.split(" ").map(Number);
+// new107.push(arr107);
+// document.querySelector("#btn107").addEventListener("click", () =>{
+//   answer107.innerHTML = answer107
+//   console.log(in107num)
+  //console.log(arr107)
+//  console.log(new107)
+const task107 = ()=>{
   const in107num = document.getElementById("in107num").value;
-  const answer107 = document.getElementById("answer107"); 
-  const arr107 = in107num.split("").map(Number);
-  const new107 = [];
-document.querySelector("#btn107").addEventListener("click", () =>{
-  new107.push(arr107)
-  answer107.textContent =  `- ${new107}`
-})
+  const answer107 = document.getElementById("answer107");
+  const arr107 = in107num.split(" ").map(Number); 
+  let  new107 = [];
+  new107.push(arr107);
+ 
+  let result107 = 0;
+for (let i = 0; i<arr107.length; i++){
+  for (let j=i+1; j<arr107.length; j++){
+      if (arr107[i] % arr107[j] === 0 || arr107[j] % arr107[i] ===0){
+        result107++;
+        answer107.textContent = result107
+      }
+  }
+}  console.log(in107num)
+console.log(arr107)
+console.log(new107)
+ return result107
+
+}
   // [2, 4, 6] -> 2 - (2,4), (2,6)
   //[2, 4, 16] -> 3 - (2,4), (2,16), (4,16)
