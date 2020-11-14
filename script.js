@@ -1443,10 +1443,7 @@ document.querySelector("#btn106").addEventListener("click", () =>{
 const task107 = ()=>{
   const in107num = document.getElementById("in107num").value;
   const answer107 = document.getElementById("answer107");
-  const arr107 = in107num.split(" ").map(Number); 
-  let  new107 = [];
-  new107.push(arr107);
- 
+  const arr107 = in107num.split(" ");
   let result107 = 0;
 for (let i = 0; i<arr107.length; i++){
   for (let j=i+1; j<arr107.length; j++){
@@ -1455,11 +1452,6 @@ for (let i = 0; i<arr107.length; i++){
         answer107.textContent = result107
       }
   }
-}  console.log(in107num)
-console.log(arr107)
-console.log(new107)
+}console.log(arr107)
  return result107
-
 }
-  // [2, 4, 6] -> 2 - (2,4), (2,6)
-  //[2, 4, 16] -> 3 - (2,4), (2,16), (4,16)
