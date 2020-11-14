@@ -1456,3 +1456,17 @@ for (let i = 0; i<arr107.length; i++){
  return result107
 }
 //108
+document.querySelector("#btn108").addEventListener("click", () =>{
+  const in108num1 = document.getElementById("in108num1").value;
+  const arr108_1 = in108num1.split(" ");
+  const in108num2 = document.getElementById("in108num2").value;
+  const arr108_2 = in108num2.split(" ");
+  const answer108 = document.getElementById("answer108");
+ let dots = 0;
+  for (let i=0; i<3; i++){
+    dots += arr108_1[i] * arr108_2[i]
+  } 
+  answer108.textContent = dots;
+  return
+
+})
