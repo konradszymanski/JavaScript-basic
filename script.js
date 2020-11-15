@@ -1456,6 +1456,7 @@ for (let i = 0; i<arr107.length; i++){
  return result107
 }
 //108
+//create the dot products of two given 3D vectors.
 document.querySelector("#btn108").addEventListener("click", () =>{
   const in108num1 = document.getElementById("in108num1").value;
   const arr108_1 = in108num1.split(" ");
@@ -1468,5 +1469,6 @@ document.querySelector("#btn108").addEventListener("click", () =>{
   } 
   answer108.textContent = dots;
   return
-
 })
+//109
+//sort an array of all prime numbers between 1 and a given integer.
