@@ -1478,17 +1478,14 @@ document.querySelector("#btn109").addEventListener("click", () =>{
   const answer109 = document.getElementById("answer109");
 
   for (let i= 1; i <= prime; i++){
-   let primeNumbers =[];
-   primeNumbers.push(i)
-   //primeNumbers.filter(numbers => numbers % 2 === 0 )
+
+    let primeNumbers =[];
+    primeNumbers.push(i)
+
     answer109.textContent += primeNumbers.filter(numbers => 
       numbers % 3!=0 && 
       numbers % 2!=0 &&
-      numbers % 5!=0)
+      numbers % 5!=0
+      )
   }
-
-  // (numbers  % 2 != 0 && numbers == 2 ) ||
-  //     (numbers  % 3 != 0 && numbers == 3 ) ||
-  //     (numbers  % 5 != 0 && numbers == 5 )
-  //       )
 });
