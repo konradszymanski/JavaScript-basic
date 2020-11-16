@@ -1480,24 +1480,14 @@ document.querySelector("#btn109").addEventListener("click", () =>{
   for (let i= 1; i <= prime; i++){
     
     let primeNumbers =[];
-   
-    if(Math.sqrt(i) === Math.round(i)  ){
-      primeNumbers.push(i)
-    }
 
-    // if (Math.sqrt(i) === false ){
-    //   primeNumbers.push(Math.sqrt(i))
-    
-   
-    answer109.textContent += primeNumbers
+    primeNumbers.push(i)
 
-  //   answer109.textContent += primeNumbers.filter(numbers => 
-  //     numbers % 3!=0 && 
-  //     numbers % 2!=0 &&
-  //     numbers % 5!=0
-  //     )
-  //
-
-console.log(primeNumbers)
-          }
+    answer109.textContent += primeNumbers.filter(numbers => 
+      numbers % 3!=0 && 
+      numbers % 2!=0 &&
+      numbers % 5!=0
+      )
+  
+        }
 });
