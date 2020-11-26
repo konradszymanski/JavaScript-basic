@@ -1472,17 +1472,21 @@ document.querySelector("#btn108").addEventListener("click", () =>{
 })
 //109
 //sort an array of all prime numbers between 1 and a given integer.
+function isPrime(num) {
+  for(var i = 2; i < num; i++)
+    if(num % i === 0) return false;
+  return num > 1;
+}
 document.querySelector("#btn109").addEventListener("click", () =>{
   const in109num = document.getElementById("in109num").value;
   const prime = in109num.split(" ");
   let answer109 = document.getElementById("answer109");
+  let primeNumbers = [];
+  let result = [];
     for (let i= 2; i <= prime; i++){
-      let primeNumbers =[];
-      primeNumbers.push(i)
-      answer109.textContent += primeNumbers.filter(numbers => 
-        numbers % 3!=0 && 
-        numbers % 2!=0 &&
-        numbers % 5!=0  
-        )
+      primeNumbers.push(i);
+      result = primeNumbers.filter(numbers=> isPrime(numbers));
     }
+   // console.log(result.join())
+    answer109.textContent = result
 });
