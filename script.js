@@ -1491,3 +1491,19 @@ document.querySelector("#btn109").addEventListener("click", () =>{
     answer109.textContent = result
 });
 //110 find the number of even values in sequence before the first occurrence of a given number. 
+let sequence = Math.floor(Math.random() * 10);
+const in109num = document.getElementById("in110num").value;
+let answer109 = document.getElementById("answer110");
+let seq = document.getElementById("seq")
+const randText = "Sequence numbers are:";
+let arr110 = [];
+ showSequence = () =>{
+ for (let i = 1; i<=10; i++ ){
+arr110.push(i)
+  seq.textContent =  `${randText} \n ${arr110}`
+ }
+}
+showSequence();
+document.querySelector("#btn110").addEventListener("click", () =>{
+  answer110.textContent = sequence;
+})
