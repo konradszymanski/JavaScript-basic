@@ -1490,3 +1490,4 @@ document.querySelector("#btn109").addEventListener("click", () =>{
    // console.log(result.join())
     answer109.textContent = result
 });
+//110 find the number of even values in sequence before the first occurrence of a given number. 
