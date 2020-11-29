@@ -1505,5 +1505,6 @@ arr110.push(i)
 }
 showSequence();
 document.querySelector("#btn110").addEventListener("click", () =>{
-  answer110.textContent = sequence;
+  //answer110.textContent = sequence;
+  answer109.textContent = arr110.filter(numbers => numbers % 2 === 0)
 })
