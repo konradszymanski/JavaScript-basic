@@ -1491,9 +1491,8 @@ document.querySelector("#btn109").addEventListener("click", () =>{
     answer109.textContent = result
 });
 //110 find the number of even values in sequence before the first occurrence of a given number. 
-let sequence = Math.floor(Math.random() * 10);
-const in109num = document.getElementById("in110num").value;
-let answer109 = document.getElementById("answer110");
+
+let answer110 = document.getElementById("answer110");
 let seq = document.getElementById("seq")
 const randText = "Sequence numbers are:";
 let arr110 = [];
@@ -1504,7 +1503,12 @@ arr110.push(i)
  }
 }
 showSequence();
+
 document.querySelector("#btn110").addEventListener("click", () =>{
+  
+const in110num = document.getElementById("in110num").value;
+const num110 = in110num.split("")
   //answer110.textContent = sequence;
-  answer109.textContent = arr110.filter(numbers => numbers % 2 === 0)
+  //answer110.textContent = arr110.filter(numbers=> odd110(numbers))
+  answer110.textContent = num110;
 })
