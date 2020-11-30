@@ -50,6 +50,13 @@ table {
   border: 10px solib black
 }
 
+.answer{
+  max-width: 250px;
+  word-wrap: break-word;
+ }
+#task{
+  max-width: 255px;
+}
 .answer {
   margin: 10px auto 0 auto;
 }
@@ -67,5 +74,5 @@ td {
 @media only screen and (max-width: 1240px) {
   table {
     max-width: 90%;
-  }
+  }  
 }
