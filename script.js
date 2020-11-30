@@ -1496,19 +1496,21 @@ let answer110 = document.getElementById("answer110");
 let seq = document.getElementById("seq")
 const randText = "Sequence numbers are:";
 let arr110 = [];
- showSequence = () =>{
- for (let i = 1; i<=10; i++ ){
-arr110.push(i)
-  seq.textContent =  `${randText} \n ${arr110}`
- }
+    showSequence = () =>{
+    for (let i = 1; i<=10; i++ ){
+    arr110.push(i)
+      seq.textContent =  `${randText} \n ${arr110}`
+    }
 }
 showSequence();
-
 document.querySelector("#btn110").addEventListener("click", () =>{
-  
-const in110num = document.getElementById("in110num").value;
-const num110 = in110num.split("")
-  //answer110.textContent = sequence;
-  //answer110.textContent = arr110.filter(numbers=> odd110(numbers))
-  answer110.textContent = num110;
+    const in110num = document.getElementById("in110num").value;
+    const num110 = in110num.split("")
+    let oddcheck = []
+    for (let i =1; i<= num110; i++){
+      oddcheck.push(i);
+    }  
+    let oddLength = oddcheck.filter(numbers => numbers % 2 === 0)
+    answer110.textContent = oddLength.length;
+    //answer110.textContent = oddLength;
 })
