@@ -1517,3 +1517,4 @@ document.querySelector("#btn110").addEventListener("click", () =>{
         answer110.textContent = `this number isn't in sequence`
     }
 })
+//check a number from three given numbers where two numbers are equal, find the third one.
