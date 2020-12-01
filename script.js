@@ -1505,12 +1505,15 @@ let arr110 = [];
 showSequence();
 document.querySelector("#btn110").addEventListener("click", () =>{
     const in110num = document.getElementById("in110num").value;
-    const num110 = in110num.split("")
+    const num110 = in110num.split(" ")
     let oddcheck = []
-    for (let i =1; i<= num110; i++){
-      oddcheck.push(i);
-    }  
-    let oddLength = oddcheck.filter(numbers => numbers % 2 === 0)
-    answer110.textContent = oddLength.length;
-    //answer110.textContent = oddLength;
+    if (num110 <=  arr110[arr110.length-1] ){
+      for (let i =1; i<= num110; i++){
+        oddcheck.push(i);
+        let oddLength = oddcheck.filter(numbers => numbers % 2 === 0)
+        answer110.textContent = oddLength.length;
+      } 
+      }else {
+        answer110.textContent = `this number isn't in sequence`
+    }
 })
