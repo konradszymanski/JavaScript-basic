@@ -1518,3 +1518,26 @@ document.querySelector("#btn110").addEventListener("click", () =>{
     }
 })
 //check a number from three given numbers where two numbers are equal, find the third one.
+
+const answer111 = document.getElementById("answer111");
+const rdn111 = document.getElementById("rdnP");
+function showRnd(){
+  const rdnArr = [];
+  for (let i = 1; i <= 3; i++) {
+    rdnArr.push(Math.floor(Math.random(i) * 3 + 1));
+    console.log(rdnArr)
+    rdn111.textContent = `Three random numbers: \n${rdnArr}`  
+  }
+}
+showRnd();
+document.querySelector("#btn111").addEventListener("click", () =>{
+  answer111.textContent = ``
+})
+
+// function task95randoms() {
+//   const randomNrsTask95 = document.querySelector(".rdmNmrsPrgf");
+//   const rdm95 = [];
+//   for (let i = 1; i <= 10; i++) {
+//     rdm95.push(Math.floor(Math.random(i) * 10 + 1));
+//     randomNrsTask95.textContent = rdm95;
+//   }
