@@ -1521,8 +1521,9 @@ document.querySelector("#btn110").addEventListener("click", () =>{
 
 const answer111 = document.getElementById("answer111");
 const rdn111 = document.getElementById("rdnP");
+const rdnArr = [];
 function showRnd(){
-  const rdnArr = [];
+  
   for (let i = 1; i <= 3; i++) {
     rdnArr.push(Math.floor(Math.random(i) * 3 + 1));
     console.log(rdnArr)
@@ -1531,13 +1532,7 @@ function showRnd(){
 }
 showRnd();
 document.querySelector("#btn111").addEventListener("click", () =>{
-  answer111.textContent = ``
+  answer111.textContent = rdnArr[1]
 })
 
-// function task95randoms() {
-//   const randomNrsTask95 = document.querySelector(".rdmNmrsPrgf");
-//   const rdm95 = [];
-//   for (let i = 1; i <= 10; i++) {
-//     rdm95.push(Math.floor(Math.random(i) * 10 + 1));
-//     randomNrsTask95.textContent = rdm95;
-//   }
+
