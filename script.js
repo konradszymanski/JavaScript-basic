@@ -1522,6 +1522,7 @@ document.querySelector("#btn110").addEventListener("click", () =>{
 const answer111 = document.getElementById("answer111");
 const rdn111 = document.getElementById("rdnP");
 const rdnArr = [];
+
 function showRnd(){
   
   for (let i = 1; i <= 3; i++) {
@@ -1531,8 +1532,17 @@ function showRnd(){
   }
 }
 showRnd();
+
 document.querySelector("#btn111").addEventListener("click", () =>{
-  answer111.textContent = rdnArr[1]
+  for (let i=0; i<=rdnArr.length; i++){
+    let result = [];
+    for (let y = i + 1; y<=rdnArr.length; y++){
+      if (rdnArr[i] === rdnArr[y] ){
+        result.push(rdnArr[i])
+        answer111.textContent = result;
+      }else {
+        answer111.textContent =`there is not equal numbers `
+      }
+    } 
+  }  
 })
-
-
