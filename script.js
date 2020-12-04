@@ -1534,15 +1534,15 @@ function showRnd(){
 showRnd();
 
 document.querySelector("#btn111").addEventListener("click", () =>{
+  let result = [];
   for (let i=0; i<=rdnArr.length; i++){
-    let result = [];
     for (let y = i + 1; y<=rdnArr.length; y++){
       if (rdnArr[i] === rdnArr[y] ){
-        result.push(rdnArr[i])
+        result.push(rdnArr[y]);
         answer111.textContent = result;
-      }else {
-        answer111.textContent =`there is not equal numbers `
-      }
+        console.log(result) 
+      } 
+      answer111.textContent = `Equal digits are: ${result} and the third is: ${rdnArr.filter(numbers => numbers != result)} ` 
     } 
   }  
 })
