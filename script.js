@@ -1541,8 +1541,14 @@ document.querySelector("#btn111").addEventListener("click", () =>{
         result.push(rdnArr[y]);
         answer111.textContent = result;
         console.log(result) 
-      } 
-      answer111.textContent = `Equal digits are: ${result} and the third is: ${rdnArr.filter(numbers => numbers != result)} ` 
+      } if (result.length == 0){
+        answer111.textContent = `no equal numbers`
+      }else if (result[0] === result[1] && result[0] == result[2] )  {
+        answer111.textContent = `all equal numbers`
+      }else {
+        answer111.textContent = `Equal digits are: ${result} and the third is: ${rdnArr.filter(numbers => numbers != result)} ` 
+      }
+     
     } 
   }  
 })
