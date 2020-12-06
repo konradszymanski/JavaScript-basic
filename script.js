@@ -1550,15 +1550,19 @@ document.querySelector("#btn111").addEventListener("click", () =>{
 const answer112 = document.getElementById("answer112");
 const in112 = document.getElementById("in112num");
 const arr112 = [];
+let trailing = 0;
 document.querySelector('#btn112').addEventListener('click', () =>{
     for (let i = 1; i <= parseInt(in112.value) ; i++){
+      let num = i;
       arr112.push(i);
-      arr112.sort(function (a, b) {
-        return b - a;
-      });
+      //divide by5 explanation: It's based on the inherent pattern of trailing zeros in factorials. The first trailing zero in factorials appears at factorial of 5. For every increase of 5 numbers in factorials, the trailing zero increases by one. So 5–9 has a 1 trailing zero; 10–14 has 2 trailing zeros; 15–19 has 3, and so on...
+      while (num % 5 === 0){
+        num /= 5;
+        trailing++;
+      }
       const reducer = (a, b) => a * b;
-     let trailing =  arr112.reduce(reducer)
+     let total =  arr112.reduce(reducer)
       console.log(trailing)
-      answer112.textContent =  `Total output is: ${trailing}` ;
+      answer112.textContent =  `Total output is: ${total}, and ther is ${trailing} zero` ;
     } 
 })
