@@ -1517,14 +1517,12 @@ document.querySelector("#btn110").addEventListener("click", () =>{
         answer110.textContent = `this number isn't in sequence`
     }
 })
-//check a number from three given numbers where two numbers are equal, find the third one.
-
+//111check a number from three given numbers where two numbers are equal, find the third one.
 const answer111 = document.getElementById("answer111");
 const rdn111 = document.getElementById("rdnP");
 const rdnArr = [];
 
 function showRnd(){
-  
   for (let i = 1; i <= 3; i++) {
     rdnArr.push(Math.floor(Math.random(i) * 3 + 1));
     console.log(rdnArr)
@@ -1532,7 +1530,6 @@ function showRnd(){
   }
 }
 showRnd();
-
 document.querySelector("#btn111").addEventListener("click", () =>{
   let result = [];
   for (let i=0; i<=rdnArr.length; i++){
@@ -1548,7 +1545,7 @@ document.querySelector("#btn111").addEventListener("click", () =>{
       }else {
         answer111.textContent = `Equal digits are: ${result} and the third is: ${rdnArr.filter(numbers => numbers != result)} ` 
       }
-     
     } 
   }  
-})
+});
+//112find the number of trailing zeros in the decimal representation of the factorial of a given number.
