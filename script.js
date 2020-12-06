@@ -1525,7 +1525,6 @@ const rdnArr = [];
 function showRnd(){
   for (let i = 1; i <= 3; i++) {
     rdnArr.push(Math.floor(Math.random(i) * 3 + 1));
-    console.log(rdnArr)
     rdn111.textContent = `Three random numbers: \n${rdnArr}`  
   }
 }
@@ -1537,7 +1536,6 @@ document.querySelector("#btn111").addEventListener("click", () =>{
       if (rdnArr[i] === rdnArr[y] ){
         result.push(rdnArr[y]);
         answer111.textContent = result;
-        console.log(result) 
       } if (result.length == 0){
         answer111.textContent = `no equal numbers`
       }else if (result[0] === result[1] && result[0] == result[2] )  {
@@ -1549,3 +1547,18 @@ document.querySelector("#btn111").addEventListener("click", () =>{
   }  
 });
 //112find the number of trailing zeros in the decimal representation of the factorial of a given number.
+const answer112 = document.getElementById("answer112");
+const in112 = document.getElementById("in112num");
+const arr112 = [];
+document.querySelector('#btn112').addEventListener('click', () =>{
+    for (let i = 1; i <= parseInt(in112.value) ; i++){
+      arr112.push(i);
+      arr112.sort(function (a, b) {
+        return b - a;
+      });
+      const reducer = (a, b) => a * b;
+     let trailing =  arr112.reduce(reducer)
+      console.log(trailing)
+      answer112.textContent =  `Total output is: ${trailing}` ;
+    } 
+})
