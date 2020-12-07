@@ -1567,3 +1567,10 @@ document.querySelector('#btn112').addEventListener('click', () =>{
     } 
 })
 //118calculate the sum of n + n/2 + n/4 + n/8 + .... where n is a positive integer and all divisions are integer.
+
+document.querySelector('#btn113').addEventListener('click', () =>{
+  const in113 = document.getElementById("in113num").value;
+const answer113 = document.getElementById("answer113");
+const nNum = in113.split(" ");
+  answer113.textContent = nNum;
+});
