@@ -1566,3 +1566,4 @@ document.querySelector('#btn112').addEventListener('click', () =>{
       answer112.textContent =  `Total output is: ${total}, and ther is ${trailing} zero` ;
     } 
 })
+//118calculate the sum of n + n/2 + n/4 + n/8 + .... where n is a positive integer and all divisions are integer.
