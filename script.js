@@ -1565,17 +1565,16 @@ document.querySelector('#btn112').addEventListener('click', () =>{
       answer112.textContent =  `Total output is: ${total}, and ther is ${trailing} zero` ;
     } 
 })
-//118calculate the sum of n + n/2 + n/4 + n/8 + .... where n is a positive integer and all divisions are integer.
-
+//113calculate the sum of n + n/2 + n/4 + n/8 + .... where n is a positive integer and all divisions are integer.
 document.querySelector('#btn113').addEventListener('click', () =>{
   const in113 = document.getElementById("in113num");
   const answer113 = document.getElementById("answer113");
   nNum = in113.value;
   let sum = 0;
   while (nNum > 0){
-   
     nNum = Math.floor(nNum /2);
     sum += nNum;
     } console.log(sum );
     answer113.textContent=  parseInt(in113.value)+sum;
 });
+//114check whether a given string represents a correct sentence or not. A string is considered correct sentence if it starts with the capital letter and ends with a full stop (.).
