@@ -1579,5 +1579,8 @@ document.querySelector('#btn113').addEventListener('click', () =>{
 });
 //114check whether a given string represents a correct sentence or not. A string is considered correct sentence if it starts with the capital letter and ends with a full stop (.).
 document.querySelector('#btn114').addEventListener('click', () =>{
-  alert("asd")
+  in114 = document.getElementById("in114str").value;
+  answer114=document.getElementById("answer114");
+
+  answer114.textContent = in114;
 })
