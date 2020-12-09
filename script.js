@@ -1581,6 +1581,11 @@ document.querySelector('#btn113').addEventListener('click', () =>{
 document.querySelector('#btn114').addEventListener('click', () =>{
   in114 = document.getElementById("in114str").value;
   answer114=document.getElementById("answer114");
+  let arr114 = in114.split("");
+  if (arr114[0] === arr114[0].toUpperCase() &&
+      (arr114[arr114.length -1] === ".")
+  ){answer114.textContent = 'true'}  else {answer114.textContent = 'false'}
 
-  answer114.textContent = in114;
+
+ // answer114.textContent = arr114[0] + arr114[arr114.length -1];
 })
