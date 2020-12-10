@@ -1586,9 +1586,12 @@ document.querySelector('#btn114').addEventListener('click', () =>{
   // if (arr114[0] === arr114[0].toUpperCase() &&
   //     (arr114[arr114.length -1] === ".")
   // ){answer114.textContent = 'true'}  else {answer114.textContent = 'false'}
-  const checkRegex =  /^[A-Z]/.test(in114)
-  const result = /\.$/.test(in114)
-  if (checkRegex && result   == true){
+
+  //regex solution
+
+  const checkUpp =  /^[A-Z]/.test(in114)
+  const checkDot = /\.$/.test(in114)
+  if (checkUpp && checkDot   == true){
     answer114.textContent = `true` 
   } else{
     answer114.textContent = `false`
