@@ -1598,3 +1598,11 @@ document.querySelector('#btn114').addEventListener('click', () =>{
   }
 });
 //115 check whether a matrix is a diagonal matrix or not. In linear algebra, a diagonal matrix is a matrix in which the entries outside the main diagonal are all zero (the diagonal from the upper left to the lower right).
+ans115 = document.getElementById("answer115");
+document.querySelector('#btn115a').addEventListener('click', () =>{
+  ans115.textContent = "test1"
+});
+
+document.querySelector('#btn115b').addEventListener('click', () =>{
+  ans115.textContent = "test2"
+});
