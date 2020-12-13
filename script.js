@@ -1609,3 +1609,21 @@ document.querySelector('#btn115b').addEventListener('click', () =>{
   ans115.textContent = "task 115 is not ready"
 });
 //find all the possible options to replace the hash in a string (Consists of digits and one hash (#)) with a digit to produce an integer divisible by 3.
+
+document.querySelector("#btn116").addEventListener("click", () =>{
+  input116 = document.getElementById("in116num").value;
+  ans116 = document.getElementById("answer116");
+
+  if ( !input116.includes("*") ){
+    ans116.textContent = "number has to contain * Asterix"
+  } else {
+    ans116.textContent = 'gfh'
+  }
+
+  // string to array
+  // replace * a number from 0 - 9  //regex? 
+  // use for loop to generate 0-9 numbers
+  // put all numbers to array
+  // filter numbers which are divisible by 3
+  // done
+})
