@@ -1602,9 +1602,9 @@ ans115 = document.getElementById("answer115");
 const a115 = [[1, 0, 0], [0, 2, 0], [0, 0, 3] ];
 const b115 = [[1, 0, 0], [0, 2, 3], [0, 0, 3] ]
 document.querySelector('#btn115a').addEventListener('click', () =>{
-  ans115.textContent = "test1"
+  ans115.textContent = "task 115 is not ready"
 });
 
 document.querySelector('#btn115b').addEventListener('click', () =>{
-  ans115.textContent = "test2"
+  ans115.textContent = "task 115 is not ready"
 });
