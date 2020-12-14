@@ -1620,23 +1620,14 @@ document.querySelector("#btn116").addEventListener("click", () =>{
     const num09 = [0,1,2,3,4,5,6,7,8,9];
     let allNums = []
     for (let i=0; i<num09.length;i++){
- 
+      //replace is string method only
       allNums.push(input116.replace("*",i));
-      let nowyarray = allNums.map((x)=> parseInt(x));
-      
-      function divByThree(numbers){
-        return numbers > 0 && numbers % 3 == 0;
-      }
-    
-      console.log(nowyarray.filter(divByThree))
+      // all elements of array need to be Numbers  
+      let resutlArr = allNums.map((x)=> parseInt(x));
+          function divByThree(numbers){
+            return numbers > 0 && numbers % 3 == 0;
+          }             
+      ans116.textContent = resutlArr.filter(divByThree);
     }
-
   }
-  // conditional statement, if contain asterix *
-  // string to array
-  // replace * a number from 0 - 9  //regex? 
-  // use for loop to generate 0-9 numbers
-  // put all numbers to array
-  // filter numbers which are divisible by 3
-  // done
 })
