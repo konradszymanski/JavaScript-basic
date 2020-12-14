@@ -1618,18 +1618,18 @@ document.querySelector("#btn116").addEventListener("click", () =>{
     ans116.textContent = "number has to contain * Asterix"
   } else {
     const num09 = [0,1,2,3,4,5,6,7,8,9];
-   // input116.replace("*",'sad')
-    //console.log(input116.replace("*",'sad'))
-    for (let i=0; i<=0;i++){
-      // add i to new array instead of asterix
-
+    let allNums = []
+    for (let i=0; i<num09.length;i++){
+ 
+      allNums.push(input116.replace("*",i));
+      let nowyarray = allNums.map((x)=> parseInt(x));
+      
+      function divByThree(numbers){
+        return numbers > 0 && numbers % 3 == 0;
+      }
+    
+      console.log(nowyarray.filter(divByThree))
     }
-    let arr116 = input116.split("")
-    let arr44 = arr116.splice((arr116.indexOf("*")),0,7); 
-  
-    console.log(arr44)
-    // ans116.textContent = arr116;
-    // console.log(arr116)
 
   }
   // conditional statement, if contain asterix *
