@@ -1624,6 +1624,7 @@ document.querySelector("#btn116").addEventListener("click", () =>{
       allNums.push(input116.replace("*",i));
       // all elements of array need to be Numbers  
       let resutlArr = allNums.map((x)=> parseInt(x));
+
           function divByThree(numbers){
             return numbers > 0 && numbers % 3 == 0;
           }             
@@ -1635,3 +1636,16 @@ document.querySelector("#btn116").addEventListener("click", () =>{
 //Note: In linear algebra, the identity matrix, or sometimes ambiguously called a unit matrix, of size n is the n ? n square matrix with ones on the main diagonal and zeros elsewhere.
 //[[1, 0, 0], [0, 1, 0], [0, 0, 1]] -> true
 //[[1, 0, 0], [0, 1, 0], [1, 0, 1]] -> false
+
+
+//118 Write a JavaScript program to check whether a given number is in a given range.
+document.getElementById("btn118").addEventListener("click", () => {
+  input118 = document.querySelector("#in118num").value;
+  ans118 = document.querySelector("#answer118");
+  arr118 = input118.split("");
+     if (arr118[0] < arr118[2] && arr118[1] < arr118[2]){
+      ans118.textContent = `true`
+     }else{
+      ans118.textContent = `false`
+     }
+})
