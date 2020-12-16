@@ -1651,8 +1651,15 @@ document.getElementById("btn118").addEventListener("click", () => {
 })
 //119 check whether a given integer has an increasing digits sequence.
 document.getElementById("btn119").addEventListener("click", () => {
-  input119 = document.querySelector("#in119num").value;
-  ans119 = document.querySelector("#answer119");
-  arr119 = input118.split("");
+  const input119 = document.querySelector("#in119num").value;
+  const ans119 = document.querySelector("#answer119");
+  arr119 = input119.split(" ");
+   for (let i = 0; i<=arr119.length-1; i++){
+     if (parseInt(arr119[i])<= parseInt(arr119[i+1]) ){
+       ans119.textContent = `false`
+     }else{
+      ans119.textContent = `true`
+     }
+   }
      
 })
