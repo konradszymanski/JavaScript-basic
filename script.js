@@ -1649,4 +1649,10 @@ document.getElementById("btn118").addEventListener("click", () => {
       ans118.textContent = `false`
      }
 })
-//119 
+//119 check whether a given integer has an increasing digits sequence.
+document.getElementById("btn119").addEventListener("click", () => {
+  input119 = document.querySelector("#in119num").value;
+  ans119 = document.querySelector("#answer119");
+  arr119 = input118.split("");
+     
+})
