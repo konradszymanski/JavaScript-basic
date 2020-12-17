@@ -1636,7 +1636,7 @@ document.querySelector("#btn116").addEventListener("click", () =>{
 //Note: In linear algebra, the identity matrix, or sometimes ambiguously called a unit matrix, of size n is the n ? n square matrix with ones on the main diagonal and zeros elsewhere.
 //[[1, 0, 0], [0, 1, 0], [0, 0, 1]] -> true
 //[[1, 0, 0], [0, 1, 0], [1, 0, 1]] -> false
-document.getElementById("btn118").addEventListener("click", () => {
+document.getElementById("btn117").addEventListener("click", () => {
   alert("not ready yet")
 });
 
@@ -1666,5 +1666,9 @@ document.getElementById("btn119").addEventListener("click", () => {
 })
 //120 check whether a point lies strictly inside a given circle. 
 document.getElementById("btn120").addEventListener("click", () => {
+  const centerCirc = document.querySelector("#circCenter").value;
+  const radiusCirc = document.querySelector("#circRadius").value; 
+  const pointsCirc = document.querySelector("#circPoints").value;
+  const ans120 = document.getElementById("answer120");
   alert("not ready yet")
 });
