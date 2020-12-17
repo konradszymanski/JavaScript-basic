@@ -1636,7 +1636,9 @@ document.querySelector("#btn116").addEventListener("click", () =>{
 //Note: In linear algebra, the identity matrix, or sometimes ambiguously called a unit matrix, of size n is the n ? n square matrix with ones on the main diagonal and zeros elsewhere.
 //[[1, 0, 0], [0, 1, 0], [0, 0, 1]] -> true
 //[[1, 0, 0], [0, 1, 0], [1, 0, 1]] -> false
-
+document.getElementById("btn118").addEventListener("click", () => {
+  alert("not ready yet")
+});
 
 //118 Write a JavaScript program to check whether a given number is in a given range.
 document.getElementById("btn118").addEventListener("click", () => {
@@ -1661,5 +1663,8 @@ document.getElementById("btn119").addEventListener("click", () => {
       ans119.textContent = `true`
      }
    }
-     
 })
+//120 check whether a point lies strictly inside a given circle. 
+document.getElementById("btn120").addEventListener("click", () => {
+  alert("not ready yet")
+});
