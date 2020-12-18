@@ -1666,7 +1666,6 @@ document.getElementById("btn119").addEventListener("click", () => {
 })
 //120 check whether a point lies strictly inside a given circle. 
 document.getElementById("btn120").addEventListener("click", () => {
-  
   const circSpecs = document.querySelector("#circSpecs").value;
   const ans120 = document.getElementById("answer120");
   const circ = circSpecs.split(" ")
@@ -1678,7 +1677,4 @@ document.getElementById("btn120").addEventListener("click", () => {
     else {
       ans120.textContent = `points are outside of the circle`
     }
-  console.log(Math.sqrt(((circ[3]-circ[0])*(circ[3]-circ[0])+(circ[4]-circ[1])*(circ[4]-circ[1]))))
-  console.log((circ[3]-circ[0])*(circ[3]-circ[0])+(circ[4]-circ[1])*(circ[4]-circ[1]))
- 
 });
