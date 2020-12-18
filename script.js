@@ -1666,22 +1666,19 @@ document.getElementById("btn119").addEventListener("click", () => {
 })
 //120 check whether a point lies strictly inside a given circle. 
 document.getElementById("btn120").addEventListener("click", () => {
-  // const centerCirc = document.querySelector("#circCenter").value;
-  // const radiusCirc = document.querySelector("#circRadius").value; 
-  // const pointsCirc = document.querySelector("#circPoints").value;
+  
   const circSpecs = document.querySelector("#circSpecs").value;
   const ans120 = document.getElementById("answer120");
-  const ans120Arr = circSpecs.split(" ")
-  if (ans120Arr.length != 5){
-    ans120.textContent = `please write 5 values separated by space. Numbers has to be in order: a, b, x, y, r`
-  }
-  console.log(ans120Arr.length)
-  // if (circSpecs.length === 9){
-  //   ans120.textContent = circSpecs.length;
-  // } else {
-  //   ans120.textContent = `please write numbers exactly `
-  // }
-
-
-
+  const circ = circSpecs.split(" ")
+    if (circ.length != 5){
+      ans120.textContent = `please write 5 values separated by space. Numbers has to be in order: x y r a b`
+    }else if (Math.sqrt(((circ[3]-circ[0])*(circ[3]-circ[0])+(circ[4]-circ[1])*(circ[4]-circ[1])))   <=circ[2] ){
+      ans120.textContent =`points are inside of the circle`
+    }
+    else {
+      ans120.textContent = `points are outside of the circle`
+    }
+  console.log(Math.sqrt(((circ[3]-circ[0])*(circ[3]-circ[0])+(circ[4]-circ[1])*(circ[4]-circ[1]))))
+  console.log((circ[3]-circ[0])*(circ[3]-circ[0])+(circ[4]-circ[1])*(circ[4]-circ[1]))
+ 
 });
