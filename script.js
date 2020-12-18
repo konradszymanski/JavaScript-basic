@@ -1666,9 +1666,22 @@ document.getElementById("btn119").addEventListener("click", () => {
 })
 //120 check whether a point lies strictly inside a given circle. 
 document.getElementById("btn120").addEventListener("click", () => {
-  const centerCirc = document.querySelector("#circCenter").value;
-  const radiusCirc = document.querySelector("#circRadius").value; 
-  const pointsCirc = document.querySelector("#circPoints").value;
+  // const centerCirc = document.querySelector("#circCenter").value;
+  // const radiusCirc = document.querySelector("#circRadius").value; 
+  // const pointsCirc = document.querySelector("#circPoints").value;
+  const circSpecs = document.querySelector("#circSpecs").value;
   const ans120 = document.getElementById("answer120");
-  alert("not ready yet")
+  const ans120Arr = circSpecs.split(" ")
+  if (ans120Arr.length != 5){
+    ans120.textContent = `please write 5 values separated by space. Numbers has to be in order: a, b, x, y, r`
+  }
+  console.log(ans120Arr.length)
+  // if (circSpecs.length === 9){
+  //   ans120.textContent = circSpecs.length;
+  // } else {
+  //   ans120.textContent = `please write numbers exactly `
+  // }
+
+
+
 });
