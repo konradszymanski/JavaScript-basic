@@ -1679,3 +1679,8 @@ document.getElementById("btn120").addEventListener("click", () => {
     }
 });
 //121 program to check whether a given matrix is lower triangular or not.
+document.getElementById("btn121").addEventListener("click", () => {
+  alert("not ready yet");
+})
+
+//122 check whether a given array of integers represents either a strictly increasing or a strictly decreasing sequence. 
