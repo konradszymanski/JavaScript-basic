@@ -1678,3 +1678,4 @@ document.getElementById("btn120").addEventListener("click", () => {
       ans120.textContent = `points are outside of the circle`
     }
 });
+//121 program to check whether a given matrix is lower triangular or not.
