@@ -1696,3 +1696,10 @@ arr122 = input122.split("");
     ans122.textContent = `no sequence`;
    }
   });
+  //123 program to find whether the members of a given array of integers is a permutation of numbers from 1 to a given integer.
+  document.getElementById("btn123").addEventListener("click", () => {
+    input123 = document.querySelector("#in123num").value;
+    ans123 = document.querySelector("#answer123");
+    arr123 = input123.split("");
+    ans123.textContent =  arr123;
+  });
