@@ -1684,3 +1684,15 @@ document.getElementById("btn121").addEventListener("click", () => {
 })
 
 //122 check whether a given array of integers represents either a strictly increasing or a strictly decreasing sequence. 
+document.getElementById("btn122").addEventListener("click", () => {
+input122 = document.querySelector("#in122num").value;
+ans122 = document.querySelector("#answer122");
+arr122 = input122.split("");
+   if (arr122[0] < arr122[2] && arr122[1] < arr122[2]){
+    ans122.textContent = `increasing sequence`;
+   } else if (arr122[0] > arr122[2] && arr122[1] > arr122[2]){
+    ans122.textContent = `decreasing sequence`;
+   } else {
+    ans122.textContent = `no sequence`;
+   }
+  });
