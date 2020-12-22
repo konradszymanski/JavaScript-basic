@@ -1562,7 +1562,7 @@ document.querySelector('#btn112').addEventListener('click', () =>{
       }
       const reducer = (a, b) => a * b;
       let total =  arr112.reduce(reducer)
-      answer112.textContent =  `Total output is: ${total}, and ther is ${trailing} zero` ;
+      answer112.textContent =  `Total output is: ${total}, and there is ${trailing} zero` ;
     } 
 })
 //113calculate the sum of n + n/2 + n/4 + n/8 + .... where n is a positive integer and all divisions are integer.
@@ -1701,6 +1701,14 @@ arr122 = input122.split("");
     in123nums = document.querySelector("#in123num").value;
     in123digit = document.querySelector("#in123digit").value;
     ans123 = document.querySelector("#answer123");
-    arr123 = in123nums.split("").filter(n => n == " ");
-    ans123.textContent =  arr123 + in123digit;
+    arr123 =in123nums.split("").filter(n => n != " ").map((x) =>parseInt(x));
+    new123 = [];
+    for (let i = 1; i <= parseInt(in123digit); i++ ){
+        new123.push(i);
+        if(JSON.stringify(arr123)==JSON.stringify(new123)) {
+          ans123.textContent = `true`;
+        } else {
+          ans123.textContent = `false`;
+        }
+    }
   });
