@@ -1713,3 +1713,13 @@ arr122 = input122.split("");
     }
   });
   //124 create the value of NOR of two given booleans.
+  document.getElementById("btn124").addEventListener("click", () => {
+    ans124 = document.getElementById('answer124');
+    const optOne = document.getElementById("task124a").value;
+    const optTwo = document.getElementById("task124b").value;
+    if (optOne === 'false' && optTwo === `false`){
+      ans124.textContent = `true`;
+    } else {
+      ans124.textContent = `false`
+    }
+  });
