@@ -1712,3 +1712,4 @@ arr122 = input122.split("");
         }
     }
   });
+  //124 create the value of NOR of two given booleans.
