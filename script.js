@@ -1723,3 +1723,18 @@ arr122 = input122.split("");
       ans124.textContent = `false`
     }
   });
+//125 find the longest string from a given array.
+const btn125 = document.getElementById('btn125');
+const inptu125 = document.getElementById('in125num').value;
+const answer125 = document.getElementById('answer125');
+
+btn125.addEventListener('click', () =>  {
+  const inptu125 = document.getElementById('in125num').value;
+  const answer125 = document.getElementById('answer125');
+  const longArr =  inptu125.split(" ").sort(function (a, b) {
+    return b.length - a.length;
+  });
+  
+
+  answer125.textContent = longArr[0];
+})
