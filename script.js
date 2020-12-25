@@ -1738,3 +1738,20 @@ btn125.addEventListener('click', () =>  {
 
   answer125.textContent = longArr[0];
 })
+//126 largest even number from an array of integers.
+
+
+document.getElementById("btn126").addEventListener('click', () =>  {
+  const inptu126 = document.getElementById('in126num').value;
+  const answer126 = document.getElementById('answer126');
+
+  const inptu125 = document.getElementById('in126num').value;
+  const answer125 = document.getElementById('answer126');
+
+  const lngArr =  inptu126.split(" ").sort(function (a, b) {
+    return b - a;
+  });
+  
+
+  answer125.textContent = lngArr[0];
+})
