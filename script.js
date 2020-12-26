@@ -1742,7 +1742,7 @@ document.getElementById("btn126").addEventListener('click', () =>  {
   });
   answer126.textContent = lngArr[0];
 })
-//126 reverse the order of the bits in a given integer.
+//127 reverse the order of the bits in a given integer.
 //this task is about to conver number to binary code, reverse that binary code and find another Num from reverted binaries. 
 // examples: 
 // var num = 15;
@@ -1753,7 +1753,11 @@ document.getElementById("btn126").addEventListener('click', () =>  {
 document.getElementById("btn127").addEventListener('click', () =>  {
   const inptu127 = document.getElementById('in127num').value;
   const answer127 = document.getElementById('answer127');
-  const revBin = inptu127.split(" ");
-  console.log(revBin.toString(2));
-  answer127.textContent = revBin.toString(2);
+  const revBin = inptu127.split(' ');
+  let newBinary = revBin.map((x) => parseInt(x))
+  let binar = newBinary[0].toString(2);
+  
+ // answer127.textContent = newBinary[0];
+ answer127.textContent = binar
+  
 })
