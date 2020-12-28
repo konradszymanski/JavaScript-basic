@@ -1750,20 +1750,17 @@ document.getElementById("btn126").addEventListener('click', () =>  {
 // var b = num.toString(2); The number will show as a binary value
 // var c = num.toString(8); octal value
 // var d = num.toString(16); hexadecimal value
+const inptu127 = document.getElementById('in127num');
+const answer127 = document.getElementById('answer127');
+let revBin = [];
 
 document.getElementById("btn127").addEventListener('click', () =>  {
-  const inptu127 = document.getElementById('in127num');
-  const answer127 = document.getElementById('answer127');
-  let num22= inptu127.value;
-  let revBin = []
-  revBin.push(num22.split(' '));
-  let newBinary = revBin.map((x) => parseInt(x));
-  let binar = newBinary[0].toString(2);
-   answer127.textContent = binar;
-//  answer127.textContent = binar.reverse()
-
+    let num22 = inptu127.value;
+    revBin.push(parseInt(num22.split(' ')));
+    let binar = revBin[0].toString(2)
+    answer127.textContent = parseInt(binar.split("").reverse().join(""),2)  ;
 //  const binary = parseInt(inptu127.toString(2).split("").reverse().join("") * Math.sign(inptu127) ); not working ??
- //const binary = parseInt(num.toString(8).split("").join(""))
- console.log(binar)
+ //const binary = parseInt(num.toString(2).split("").join(""))
+// console.log(binar)
 });
 
