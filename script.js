@@ -1750,19 +1750,20 @@ document.getElementById("btn126").addEventListener('click', () =>  {
 // var b = num.toString(2); The number will show as a binary value
 // var c = num.toString(8); octal value
 // var d = num.toString(16); hexadecimal value
+
 document.getElementById("btn127").addEventListener('click', () =>  {
   const inptu127 = document.getElementById('in127num');
   const answer127 = document.getElementById('answer127');
-//   const revBin = inptu127.split(' ');
-//   let newBinary = revBin.map((x) => parseInt(x));
-//   let binar = newBinary[0].toString(2);
-//  // answer127.textContent = newBinary[0];
+  let num22= inptu127.value;
+  let revBin = []
+  revBin.push(num22.split(' '));
+  let newBinary = revBin.map((x) => parseInt(x));
+  let binar = newBinary[0].toString(2);
+   answer127.textContent = binar;
 //  answer127.textContent = binar.reverse()
-const num = inptu127.value;
- //const binary = parseInt(inptu127.toString(2).split("").reverse().join("") * Math.sign(inptu127) );
- const binary = parseInt(num.toString(8).split("").join(""))
- console.log(binary)
- console.log(parseInt(num.toString(2).split("").reverse().join(""), 2))
 
+//  const binary = parseInt(inptu127.toString(2).split("").reverse().join("") * Math.sign(inptu127) ); not working ??
+ //const binary = parseInt(num.toString(8).split("").join(""))
+ console.log(binar)
 });
 
