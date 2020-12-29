@@ -1760,7 +1760,8 @@ document.getElementById("btn127").addEventListener('click', () =>  {
     let binar = revBin[0].toString(2)
     answer127.textContent = parseInt(binar.split("").reverse().join(""),2)  ;
 //  const binary = parseInt(inptu127.toString(2).split("").reverse().join("") * Math.sign(inptu127) ); not working ??
- //const binary = parseInt(num.toString(2).split("").join(""))
-// console.log(binar)
 });
+
+//128 find the smallest round number that is not less than a given value. Note: A round number is informally considered to be an integer that ends with one or more zeros. So, 590 is rounder than 592, but 590 is less round than 600.
+
 
