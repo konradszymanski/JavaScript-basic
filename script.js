@@ -1763,11 +1763,11 @@ document.getElementById("btn127").addEventListener('click', () =>  {
 });
 
 //128 find the smallest round number that is not less than a given value. Note: A round number is informally considered to be an integer that ends with one or more zeros. So, 590 is rounder than 592, but 590 is less round than 600.
-const inptu128 = document.getElementById('in128num');
-const answer128 = document.getElementById('answer128');
 
-const round = ()=>{
-  alert("sad");
-  answer128.textContent = 'asddd'
-}
-document.getElementById("btn128").addEventListener('click', round());
+
+document.getElementById("btn128").addEventListener('click', () => {
+  const answer128 = document.getElementById('answer128');
+const inptu128 = document.getElementById('in128num').value;
+
+ answer128.textContent =  Math.floor(inptu128/10) * 10  ;
+});
