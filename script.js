@@ -1761,13 +1761,34 @@ document.getElementById("btn127").addEventListener('click', () =>  {
     answer127.textContent = parseInt(binar.split("").reverse().join(""),2)  ;
 //  const binary = parseInt(inptu127.toString(2).split("").reverse().join("") * Math.sign(inptu127) ); not working ??
 });
-
 //128 find the smallest round number that is not less than a given value. Note: A round number is informally considered to be an integer that ends with one or more zeros. So, 590 is rounder than 592, but 590 is less round than 600.
-
-
 document.getElementById("btn128").addEventListener('click', () => {
   const answer128 = document.getElementById('answer128');
 const inptu128 = document.getElementById('in128num').value;
 
  answer128.textContent =  Math.floor(inptu128/10) * 10  ;
+});
+//129 find the smallest prime number strictly greater than a given number. 
+function isPrime2(num2) {
+  for(var i = 2; i < num2; i++)
+    if(num2 % i === 0) return false;
+  return num2 > 1;
+}
+document.querySelector("#btn129").addEventListener("click", () =>{
+  const in129num = document.getElementById("in129num").value;
+  const prime = in129num.split(" ");
+  let answer129 = document.getElementById("answer129");
+  let primeNumbers = [];
+  let result = [];
+  let greaterResult = [];
+    for (let i= 2; i <= prime; i++){
+      primeNumbers.push(i);
+      result = primeNumbers.filter(numbers=> isPrime2(numbers));
+    }
+    while (prime+1 == isPrime2){
+        console.log(i)
+        break;
+    } 
+   // console.log(result.join())
+    answer129.textContent = `The smallesr prime number is: ${result[result.length-1]}, the greater is: ${greaterResult}`
 });
