@@ -1774,21 +1774,32 @@ function isPrime2(num2) {
     if(num2 % i === 0) return false;
   return num2 > 1;
 }
+let result = [];
+let primeNumbers = [];
+let greaterResult = [];
+const in129num = document.getElementById("in129num")
 document.querySelector("#btn129").addEventListener("click", () =>{
-  const in129num = document.getElementById("in129num").value;
-  const prime = in129num.split(" ");
+  
+  const prime = parseInt(in129num.value.split(" "));
   let answer129 = document.getElementById("answer129");
-  let primeNumbers = [];
-  let result = [];
-  let greaterResult = [];
+  
     for (let i= 2; i <= prime; i++){
       primeNumbers.push(i);
       result = primeNumbers.filter(numbers=> isPrime2(numbers));
     }
-    while (prime+1 == isPrime2){
-        console.log(i)
-        break;
-    } 
-   // console.log(result.join())
-    answer129.textContent = `The smallesr prime number is: ${result[result.length-1]}, the greater will be: ${greaterResult}`
+ // let primePlus = prime + 1;
+
+// while ( isPrime2(prime) ==false ){
+//   prime++;
+//   if (isPrime2(prime) == true  ){
+   
+//     console.log('dfgg');
+//     break;
+//   }
+//   console.log('asd')
+// }
+
+//   console.log(prime)
+
+    answer129.textContent = `The smallest prime number is: ${result[result.length-1]}, the greater will be: ${greaterResult}`
 });
