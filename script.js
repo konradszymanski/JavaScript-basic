@@ -1790,5 +1790,5 @@ document.querySelector("#btn129").addEventListener("click", () =>{
         break;
     } 
    // console.log(result.join())
-    answer129.textContent = `The smallesr prime number is: ${result[result.length-1]}, the greater is: ${greaterResult}`
+    answer129.textContent = `The smallesr prime number is: ${result[result.length-1]}, the greater will be: ${greaterResult}`
 });
