@@ -1787,18 +1787,16 @@ document.querySelector("#btn129").addEventListener("click", () =>{
       primeNumbers.push(i);
       result = primeNumbers.filter(numbers=> isPrime2(numbers));
     }
- // let primePlus = prime + 1;
+ //let primePlus = prime + 1;
+ 
+if ( !isPrime2(prime) ) {
+  prime = prime + 1;
+  console.log('true')
+} else {
+  greaterResult.push(  isPrime2(prime) );
+} 
 
-// while ( isPrime2(prime) ==false ){
-//   prime++;
-//   if (isPrime2(prime) == true  ){
-   
-//     console.log('dfgg');
-//     break;
-//   }
-//   console.log('asd')
-// }
-
+ // if  isPrime2 (prime) == false, { prime + 1 and continue } if true / break 
 //   console.log(prime)
 
     answer129.textContent = `The smallest prime number is: ${result[result.length-1]}, the greater will be: ${greaterResult}`
