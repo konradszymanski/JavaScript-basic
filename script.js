@@ -1764,9 +1764,8 @@ document.getElementById("btn127").addEventListener('click', () =>  {
 //128 find the smallest round number that is not less than a given value. Note: A round number is informally considered to be an integer that ends with one or more zeros. So, 590 is rounder than 592, but 590 is less round than 600.
 document.getElementById("btn128").addEventListener('click', () => {
   const answer128 = document.getElementById('answer128');
-const inptu128 = document.getElementById('in128num').value;
-
- answer128.textContent =  Math.floor(inptu128/10) * 10  ;
+  const inptu128 = document.getElementById('in128num').value;
+  answer128.textContent =  Math.floor(inptu128/10) * 10  ;
 });
 //129 find the smallest prime number strictly greater than a given number. 
 function isPrime2(num2) {
@@ -1787,17 +1786,14 @@ document.querySelector("#btn129").addEventListener("click", () =>{
       primeNumbers.push(i);
       result = primeNumbers.filter(numbers=> isPrime2(numbers));
     }
- //let primePlus = prime + 1;
- 
-if ( !isPrime2(prime) ) {
-  prime = prime + 1;
-  console.log('true')
-} else {
-  greaterResult.push(  isPrime2(prime) );
-} 
+ let primePlus = prime;
 
- // if  isPrime2 (prime) == false, { prime + 1 and continue } if true / break 
-//   console.log(prime)
+ while ( !isPrime2(primePlus) ){
+  isPrime2(primePlus++) 
+  greaterResult.push(primePlus)
+}
 
-    answer129.textContent = `The smallest prime number is: ${result[result.length-1]}, the greater will be: ${greaterResult}`
+return answer129.textContent = `The smallest prime number is: ${result[result.length-1]}, the greater will be: ${greaterResult[greaterResult.length-1] }`
+
+    
 });
