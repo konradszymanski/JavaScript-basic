@@ -1794,7 +1794,11 @@ document.querySelector("#btn129").addEventListener("click", () =>{
 }
 
 return answer129.textContent = `The smallest prime number is: ${result[result.length-1]}, the greater will be: ${greaterResult[greaterResult.length-1] }`
-
-    
 });
 //130 find the number of even digits in a given integer.
+in130 = document.getElementById("in130num")
+ans130 = document.getElementById("answer130")
+document.querySelector("#btn130").addEventListener("click", () =>{
+  const numCheck = in130.value;
+  ans130.textContent = numCheck.split('').filter(x=> x % 2 == 0).length;
+})
