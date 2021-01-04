@@ -1797,3 +1797,4 @@ return answer129.textContent = `The smallest prime number is: ${result[result.le
 
     
 });
+//130 find the number of even digits in a given integer.
