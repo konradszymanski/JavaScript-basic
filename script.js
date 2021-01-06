@@ -1802,3 +1802,4 @@ document.querySelector("#btn130").addEventListener("click", () =>{
   const numCheck = in130.value;
   ans130.textContent = numCheck.split('').filter(x=> x % 2 == 0).length;
 })
+//131 Write a JavaScript program to create an array of prefix sums of the given array
