@@ -1817,7 +1817,6 @@ for (let i=1; i<=arr131; i++){
 console.log(new131.reduce((a,b) => {return  a+b} ))
 ans131.textContent = new131.reduce((a,b) => {return  a+b} );
 
-//new131 = arr131.map( x => x * 2 )
-
+console.log(new131.forEach(x => x.reduce((a,b) => {return  a+b} )));
 })
 
