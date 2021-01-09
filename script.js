@@ -1804,15 +1804,20 @@ document.querySelector("#btn130").addEventListener("click", () =>{
 })
 //131 Write a JavaScript program to create an array of prefix sums of the given array
 in131 = document.getElementById("in131num")
-ans131 = document.getElementById("answer131")
+ans131 = document.getElementById("answer131") 
 document.querySelector("#btn131").addEventListener("click", () =>{
-  
+
 const arr131 = in131.value;
 arr131.split(' ');
 const new131=[];
 
 for (let i=1; i<=arr131; i++){
   new131.push(i);
-} console.log(new131.reduce((a,b) => {return  a+b} ))
-  ans131.textContent = new131.reduce((a,b) => {return  a+b} );
+} 
+console.log(new131.reduce((a,b) => {return  a+b} ))
+ans131.textContent = new131.reduce((a,b) => {return  a+b} );
+
+//new131 = arr131.map( x => x * 2 )
+
 })
+
