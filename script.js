@@ -1803,15 +1803,16 @@ document.querySelector("#btn130").addEventListener("click", () =>{
   ans130.textContent = numCheck.split('').filter(x=> x % 2 == 0).length;
 })
 //131 Write a JavaScript program to create an array of prefix sums of the given array
-//in131 = document.getElementById("in131num").value
-// ans131 = document.getElementById("answer131") 
+  in131 = document.getElementById("in131num")
+  ans131 = document.getElementById("answer131") 
 document.querySelector("#btn131").addEventListener("click", () =>{
-  in131 = document.getElementById("in131num").value
- ans131 = document.getElementById("answer131") 
 
-const arr131 = in131.split(' ')
-//const new131= []
-//const new131 = [];
+ // const arr131 = in131.value;
+// arr131.split(' ')
+
+  const new131 = [];
+  new131.push(in131.value);
+  console.log( Number(new131))
 //new131.push(arr131);
 // for (let i=1; i<=arr131; i++){
 //   new131.push(i);
