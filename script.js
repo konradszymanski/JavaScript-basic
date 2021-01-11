@@ -1803,16 +1803,14 @@ document.querySelector("#btn130").addEventListener("click", () =>{
   ans130.textContent = numCheck.split('').filter(x=> x % 2 == 0).length;
 })
 //131 Write a JavaScript program to create an array of prefix sums of the given array
-  in131 = document.getElementById("in131num")
-  ans131 = document.getElementById("answer131") 
-document.querySelector("#btn131").addEventListener("click", () =>{
-
- // const arr131 = in131.value;
-// arr131.split(' ')
-
-  const new131 = [];
-  new131.push(in131.value);
-  console.log( Number(new131))
+//   in131 = document.getElementById("in131num")
+//   ans131 = document.getElementById("answer131") 
+// document.querySelector("#btn131").addEventListener("click", () =>{
+// const arr131 = [];
+//  // const arr131 = in131.value;
+// // arr131.split(' ')
+//    arr131.push(Number(in131.value))
+//    console.log(arr131)
 //new131.push(arr131);
 // for (let i=1; i<=arr131; i++){
 //   new131.push(i);
@@ -1820,21 +1818,32 @@ document.querySelector("#btn131").addEventListener("click", () =>{
 // console.log(new131.reduce((a,b) => {return  a+b} ))
 // ans131.textContent = new131.reduce((a,b) => {return  a+b} );
 
-// console.log(new131.forEach(x => x.reduce((a,b) => {return  a+b} )));
+// const prefix =arr131.map((val, index) => {
+//   let sum=0;
+//   for (let i=0; i< index + 1; i++ ){
+//     sum+=arr131[i];
+//   }
+//   return sum;
+// } ) 
+// ans131.textContent = prefix;
+// console.log(prefix)
+// })
 
+let ans131 = document.getElementById("answer131")
 
-const prefix =arr131.map((val, index) => {
-
-  let sum=0;
-
-  for (let i=1; i< index + 1; i++ ){
-    sum+=arr131[i];
+document.querySelector("#btn131").addEventListener("click", () => {
+  let splitted = document.getElementById("in131num").value.split(" ");
+  let valasnumber = splitted.map((val) => parseInt(val))
+console.log(valasnumber)
+const prefix = valasnumber.map((val, index) => {
+  let sum = 0;
+  
+  for(let i = 0; i < index+1 ; i++){
+  sum += valasnumber[i];
   }
   return sum;
-  
-} ) 
-console.log(prefix)
+  });
+  console.log(prefix);
+  ans131.textContent = prefix
 
 })
-
-
