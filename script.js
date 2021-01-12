@@ -1803,47 +1803,19 @@ document.querySelector("#btn130").addEventListener("click", () =>{
   ans130.textContent = numCheck.split('').filter(x=> x % 2 == 0).length;
 })
 //131 Write a JavaScript program to create an array of prefix sums of the given array
-//   in131 = document.getElementById("in131num")
-//   ans131 = document.getElementById("answer131") 
-// document.querySelector("#btn131").addEventListener("click", () =>{
-// const arr131 = [];
-//  // const arr131 = in131.value;
-// // arr131.split(' ')
-//    arr131.push(Number(in131.value))
-//    console.log(arr131)
-//new131.push(arr131);
-// for (let i=1; i<=arr131; i++){
-//   new131.push(i);
-// } 
-// console.log(new131.reduce((a,b) => {return  a+b} ))
-// ans131.textContent = new131.reduce((a,b) => {return  a+b} );
 
-// const prefix =arr131.map((val, index) => {
-//   let sum=0;
-//   for (let i=0; i< index + 1; i++ ){
-//     sum+=arr131[i];
-//   }
-//   return sum;
-// } ) 
-// ans131.textContent = prefix;
-// console.log(prefix)
-// })
+const in131 = document.querySelector("#in131num")
+const ans131 = document.querySelector("#answer131")
+const btn = document.querySelector("#btn131")
 
-let ans131 = document.getElementById("answer131")
-
-document.querySelector("#btn131").addEventListener("click", () => {
-  let splitted = document.getElementById("in131num").value.split(" ");
-  let valasnumber = splitted.map((val) => parseInt(val))
-console.log(valasnumber)
-const prefix = valasnumber.map((val, index) => {
-  let sum = 0;
-  
-  for(let i = 0; i < index+1 ; i++){
-  sum += valasnumber[i];
-  }
-  return sum;
-  });
-  console.log(prefix);
-  ans131.textContent = prefix
-
+btn.addEventListener("click", () => {
+  const values= in131.value.split(",")  
+  ans131.textContent=PrefixSum(values)
 })
+
+function PrefixSum(values){
+  let acc = 0 //accumulator (note that the code within the 'forEach{}' can 'see' this variable (it is 'in scope') (BECAUSE it's an arrow function))
+  let answer=[] //we'll collect the values into here
+  values.forEach(p=>{acc+=parseInt(p);answer.push(acc)})   
+  return answer.join(',')  //The 'opposite' of split  
+}     
