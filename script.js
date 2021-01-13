@@ -1806,18 +1806,31 @@ document.querySelector("#btn130").addEventListener("click", () =>{
 
 const in131 = document.querySelector("#in131num")
 const ans131 = document.querySelector("#answer131")
-const btn = document.querySelector("#btn131")
+const btn131 = document.querySelector("#btn131")
 
-btn.addEventListener("click", () => {
+btn131.addEventListener("click", () => {
   const values= in131.value.split(" ")  
   ans131.textContent=PrefixSum(values)
 })
 
-function PrefixSum(values){
+// function PrefixSum(values){
+//   let acc = 0 //accumulator (note that the code within the 'forEach{}' can 'see' this variable (it is 'in scope') (BECAUSE it's an arrow function))
+//   let answer=[] //we'll collect the values into here
+//   values.forEach(p=>{acc+=parseInt(p);answer.push(acc)})   
+//   return answer.join(',')  //The 'opposite' of split  
+// }     
+ PrefixSum = (values) =>  {
   let acc = 0 //accumulator (note that the code within the 'forEach{}' can 'see' this variable (it is 'in scope') (BECAUSE it's an arrow function))
   let answer=[] //we'll collect the values into here
   values.forEach(p=>{acc+=parseInt(p);answer.push(acc)})   
   return answer.join(',')  //The 'opposite' of split  
 }     
 
-//132
+//132 find all distinct prime factors of a given integer.
+const in132 = document.querySelector("#in132num")
+const ans132 = document.querySelector("#answer132")
+const btn132 = document.querySelector("#btn132")
+
+btn132.addEventListener("click", ()=> {
+  
+}) 
