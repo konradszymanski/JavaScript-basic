@@ -1809,7 +1809,7 @@ const ans131 = document.querySelector("#answer131")
 const btn = document.querySelector("#btn131")
 
 btn.addEventListener("click", () => {
-  const values= in131.value.split(",")  
+  const values= in131.value.split(" ")  
   ans131.textContent=PrefixSum(values)
 })
 
@@ -1819,3 +1819,5 @@ function PrefixSum(values){
   values.forEach(p=>{acc+=parseInt(p);answer.push(acc)})   
   return answer.join(',')  //The 'opposite' of split  
 }     
+
+//132
