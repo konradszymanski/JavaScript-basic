@@ -1827,10 +1827,17 @@ btn131.addEventListener("click", () => {
 }     
 
 //132 find all distinct prime factors of a given integer.
-const in132 = document.querySelector("#in132num")
-const ans132 = document.querySelector("#answer132")
-const btn132 = document.querySelector("#btn132")
+const in132 = document.querySelector("#in132num");
+const ans132 = document.querySelector("#answer132");
+const btn132 = document.querySelector("#btn132");
 
+function isPrime(num) {
+  for(var i = 2; i < num; i++)
+    if(num % i === 0) return false;
+  return num > 1;
+}
 btn132.addEventListener("click", ()=> {
-  
+  const val132 = parseInt(in132.value.split(" "));
+   
+  console.log(val132)
 }) 
