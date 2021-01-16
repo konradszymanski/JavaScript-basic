@@ -1847,3 +1847,4 @@ btn132.addEventListener("click", ()=> {
   }
  ans132.textContent = result.join(',')
 }) 
+//133W check whether a given fraction is proper or not.
