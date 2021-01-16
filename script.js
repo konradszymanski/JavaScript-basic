@@ -1812,7 +1812,6 @@ btn131.addEventListener("click", () => {
   const values= in131.value.split(" ")  
   ans131.textContent=PrefixSum(values)
 })
-
 // function PrefixSum(values){
 //   let acc = 0 //accumulator (note that the code within the 'forEach{}' can 'see' this variable (it is 'in scope') (BECAUSE it's an arrow function))
 //   let answer=[] //we'll collect the values into here
@@ -1831,6 +1830,7 @@ const in132 = document.querySelector("#in132num");
 const ans132 = document.querySelector("#answer132");
 const btn132 = document.querySelector("#btn132");
 
+// this task is based on task 109
 function isPrime(num) {
   for(var i = 2; i < num; i++)
     if(num % i === 0) return false;
@@ -1838,6 +1838,12 @@ function isPrime(num) {
 }
 btn132.addEventListener("click", ()=> {
   const val132 = parseInt(in132.value.split(" "));
-   
-  console.log(val132)
+  
+  let allNums = [];
+  let result = [];
+  for (let i= 2; i <= val132; i++){
+    allNums.push(i);   // two filters allowed!
+    result = allNums.filter(numbers=> isPrime(numbers)).filter(x => val132 % x == 0 );
+  }
+ ans132.textContent = result.join(',')
 }) 
