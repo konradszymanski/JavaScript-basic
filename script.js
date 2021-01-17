@@ -1848,17 +1848,16 @@ btn132.addEventListener("click", ()=> {
  ans132.textContent = result.join(',')
 }) 
 //133W check whether a given fraction is proper or not.
-const in133 = document.querySelector("#in133num");
+//const in133 = document.querySelector("#in133num");
 const ans133 = document.querySelector("#answer133");
 const btn133 = document.querySelector("#btn133");
 
 btn133.addEventListener("click", () => {
-  const val133 = in132.value.split(" ");
-  console.log(val133[0])
-  console.log(val133[1])
-  console.log(val133)
+  //const val133 = in132.value.split(" ");
 
-   if (val133[0] / val133[1] < 1) {
+  const in133 = document.querySelector("#in133num").value.split(" ");
+
+   if ( parseInt(in133[0]) / parseInt(in133[1]) < 1) {
     ans133.textContent = `Proper fraction`
    }else {
     ans133.textContent = `Improper fraction`
