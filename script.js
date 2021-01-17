@@ -1854,7 +1854,6 @@ const btn133 = document.querySelector("#btn133");
 
 btn133.addEventListener("click", () => {
   //const val133 = in132.value.split(" ");
-
   const in133 = document.querySelector("#in133num").value.split(" ");
 
    if ( parseInt(in133[0]) / parseInt(in133[1]) < 1) {
@@ -1863,3 +1862,4 @@ btn133.addEventListener("click", () => {
     ans133.textContent = `Improper fraction`
    }
 })
+//134 change the characters (lower case) in a string where a turns into z, b turns into y, c turns into x, ..., n turns into m, m turns into n, ..., z turns into a.
