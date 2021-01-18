@@ -1863,3 +1863,16 @@ btn133.addEventListener("click", () => {
    }
 })
 //134 change the characters (lower case) in a string where a turns into z, b turns into y, c turns into x, ..., n turns into m, m turns into n, ..., z turns into a.
+
+const ans134 = document.querySelector("#answer134");
+const btn134 = document.querySelector("#btn134");
+
+btn134.addEventListener("click", () => {
+  //const val133 = in132.value.split(" ");
+  const in134 = document.querySelector("#in134num").value.toLowerCase().split("");
+  let arrChar = [];
+
+ arrChar = in134.map(x => x.charCodeAt());
+ console.log(arrChar)
+  ans134.textContent = arrChar
+})
