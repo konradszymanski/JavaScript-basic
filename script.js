@@ -1876,3 +1876,6 @@ btn134.addEventListener("click", () => {
  console.log(arrChar)
   ans134.textContent = arrChar
 })
+
+// a  b  c  d e f g h i j k l m n o p r s t u w x y z
+// 97 98 99                                         122
