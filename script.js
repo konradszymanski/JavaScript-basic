@@ -1868,14 +1868,20 @@ const ans134 = document.querySelector("#answer134");
 const btn134 = document.querySelector("#btn134");
 
 btn134.addEventListener("click", () => {
-  //const val133 = in132.value.split(" ");
-  const in134 = document.querySelector("#in134num").value.toLowerCase().split("");
+ // const in134 = document.querySelector("#in134num").value.toLowerCase().split("");
   let arrChar = [];
+  const in134 = document.querySelector("#in134num").value.toLowerCase()
+  //my attempts: all failure 
+//  arrChar = in134.map(x => x.charCodeAt());
+//  console.log(arrChar)
+//   ans134.textContent = arrChar
 
- arrChar = in134.map(x => x.charCodeAt());
- console.log(arrChar)
-  ans134.textContent = arrChar
+  for (let i=0; i< in134.length; i++){
+    let characters = in134.charCodeAt(i) - 'a'.charCodeAt(0),
+    chage_char = 25 - characters + 'a'.charCodeAt(0);
+    arrChar.push(String.fromCharCode(chage_char))
+  }
+  return ans134.textContent=arrChar.join('')
+//solution taken from:
+//https://www.w3resource.com/javascript-exercises/javascript-basic-exercise-134.php
 })
-
-// a  b  c  d e f g h i j k l m n o p r s t u w x y z
-// 97 98 99                                         122
