@@ -31,19 +31,20 @@ function task1() {
     amPm += "AM";
   }
   // show outcome inside html element
-  document.getElementById(
-    "task1"
-  ).innerHTML = `Today is:<br/> ${n}<br/> Current time is: <br/> ${hh}${amPm} : ${mm} : ${ss}`;
+  const task1ans = document.getElementById("task1");
+  task1ans.innerHTML = `Today is:<br/> ${n}<br/> Current time is: <br/> ${hh}${amPm} : ${mm} : ${ss}`;
 }
 setInterval(task1, 1000);
 task1();
 //task 3
 // take newDate
+
 var d = new Date();
 var yy = d.getFullYear();
 var mo = ("0" + (d.getMonth() + 1)).slice(-2); //d.getMonth() + 1;
 var dd = ("0" + d.getDate()).slice(-2); // d.getDate();
-document.getElementById("task3").innerHTML = dd + "-" + mo + "-" + yy;
+const ans3 = document.getElementById("task3");
+ans3.innerHTML = dd + "-" + mo + "-" + yy;
 //task 4
 function task4() {
   var aa = 5;
@@ -134,7 +135,7 @@ function task9() {
   var dayNow = new Date();
   var toDay = dayNow.getTime();
   // var christmas_day = new Date(present_date.getFullYear(), 11, 25)
-  var xmas = new Date("2020,12,25");
+  var xmas = new Date("2021,12,25");
   var xmasDay = xmas.getTime();
   //one day in miliseconds
   var oneDay = 1000 * 60 * 60 * 24;
