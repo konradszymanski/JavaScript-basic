@@ -1,1 +1,19 @@
-{}
+{
+  "name": "javascript-basic",
+  "description": "Exercises--Practice--Solution",
+  "version": "1.0.0",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/konradszymanski/JavaScript-basic.git"
+  },
+  "author": "konrad szymanski",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/konradszymanski/JavaScript-basic/issues"
+  },
+  "homepage": "https://github.com/konradszymanski/JavaScript-basic#readme"
+}
