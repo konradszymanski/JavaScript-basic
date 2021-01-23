@@ -1885,3 +1885,16 @@ btn134.addEventListener("click", () => {
 //solution taken from:
 //https://www.w3resource.com/javascript-exercises/javascript-basic-exercise-134.php
 })
+//135 remove all characters from a given string that appear more than once.
+
+const ans135 = document.querySelector("#answer135");
+const btn135 = document.querySelector("#btn135");
+btn135.addEventListener('click', () => {
+  const in135 = document.querySelector('#in135str').value.split("");
+ // const doubles =  in135.filter((x, y) => in135.indexOf(x) === y)
+ ans135.textContent = doubles(in135);
+}) 
+// practice with helper function
+const doubles = (in135) => {
+  return   in135.filter((x, y) => in135.indexOf(x) === y).join("")
+} 
