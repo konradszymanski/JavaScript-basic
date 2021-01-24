@@ -2,6 +2,9 @@
 /* * {
   margin: 10px;
 } */
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   width: 100%;
@@ -50,13 +53,15 @@ table {
   border: 10px solib black
 }
 
-.answer{
+.answer {
   max-width: 250px;
   word-wrap: break-word;
- }
-#task{
+}
+
+#task {
   max-width: 255px;
 }
+
 .answer {
   margin: 10px auto 0 auto;
 }
@@ -74,5 +79,57 @@ td {
 @media only screen and (max-width: 1240px) {
   table {
     max-width: 90%;
-  }  
+  }
+}
+
+/* SMOTH SCROLL BUTTON*/
+#btnTopOnScroll {
+  display: inline-block;
+  background-color: #FF9800;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color .3s,
+    opacity .5s, visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+
+#btnTopOnScroll::after {
+  content: "\f077";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2em;
+  line-height: 50px;
+  color: #fff;
+}
+
+#btnTopOnScroll:hover {
+  cursor: pointer;
+  background-color: #333;
+}
+
+#btnTopOnScroll:active {
+  background-color: #555;
+}
+
+#btnTopOnScroll.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Styles for the content section */
+
+
+@media (min-width: 500px) {
+
+  #btnTopOnScroll {
+    margin: 30px;
+  }
 }
