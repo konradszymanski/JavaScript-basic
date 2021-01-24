@@ -1,7 +1,3 @@
-/* bootsrap :) */
-/* * {
-  margin: 10px;
-} */
 html {
   scroll-behavior: smooth;
 }
@@ -85,14 +81,15 @@ td {
 /* SMOTH SCROLL BUTTON*/
 #btnTopOnScroll {
   display: inline-block;
-  background-color: #FF9800;
-  width: 50px;
-  height: 50px;
+  background-color: #343a40;
+  width: 40px;
+  height: 40px;
   text-align: center;
+  border: 1px solid #fff;
   border-radius: 4px;
   position: fixed;
-  bottom: 30px;
-  right: 30px;
+  bottom: 10px;
+  right: 10px;
   transition: background-color .3s,
     opacity .5s, visibility .5s;
   opacity: 0;
@@ -105,8 +102,8 @@ td {
   font-family: FontAwesome;
   font-weight: normal;
   font-style: normal;
-  font-size: 2em;
-  line-height: 50px;
+  font-size: 1em;
+  line-height: 38px;
   color: #fff;
 }
 
@@ -116,7 +113,7 @@ td {
 }
 
 #btnTopOnScroll:active {
-  background-color: #555;
+  background-color: #ffc107;
 }
 
 #btnTopOnScroll.show {
@@ -130,6 +127,6 @@ td {
 @media (min-width: 500px) {
 
   #btnTopOnScroll {
-    margin: 30px;
+    margin: 0px;
   }
 }
