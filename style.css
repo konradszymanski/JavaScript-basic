@@ -121,9 +121,6 @@ td {
   visibility: visible;
 }
 
-/* Styles for the content section */
-
-
 @media (min-width: 500px) {
 
   #btnTopOnScroll {
