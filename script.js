@@ -12,17 +12,17 @@ function task1() {
   var n = dayName[today.getDay()]; // take specific day from array
   const currentTime = new this.Date(); // take the rest of dates
   const hh =
-    currentTime.getHours() < 10
-      ? "0" + currentTime.getHours()
-      : currentTime.getHours();
+    currentTime.getHours() < 10 ?
+    "0" + currentTime.getHours() :
+    currentTime.getHours();
   const mm =
-    currentTime.getMinutes() < 10
-      ? "0" + currentTime.getMinutes()
-      : currentTime.getMinutes();
+    currentTime.getMinutes() < 10 ?
+    "0" + currentTime.getMinutes() :
+    currentTime.getMinutes();
   const ss =
-    currentTime.getSeconds() < 10
-      ? "0" + currentTime.getSeconds()
-      : currentTime.getSeconds();
+    currentTime.getSeconds() < 10 ?
+    "0" + currentTime.getSeconds() :
+    currentTime.getSeconds();
   // AM /PM cant be const. let is allowed.
   let amPm = " ";
   if (hh >= 12) {
@@ -1374,61 +1374,65 @@ document.querySelector("#btn103").addEventListener("click", () => {
   arr103.sort(function (a, b) {
     return b - a;
   });
-  const highNum= arr103[0]
-  var filtered = arr103.filter(function(value, index, arr103){ return value != highNum;});
-  answer103.textContent = filtered.join("")  
+  const highNum = arr103[0]
+  var filtered = arr103.filter(function (value, index, arr103) {
+    return value != highNum;
+  });
+  answer103.textContent = filtered.join("")
 });
 //104
 //find two elements of the array such that their absolute difference is not greater than a given integer but is as close to the said integer.
-document.querySelector("#btn104").addEventListener("click", () =>{
+document.querySelector("#btn104").addEventListener("click", () => {
   const input104 = document.getElementById("input104").value;
   const input104a = document.getElementById("input104a").value
   const answer104 = document.getElementById("answer104");
   //answer104.textContent = input104 + input104a;
   const arr104 = input104.split(" ");
   let max_num = -1;
-  for (let i=0; i<arr104.length; i++){
-    for (let j = i + 1; j < arr104.length; j++){
-    let result = Math.abs(arr104[i] - arr104[j])
-     if (result <= input104a){
-      max_num = Math.max(max_num, result)
-     }
-    } 
-  } 
-answer104.textContent = max_num;
+  for (let i = 0; i < arr104.length; i++) {
+    for (let j = i + 1; j < arr104.length; j++) {
+      let result = Math.abs(arr104[i] - arr104[j])
+      if (result <= input104a) {
+        max_num = Math.max(max_num, result)
+      }
+    }
+  }
+  answer104.textContent = max_num;
 });
 //105
 //find the number of times to replace a given number with the sum of its digits until it convert to a single digit number.
-document.querySelector("#btn105").addEventListener("click", () =>{
+document.querySelector("#btn105").addEventListener("click", () => {
   const input105 = document.getElementById("input105").value;
   const answer105 = document.getElementById("answer105");
   const arr105 = input105.split("").map(Number);
   const new105 = [];
-  new105.push(arr105.reduce((a, b) => {return a + b})) 
+  new105.push(arr105.reduce((a, b) => {
+    return a + b
+  }))
   const result105 = Array.from(String(new105), Number);
-  console.log(typeof(new105))
-  console.log(typeof(arr105))
+  console.log(typeof (new105))
+  console.log(typeof (arr105))
   answer105.textContent = result105.length;
 });
 //106
 //divide an integer by another integer as long as the result is an integer and return the result
-document.querySelector("#btn106").addEventListener("click", () =>{
+document.querySelector("#btn106").addEventListener("click", () => {
   let in106num = document.getElementById("in106num").value;
   const in106int = document.getElementById("in106int").value;
   const answer106 = document.getElementById("answer106");
 
-   let result = 0;
-   if ((parseInt(in106num)% parseInt(in106int)) != 0 ) {
+  let result = 0;
+  if ((parseInt(in106num) % parseInt(in106int)) != 0) {
     answer106.textContent = in106num
-   } else {
-    while(parseInt(in106num) >= parseInt(in106int)){
+  } else {
+    while (parseInt(in106num) >= parseInt(in106int)) {
       in106num /= in106int;
-         result++;
-         answer106.textContent=result
-     }
-     return result;
-   }
-   console.log(result)
+      result++;
+      answer106.textContent = result
+    }
+    return result;
+  }
+  console.log(result)
 })
 //107
 //find the number of sorted pairs formed by its elements of a given array of integers such that one element in the pair is divisible by the other one.
@@ -1439,57 +1443,58 @@ document.querySelector("#btn106").addEventListener("click", () =>{
 // document.querySelector("#btn107").addEventListener("click", () =>{
 //   answer107.innerHTML = answer107
 //   console.log(in107num)
-  //console.log(arr107)
+//console.log(arr107)
 //  console.log(new107)
-const task107 = ()=>{
+const task107 = () => {
   const in107num = document.getElementById("in107num").value;
   const answer107 = document.getElementById("answer107");
   const arr107 = in107num.split(" ");
   let result107 = 0;
-for (let i = 0; i<arr107.length; i++){
-  for (let j=i+1; j<arr107.length; j++){
-      if (arr107[i] % arr107[j] === 0 || arr107[j] % arr107[i] ===0){
+  for (let i = 0; i < arr107.length; i++) {
+    for (let j = i + 1; j < arr107.length; j++) {
+      if (arr107[i] % arr107[j] === 0 || arr107[j] % arr107[i] === 0) {
         result107++;
         answer107.textContent = result107
       }
+    }
   }
-}console.log(arr107)
- return result107
+  console.log(arr107)
+  return result107
 }
 //108
 //create the dot products of two given 3D vectors.
-document.querySelector("#btn108").addEventListener("click", () =>{
+document.querySelector("#btn108").addEventListener("click", () => {
   const in108num1 = document.getElementById("in108num1").value;
   const arr108_1 = in108num1.split(" ");
   const in108num2 = document.getElementById("in108num2").value;
   const arr108_2 = in108num2.split(" ");
   const answer108 = document.getElementById("answer108");
- let dots = 0;
-  for (let i=0; i<3; i++){
+  let dots = 0;
+  for (let i = 0; i < 3; i++) {
     dots += arr108_1[i] * arr108_2[i]
-  } 
+  }
   answer108.textContent = dots;
   return
 })
 //109
 //sort an array of all prime numbers between 1 and a given integer.
 function isPrime(num) {
-  for(var i = 2; i < num; i++)
-    if(num % i === 0) return false;
+  for (var i = 2; i < num; i++)
+    if (num % i === 0) return false;
   return num > 1;
 }
-document.querySelector("#btn109").addEventListener("click", () =>{
+document.querySelector("#btn109").addEventListener("click", () => {
   const in109num = document.getElementById("in109num").value;
   const prime = in109num.split(" ");
   let answer109 = document.getElementById("answer109");
   let primeNumbers = [];
   let result = [];
-    for (let i= 2; i <= prime; i++){
-      primeNumbers.push(i);
-      result = primeNumbers.filter(numbers=> isPrime(numbers));
-    }
-   // console.log(result.join())
-    answer109.textContent = result
+  for (let i = 2; i <= prime; i++) {
+    primeNumbers.push(i);
+    result = primeNumbers.filter(numbers => isPrime(numbers));
+  }
+  // console.log(result.join())
+  answer109.textContent = result
 });
 //110 find the number of even values in sequence before the first occurrence of a given number. 
 
@@ -1497,91 +1502,93 @@ let answer110 = document.getElementById("answer110");
 let seq = document.getElementById("seq")
 const randText = "Sequence numbers are:";
 let arr110 = [];
-    showSequence = () =>{
-    for (let i = 1; i<=10; i++ ){
+showSequence = () => {
+  for (let i = 1; i <= 10; i++) {
     arr110.push(i)
-      seq.textContent =  `${randText} \n ${arr110}`
-    }
+    seq.textContent = `${randText} \n ${arr110}`
+  }
 }
 showSequence();
-document.querySelector("#btn110").addEventListener("click", () =>{
-    const in110num = document.getElementById("in110num").value;
-    const num110 = in110num.split(" ")
-    let oddcheck = []
-    if (num110 <=  arr110[arr110.length-1] ){
-      for (let i =1; i<= num110; i++){
-        oddcheck.push(i);
-        let oddLength = oddcheck.filter(numbers => numbers % 2 === 0)
-        answer110.textContent = oddLength.length;
-      } 
-      }else {
-        answer110.textContent = `this number isn't in sequence`
+document.querySelector("#btn110").addEventListener("click", () => {
+  const in110num = document.getElementById("in110num").value;
+  const num110 = in110num.split(" ")
+  let oddcheck = []
+  if (num110 <= arr110[arr110.length - 1]) {
+    for (let i = 1; i <= num110; i++) {
+      oddcheck.push(i);
+      let oddLength = oddcheck.filter(numbers => numbers % 2 === 0)
+      answer110.textContent = oddLength.length;
     }
+  } else {
+    answer110.textContent = `this number isn't in sequence`
+  }
 })
 //111check a number from three given numbers where two numbers are equal, find the third one.
 const answer111 = document.getElementById("answer111");
 const rdn111 = document.getElementById("rdnP");
 const rdnArr = [];
 
-function showRnd(){
+function showRnd() {
   for (let i = 1; i <= 3; i++) {
     rdnArr.push(Math.floor(Math.random(i) * 3 + 1));
-    rdn111.textContent = `Three random numbers: \n${rdnArr}`  
+    rdn111.textContent = `Three random numbers: \n${rdnArr}`
   }
 }
 showRnd();
-document.querySelector("#btn111").addEventListener("click", () =>{
+document.querySelector("#btn111").addEventListener("click", () => {
   let result = [];
-  for (let i=0; i<=rdnArr.length; i++){
-    for (let y = i + 1; y<=rdnArr.length; y++){
-      if (rdnArr[i] === rdnArr[y] ){
+  for (let i = 0; i <= rdnArr.length; i++) {
+    for (let y = i + 1; y <= rdnArr.length; y++) {
+      if (rdnArr[i] === rdnArr[y]) {
         result.push(rdnArr[y]);
         answer111.textContent = result;
-      } if (result.length == 0){
-        answer111.textContent = `no equal numbers`
-      }else if (result[0] === result[1] && result[0] == result[2] )  {
-        answer111.textContent = `all equal numbers`
-      }else {
-        answer111.textContent = `Equal digits are: ${result} and the third is: ${rdnArr.filter(numbers => numbers != result)} ` 
       }
-    } 
-  }  
+      if (result.length == 0) {
+        answer111.textContent = `no equal numbers`
+      } else if (result[0] === result[1] && result[0] == result[2]) {
+        answer111.textContent = `all equal numbers`
+      } else {
+        answer111.textContent = `Equal digits are: ${result} and the third is: ${rdnArr.filter(numbers => numbers != result)} `
+      }
+    }
+  }
 });
 //112find the number of trailing zeros in the decimal representation of the factorial of a given number.
 const answer112 = document.getElementById("answer112");
 const in112 = document.getElementById("in112num");
 const arr112 = [];
 let trailing = 0;
-document.querySelector('#btn112').addEventListener('click', () =>{
-    for (let i = 1; i <= parseInt(in112.value) ; i++){
-      let num = i;
-      arr112.push(i);
-//divide by5 explanation: It's based on the inherent pattern of trailing zeros in factorials. The first trailing zero in factorials appears at factorial of 5. For every increase of 5 numbers in factorials, the trailing zero increases by one. So 5–9 has a 1 trailing zero; 10–14 has 2 trailing zeros; 15–19 has 3, and so on...
-      while (num % 5 === 0){
-        num /= 5;
-        trailing++;
-      }
-      const reducer = (a, b) => a * b;
-      let total =  arr112.reduce(reducer)
-      answer112.textContent =  `Total output is: ${total}, and there is ${trailing} zero` ;
-    } 
+document.querySelector('#btn112').addEventListener('click', () => {
+  for (let i = 1; i <= parseInt(in112.value); i++) {
+    let num = i;
+    arr112.push(i);
+    //divide by5 explanation: It's based on the inherent pattern of trailing zeros in factorials. The first trailing zero in factorials appears at factorial of 5. For every increase of 5 numbers in factorials, the trailing zero increases by one. So 5–9 has a 1 trailing zero; 10–14 has 2 trailing zeros; 15–19 has 3, and so on...
+    while (num % 5 === 0) {
+      num /= 5;
+      trailing++;
+    }
+    const reducer = (a, b) => a * b;
+    let total = arr112.reduce(reducer)
+    answer112.textContent = `Total output is: ${total}, and there is ${trailing} zero`;
+  }
 })
 //113calculate the sum of n + n/2 + n/4 + n/8 + .... where n is a positive integer and all divisions are integer.
-document.querySelector('#btn113').addEventListener('click', () =>{
+document.querySelector('#btn113').addEventListener('click', () => {
   const in113 = document.getElementById("in113num");
   const answer113 = document.getElementById("answer113");
   nNum = in113.value;
   let sum = 0;
-  while (nNum > 0){
-    nNum = Math.floor(nNum /2);
+  while (nNum > 0) {
+    nNum = Math.floor(nNum / 2);
     sum += nNum;
-    } console.log(sum );
-    answer113.textContent=  parseInt(in113.value)+sum;
+  }
+  console.log(sum);
+  answer113.textContent = parseInt(in113.value) + sum;
 });
 //114check whether a given string represents a correct sentence or not. A string is considered correct sentence if it starts with the capital letter and ends with a full stop (.).
-document.querySelector('#btn114').addEventListener('click', () =>{
+document.querySelector('#btn114').addEventListener('click', () => {
   in114 = document.getElementById("in114str").value;
-  answer114=document.getElementById("answer114");
+  answer114 = document.getElementById("answer114");
   // if statement solution
   // let arr114 = in114.split("");
   // if (arr114[0] === arr114[0].toUpperCase() &&
@@ -1590,45 +1597,53 @@ document.querySelector('#btn114').addEventListener('click', () =>{
 
   //regex solution
 
-  const checkUpp =  /^[A-Z]/.test(in114)
+  const checkUpp = /^[A-Z]/.test(in114)
   const checkDot = /\.$/.test(in114)
-  if (checkUpp && checkDot   == true){
-    answer114.textContent = `true` 
-  } else{
+  if (checkUpp && checkDot == true) {
+    answer114.textContent = `true`
+  } else {
     answer114.textContent = `false`
   }
 });
 //115 check whether a matrix is a diagonal matrix or not. In linear algebra, a diagonal matrix is a matrix in which the entries outside the main diagonal are all zero (the diagonal from the upper left to the lower right).
 ans115 = document.getElementById("answer115");
-const a115 = [[1, 0, 0], [0, 2, 0], [0, 0, 3] ];
-const b115 = [[1, 0, 0], [0, 2, 3], [0, 0, 3] ]
-document.querySelector('#btn115a').addEventListener('click', () =>{
+const a115 = [
+  [1, 0, 0],
+  [0, 2, 0],
+  [0, 0, 3]
+];
+const b115 = [
+  [1, 0, 0],
+  [0, 2, 3],
+  [0, 0, 3]
+]
+document.querySelector('#btn115a').addEventListener('click', () => {
   ans115.textContent = "task 115 is not ready"
 });
 
-document.querySelector('#btn115b').addEventListener('click', () =>{
+document.querySelector('#btn115b').addEventListener('click', () => {
   ans115.textContent = "task 115 is not ready"
 });
 //find all the possible options to replace the hash in a string (Consists of digits and one hash (#)) with a digit to produce an integer divisible by 3.
 
-document.querySelector("#btn116").addEventListener("click", () =>{
- let  input116 = document.getElementById("in116num").value;
+document.querySelector("#btn116").addEventListener("click", () => {
+  let input116 = document.getElementById("in116num").value;
   let ans116 = document.getElementById("answer116");
 
-  if ( !input116.includes("*") ){
+  if (!input116.includes("*")) {
     ans116.textContent = "number has to contain * Asterix"
   } else {
-    const num09 = [0,1,2,3,4,5,6,7,8,9];
+    const num09 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
     let allNums = []
-    for (let i=0; i<num09.length;i++){
+    for (let i = 0; i < num09.length; i++) {
       //replace is string method only
-      allNums.push(input116.replace("*",i));
+      allNums.push(input116.replace("*", i));
       // all elements of array need to be Numbers  
-      let resutlArr = allNums.map((x)=> parseInt(x));
+      let resutlArr = allNums.map((x) => parseInt(x));
 
-          function divByThree(numbers){
-            return numbers > 0 && numbers % 3 == 0;
-          }             
+      function divByThree(numbers) {
+        return numbers > 0 && numbers % 3 == 0;
+      }
       ans116.textContent = resutlArr.filter(divByThree);
     }
   }
@@ -1646,38 +1661,37 @@ document.getElementById("btn118").addEventListener("click", () => {
   input118 = document.querySelector("#in118num").value;
   ans118 = document.querySelector("#answer118");
   arr118 = input118.split("");
-     if (arr118[0] < arr118[2] && arr118[1] < arr118[2]){
-      ans118.textContent = `true`
-     }else{
-      ans118.textContent = `false`
-     }
+  if (arr118[0] < arr118[2] && arr118[1] < arr118[2]) {
+    ans118.textContent = `true`
+  } else {
+    ans118.textContent = `false`
+  }
 })
 //119 check whether a given integer has an increasing digits sequence.
 document.getElementById("btn119").addEventListener("click", () => {
   const input119 = document.querySelector("#in119num").value;
   const ans119 = document.querySelector("#answer119");
   arr119 = input119.split("");
-   for (let i = 0; i < arr119.length-1; i++){
-     if (parseInt(arr119[i])>= parseInt(arr119[i+1]) ){
-       ans119.textContent = `false`
-     }else{
+  for (let i = 0; i < arr119.length - 1; i++) {
+    if (parseInt(arr119[i]) >= parseInt(arr119[i + 1])) {
+      ans119.textContent = `false`
+    } else {
       ans119.textContent = `true`
-     }
-   }
+    }
+  }
 })
 //120 check whether a point lies strictly inside a given circle. 
 document.getElementById("btn120").addEventListener("click", () => {
   const circSpecs = document.querySelector("#circSpecs").value;
   const ans120 = document.getElementById("answer120");
   const circ = circSpecs.split(" ")
-    if (circ.length != 5){
-      ans120.textContent = `please write 5 values separated by space. Numbers has to be in order: x y r a b`
-    }else if (Math.sqrt(((circ[3]-circ[0])*(circ[3]-circ[0])+(circ[4]-circ[1])*(circ[4]-circ[1])))   <=circ[2] ){
-      ans120.textContent =`points are inside of the circle`
-    }
-    else {
-      ans120.textContent = `points are outside of the circle`
-    }
+  if (circ.length != 5) {
+    ans120.textContent = `please write 5 values separated by space. Numbers has to be in order: x y r a b`
+  } else if (Math.sqrt(((circ[3] - circ[0]) * (circ[3] - circ[0]) + (circ[4] - circ[1]) * (circ[4] - circ[1]))) <= circ[2]) {
+    ans120.textContent = `points are inside of the circle`
+  } else {
+    ans120.textContent = `points are outside of the circle`
+  }
 });
 //121 program to check whether a given matrix is lower triangular or not.
 document.getElementById("btn121").addEventListener("click", () => {
@@ -1686,59 +1700,59 @@ document.getElementById("btn121").addEventListener("click", () => {
 
 //122 check whether a given array of integers represents either a strictly increasing or a strictly decreasing sequence. 
 document.getElementById("btn122").addEventListener("click", () => {
-input122 = document.querySelector("#in122num").value;
-ans122 = document.querySelector("#answer122");
-arr122 = input122.split("");
-   if (arr122[0] < arr122[2] && arr122[1] < arr122[2]){
+  input122 = document.querySelector("#in122num").value;
+  ans122 = document.querySelector("#answer122");
+  arr122 = input122.split("");
+  if (arr122[0] < arr122[2] && arr122[1] < arr122[2]) {
     ans122.textContent = `increasing sequence`;
-   } else if (arr122[0] > arr122[2] && arr122[1] > arr122[2]){
+  } else if (arr122[0] > arr122[2] && arr122[1] > arr122[2]) {
     ans122.textContent = `decreasing sequence`;
-   } else {
+  } else {
     ans122.textContent = `no sequence`;
-   }
-  });
-  //123 program to find whether the members of a given array of integers is a permutation of numbers from 1 to a given integer.
-  document.getElementById("btn123").addEventListener("click", () => {
-    in123nums = document.querySelector("#in123num").value;
-    in123digit = document.querySelector("#in123digit").value;
-    ans123 = document.querySelector("#answer123");
-    arr123 =in123nums.split("").filter(n => n != " ").map((x) =>parseInt(x));
-    new123 = [];
-    for (let i = 1; i <= parseInt(in123digit); i++ ){
-        new123.push(i);
-        if(JSON.stringify(arr123)==JSON.stringify(new123)) {
-          ans123.textContent = `true`;
-        } else {
-          ans123.textContent = `false`;
-        }
-    }
-  });
-  //124 create the value of NOR of two given booleans.
-  document.getElementById("btn124").addEventListener("click", () => {
-    ans124 = document.getElementById('answer124');
-    const optOne = document.getElementById("task124a").value;
-    const optTwo = document.getElementById("task124b").value;
-    if (optOne === 'false' && optTwo === `false`){
-      ans124.textContent = `true`;
+  }
+});
+//123 program to find whether the members of a given array of integers is a permutation of numbers from 1 to a given integer.
+document.getElementById("btn123").addEventListener("click", () => {
+  in123nums = document.querySelector("#in123num").value;
+  in123digit = document.querySelector("#in123digit").value;
+  ans123 = document.querySelector("#answer123");
+  arr123 = in123nums.split("").filter(n => n != " ").map((x) => parseInt(x));
+  new123 = [];
+  for (let i = 1; i <= parseInt(in123digit); i++) {
+    new123.push(i);
+    if (JSON.stringify(arr123) == JSON.stringify(new123)) {
+      ans123.textContent = `true`;
     } else {
-      ans124.textContent = `false`
+      ans123.textContent = `false`;
     }
-  });
+  }
+});
+//124 create the value of NOR of two given booleans.
+document.getElementById("btn124").addEventListener("click", () => {
+  ans124 = document.getElementById('answer124');
+  const optOne = document.getElementById("task124a").value;
+  const optTwo = document.getElementById("task124b").value;
+  if (optOne === 'false' && optTwo === `false`) {
+    ans124.textContent = `true`;
+  } else {
+    ans124.textContent = `false`
+  }
+});
 //125 find the longest string from a given array.
 const btn125 = document.getElementById('btn125');
-btn125.addEventListener('click', () =>  {
+btn125.addEventListener('click', () => {
   const inptu125 = document.getElementById('in125num').value;
   const answer125 = document.getElementById('answer125');
-  const longArr =  inptu125.split(" ").sort(function (a, b) {
+  const longArr = inptu125.split(" ").sort(function (a, b) {
     return b.length - a.length;
   });
   answer125.textContent = longArr[0];
 })
 //126 largest even number from an array of integers.
-document.getElementById("btn126").addEventListener('click', () =>  {
+document.getElementById("btn126").addEventListener('click', () => {
   const inptu126 = document.getElementById('in126num').value;
   const answer126 = document.getElementById('answer126');
-  const lngArr =  inptu126.split(" ").sort(function (a, b) {
+  const lngArr = inptu126.split(" ").sort(function (a, b) {
     return b - a;
   });
   answer126.textContent = lngArr[0];
@@ -1755,53 +1769,53 @@ const inptu127 = document.getElementById('in127num');
 const answer127 = document.getElementById('answer127');
 let revBin = [];
 
-document.getElementById("btn127").addEventListener('click', () =>  {
-    let num22 = inptu127.value;
-    revBin.push(parseInt(num22.split(' ')));
-    let binar = revBin[0].toString(2)
-    answer127.textContent = parseInt(binar.split("").reverse().join(""),2)  ;
-//  const binary = parseInt(inptu127.toString(2).split("").reverse().join("") * Math.sign(inptu127) ); not working ??
+document.getElementById("btn127").addEventListener('click', () => {
+  let num22 = inptu127.value;
+  revBin.push(parseInt(num22.split(' ')));
+  let binar = revBin[0].toString(2)
+  answer127.textContent = parseInt(binar.split("").reverse().join(""), 2);
+  //  const binary = parseInt(inptu127.toString(2).split("").reverse().join("") * Math.sign(inptu127) ); not working ??
 });
 //128 find the smallest round number that is not less than a given value. Note: A round number is informally considered to be an integer that ends with one or more zeros. So, 590 is rounder than 592, but 590 is less round than 600.
 document.getElementById("btn128").addEventListener('click', () => {
   const answer128 = document.getElementById('answer128');
   const inptu128 = document.getElementById('in128num').value;
-  answer128.textContent =  Math.floor(inptu128/10) * 10  ;
+  answer128.textContent = Math.floor(inptu128 / 10) * 10;
 });
 //129 find the smallest prime number strictly greater than a given number. 
 function isPrime2(num2) {
-  for(var i = 2; i < num2; i++)
-    if(num2 % i === 0) return false;
+  for (var i = 2; i < num2; i++)
+    if (num2 % i === 0) return false;
   return num2 > 1;
 }
 let result = [];
 let primeNumbers = [];
 let greaterResult = [];
 const in129num = document.getElementById("in129num")
-document.querySelector("#btn129").addEventListener("click", () =>{
-  
+document.querySelector("#btn129").addEventListener("click", () => {
+
   const prime = parseInt(in129num.value.split(" "));
   let answer129 = document.getElementById("answer129");
-  
-    for (let i= 2; i <= prime; i++){
-      primeNumbers.push(i);
-      result = primeNumbers.filter(numbers=> isPrime2(numbers));
-    }
- let primePlus = prime;
 
- while ( !isPrime2(primePlus) ){
-  isPrime2(primePlus++) 
-  greaterResult.push(primePlus)
-}
+  for (let i = 2; i <= prime; i++) {
+    primeNumbers.push(i);
+    result = primeNumbers.filter(numbers => isPrime2(numbers));
+  }
+  let primePlus = prime;
 
-return answer129.textContent = `The smallest prime number is: ${result[result.length-1]}, the greater will be: ${greaterResult[greaterResult.length-1] }`
+  while (!isPrime2(primePlus)) {
+    isPrime2(primePlus++)
+    greaterResult.push(primePlus)
+  }
+
+  return answer129.textContent = `The smallest prime number is: ${result[result.length-1]}, the greater will be: ${greaterResult[greaterResult.length-1] }`
 });
 //130 find the number of even digits in a given integer.
 in130 = document.getElementById("in130num")
 ans130 = document.getElementById("answer130")
-document.querySelector("#btn130").addEventListener("click", () =>{
+document.querySelector("#btn130").addEventListener("click", () => {
   const numCheck = in130.value;
-  ans130.textContent = numCheck.split('').filter(x=> x % 2 == 0).length;
+  ans130.textContent = numCheck.split('').filter(x => x % 2 == 0).length;
 })
 //131 Write a JavaScript program to create an array of prefix sums of the given array
 
@@ -1810,8 +1824,8 @@ const ans131 = document.querySelector("#answer131")
 const btn131 = document.querySelector("#btn131")
 
 btn131.addEventListener("click", () => {
-  const values= in131.value.split(" ")  
-  ans131.textContent=PrefixSum(values)
+  const values = in131.value.split(" ")
+  ans131.textContent = PrefixSum(values)
 })
 // function PrefixSum(values){
 //   let acc = 0 //accumulator (note that the code within the 'forEach{}' can 'see' this variable (it is 'in scope') (BECAUSE it's an arrow function))
@@ -1819,12 +1833,15 @@ btn131.addEventListener("click", () => {
 //   values.forEach(p=>{acc+=parseInt(p);answer.push(acc)})   
 //   return answer.join(',')  //The 'opposite' of split  
 // }     
- PrefixSum = (values) =>  {
+PrefixSum = (values) => {
   let acc = 0 //accumulator (note that the code within the 'forEach{}' can 'see' this variable (it is 'in scope') (BECAUSE it's an arrow function))
-  let answer=[] //we'll collect the values into here
-  values.forEach(p=>{acc+=parseInt(p);answer.push(acc)})   
-  return answer.join(',')  //The 'opposite' of split  
-}     
+  let answer = [] //we'll collect the values into here
+  values.forEach(p => {
+    acc += parseInt(p);
+    answer.push(acc)
+  })
+  return answer.join(',') //The 'opposite' of split  
+}
 
 //132 find all distinct prime factors of a given integer.
 const in132 = document.querySelector("#in132num");
@@ -1833,21 +1850,21 @@ const btn132 = document.querySelector("#btn132");
 
 // this task is based on task 109
 function isPrime(num) {
-  for(var i = 2; i < num; i++)
-    if(num % i === 0) return false;
+  for (var i = 2; i < num; i++)
+    if (num % i === 0) return false;
   return num > 1;
 }
-btn132.addEventListener("click", ()=> {
+btn132.addEventListener("click", () => {
   const val132 = parseInt(in132.value.split(" "));
   console.log(val132)
   let allNums = [];
   let result = [];
-  for (let i= 2; i <= val132; i++){
-    allNums.push(i);   // two filters allowed!
-    result = allNums.filter(numbers=> isPrime(numbers)).filter(x => val132 % x == 0 );
+  for (let i = 2; i <= val132; i++) {
+    allNums.push(i); // two filters allowed!
+    result = allNums.filter(numbers => isPrime(numbers)).filter(x => val132 % x == 0);
   }
- ans132.textContent = result.join(',')
-}) 
+  ans132.textContent = result.join(',')
+})
 //133W check whether a given fraction is proper or not.
 //const in133 = document.querySelector("#in133num");
 const ans133 = document.querySelector("#answer133");
@@ -1857,11 +1874,11 @@ btn133.addEventListener("click", () => {
   //const val133 = in132.value.split(" ");
   const in133 = document.querySelector("#in133num").value.split(" ");
 
-   if ( parseInt(in133[0]) / parseInt(in133[1]) < 1) {
+  if (parseInt(in133[0]) / parseInt(in133[1]) < 1) {
     ans133.textContent = `Proper fraction`
-   }else {
+  } else {
     ans133.textContent = `Improper fraction`
-   }
+  }
 })
 //134 change the characters (lower case) in a string where a turns into z, b turns into y, c turns into x, ..., n turns into m, m turns into n, ..., z turns into a.
 
@@ -1869,22 +1886,22 @@ const ans134 = document.querySelector("#answer134");
 const btn134 = document.querySelector("#btn134");
 
 btn134.addEventListener("click", () => {
- // const in134 = document.querySelector("#in134num").value.toLowerCase().split("");
+  // const in134 = document.querySelector("#in134num").value.toLowerCase().split("");
   let arrChar = [];
   const in134 = document.querySelector("#in134num").value.toLowerCase()
   //my attempts: all failure 
-//  arrChar = in134.map(x => x.charCodeAt());
-//  console.log(arrChar)
-//   ans134.textContent = arrChar
+  //  arrChar = in134.map(x => x.charCodeAt());
+  //  console.log(arrChar)
+  //   ans134.textContent = arrChar
 
-  for (let i=0; i< in134.length; i++){
+  for (let i = 0; i < in134.length; i++) {
     let characters = in134.charCodeAt(i) - 'a'.charCodeAt(0),
-    chage_char = 25 - characters + 'a'.charCodeAt(0);
+      chage_char = 25 - characters + 'a'.charCodeAt(0);
     arrChar.push(String.fromCharCode(chage_char))
   }
-  return ans134.textContent=arrChar.join('')
-//solution taken from:
-//https://www.w3resource.com/javascript-exercises/javascript-basic-exercise-134.php
+  return ans134.textContent = arrChar.join('')
+  //solution taken from:
+  //https://www.w3resource.com/javascript-exercises/javascript-basic-exercise-134.php
 })
 //135 remove all characters from a given string that appear more than once.
 
@@ -1892,22 +1909,22 @@ const ans135 = document.querySelector("#answer135");
 const btn135 = document.querySelector("#btn135");
 btn135.addEventListener('click', () => {
   const in135 = document.querySelector('#in135str').value.split("");
- // const doubles =  in135.filter((x, y) => in135.indexOf(x) === y)
- ans135.textContent = doubles(in135);
-}) 
+  // const doubles =  in135.filter((x, y) => in135.indexOf(x) === y)
+  ans135.textContent = doubles(in135);
+})
 // practice with helper function
 const doubles = (in135) => {
   return in135.filter((x, y) => in135.indexOf(x) === y).join("")
-} 
+}
 
 //136  replace the first digit in a string (should contains at least digit) with $ character
 const ans136 = document.querySelector("#answer136");
 const btn136 = document.querySelector("#btn136");
-
-const dollar = in136 =>{
-  const in136 = document.querySelector('#in136num').value.split("");
-  return in136;
+const findNum = /[0-9]/g
+const dollar = () => {
+  const in136 = document.querySelector('#in136num').value;
+  findNum.test(in136) ? ans136.textContent = in136.replace(/[0-9]/g, '$') : ans136.textContent = `there is no digit`;
 }
 btn136.addEventListener('click', () => {
-  ans135.textContent = dollar(in136);
+  dollar()
 })
