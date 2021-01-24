@@ -1897,5 +1897,17 @@ btn135.addEventListener('click', () => {
 }) 
 // practice with helper function
 const doubles = (in135) => {
-  return   in135.filter((x, y) => in135.indexOf(x) === y).join("")
+  return in135.filter((x, y) => in135.indexOf(x) === y).join("")
 } 
+
+//136  replace the first digit in a string (should contains at least digit) with $ character
+const ans136 = document.querySelector("#answer136");
+const btn136 = document.querySelector("#btn136");
+
+const dollar = in136 =>{
+  const in136 = document.querySelector('#in136num').value.split("");
+  return in136;
+}
+btn136.addEventListener('click', () => {
+  ans135.textContent = dollar(in136);
+})
