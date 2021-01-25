@@ -1935,3 +1935,12 @@ btn137.addEventListener('click', () => {
   const in137 = document.querySelector('#in137num').value;
   in137 >= 15 ? ans137.textContent = in137 : ans137.textContent = 15
 })
+//138 reverse the bits of a given 16 bits unsigned short integer.
+const ans138 = document.querySelector("#answer138");
+const btn138 = document.querySelector("#btn138");
+btn138.addEventListener('click', () => {
+  const in138 = document.querySelector('#in138num').value;
+  const numBin = Number(in138)
+  ans138.textContent = numBin.toString(16)
+
+})
