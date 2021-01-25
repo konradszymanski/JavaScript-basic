@@ -1926,5 +1926,12 @@ const dollar = () => {
   findNum.test(in136) ? ans136.textContent = in136.replace(/[0-9]/g, '$') : ans136.textContent = `there is no digit`;
 }
 btn136.addEventListener('click', () => {
-  dollar()
+  dollar();
+})
+//137 test whether a given integer is greater than 15 return the given number, otherwise return 15. 
+const ans137 = document.querySelector("#answer137");
+const btn137 = document.querySelector("#btn137");
+btn137.addEventListener('click', () => {
+  const in137 = document.querySelector('#in137num').value;
+  in137 >= 15 ? ans137.textContent = in137 : ans137.textContent = 15
 })
