@@ -1940,7 +1940,14 @@ const ans138 = document.querySelector("#answer138");
 const btn138 = document.querySelector("#btn138");
 btn138.addEventListener('click', () => {
   const in138 = document.querySelector('#in138num').value;
-  const numBin = Number(in138)
-  ans138.textContent = numBin.toString(16)
-
+  return ans138.textContent = bits137(in138)
+  //  
 })
+const bits137 = (num) => {
+  var result = 0;
+  for (let i = 0; i < 16; i++) {
+    result = result * 2 + (num % 2);
+    num = Math.floor(num / 2);
+  }
+  return result;
+}
