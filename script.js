@@ -1951,3 +1951,12 @@ const bits137 = (num) => {
   }
   return result;
 }
+
+//139 find the position of a rightmost round number in an array of integers. Returns 0 if there are no round number.
+const ans139 = document.querySelector("#answer139");
+const btn139 = document.querySelector("#btn139");
+btn139.addEventListener('click', () => {
+  const in139 = document.querySelector('#in139num').value.split(' ');
+  const round139 = in139.map(x => x / 10).map(x => Number.isInteger(x))
+  ans139.textContent = round139.indexOf(true)
+})
