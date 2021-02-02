@@ -1960,3 +1960,18 @@ btn139.addEventListener('click', () => {
   const round139 = in139.map(x => x / 10).map(x => Number.isInteger(x))
   ans139.textContent = round139.indexOf(true)
 })
+//140 check whether all the digits in a given number are the same or not.
+const ans140 = document.querySelector("#answer140");
+const btn140 = document.querySelector("#btn140");
+btn140.addEventListener('click', () => {
+  const in140 = document.querySelector('#in140num').value.split(' ');
+
+  for (let i = 0; i <= in140.length; i++) {
+    if (in140[i] == in140[i + 1]) {
+      ans140.textContent = 'true'
+    } else {
+      ans140.textContent = 'false'
+    }
+  }
+
+})
