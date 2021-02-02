@@ -1965,13 +1965,6 @@ const ans140 = document.querySelector("#answer140");
 const btn140 = document.querySelector("#btn140");
 btn140.addEventListener('click', () => {
   const in140 = document.querySelector('#in140num').value.split(' ');
-
-  for (let i = 0; i <= in140.length; i++) {
-    if (in140[i] == in140[i + 1]) {
-      ans140.textContent = 'true'
-    } else {
-      ans140.textContent = 'false'
-    }
-  }
-
+  const cheksame = in140.every(x => x === in140[0])
+  ans140.textContent = cheksame
 })
