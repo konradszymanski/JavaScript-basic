@@ -1969,6 +1969,7 @@ btn140.addEventListener('click', () => {
   ans140.textContent = cheksame;
 })
 // 141
-const randArr = () => {
-
+function randomArrays() {
+  const rand141 = Math.floor(Math.random() * 10);
+  document.getElementById("randomArrays").innerHTML = rand141;
 }
