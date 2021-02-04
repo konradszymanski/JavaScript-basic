@@ -1966,5 +1966,9 @@ const btn140 = document.querySelector("#btn140");
 btn140.addEventListener('click', () => {
   const in140 = document.querySelector('#in140num').value.split(' ');
   const cheksame = in140.every(x => x === in140[0])
-  ans140.textContent = cheksame
+  ans140.textContent = cheksame;
 })
+// 141
+const randArr = () => {
+
+}
