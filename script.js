@@ -1969,7 +1969,23 @@ btn140.addEventListener('click', () => {
   ans140.textContent = cheksame;
 })
 // 141
+let rdmArr140 = []
+let rdmArr140_2 = [];
+let active = 0;
+
 function randomArrays() {
-  const rand141 = Math.floor(Math.random() * 10);
-  document.getElementById("randomArrays").innerHTML = rand141;
+  active++
+  if (active === 1) {
+    active++
+    for (let i = 1; i <= 4; i++) {
+      const rand141 = Math.floor(Math.random() * 15);;
+      rdmArr140.push(rand141);
+    }
+  } else if (active === 2) {
+    for (let i = 1; i <= 4; i++) {
+      const rand141 = Math.floor(Math.random() * 15);;
+      rdmArr140_2.push(rand141);
+    }
+  }
+  return document.getElementById("randomArrays").innerHTML = `Random arr1: [${rdmArr140}] and arr2: ${rdmArr140_2}`
 }
