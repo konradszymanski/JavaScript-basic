@@ -1971,21 +1971,24 @@ btn140.addEventListener('click', () => {
 // 141
 let rdmArr140 = []
 let rdmArr140_2 = [];
-let active = 0;
+let randomCount = 0;
 
 function randomArrays() {
-  active++
-  if (active === 1) {
-    active++
+  randomCount++;
+  console.log(randomCount)
+  if (randomCount === 1 && rdmArr140.length <= 4) {
+    randomCount + 1
     for (let i = 1; i <= 4; i++) {
-      const rand141 = Math.floor(Math.random() * 15);;
+      const rand141 = Math.floor(Math.random() * 15);
       rdmArr140.push(rand141);
+      document.getElementById("randomArrays").innerHTML = `Random arr1: [${rdmArr140}]`
     }
-  } else if (active === 2) {
+  } else if (randomCount == 2) {
     for (let i = 1; i <= 4; i++) {
-      const rand141 = Math.floor(Math.random() * 15);;
-      rdmArr140_2.push(rand141);
+      const rand141a = Math.floor(Math.random() * 15);
+      rdmArr140_2.push(rand141a);
+      document.getElementById("randomArrays2").innerHTML = `Random arr2: [${rdmArr140_2}]`
+      //return active = 0;
     }
   }
-  return document.getElementById("randomArrays").innerHTML = `Random arr1: [${rdmArr140}] and arr2: ${rdmArr140_2}`
 }
