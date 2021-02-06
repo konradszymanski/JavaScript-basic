@@ -1968,7 +1968,7 @@ btn140.addEventListener('click', () => {
   const cheksame = in140.every(x => x === in140[0])
   ans140.textContent = cheksame;
 })
-// 141
+// 141 find the number of elements which presents in both of the given
 let rdmArr140 = []
 let rdmArr140_2 = [];
 let randomCount = 0;
@@ -1979,16 +1979,20 @@ function randomArrays() {
   if (randomCount === 1 && rdmArr140.length <= 4) {
     randomCount + 1
     for (let i = 1; i <= 4; i++) {
-      const rand141 = Math.floor(Math.random() * 15);
+      const rand141 = Math.floor(Math.random() * 10);
       rdmArr140.push(rand141);
       document.getElementById("randomArrays").innerHTML = `Random arr1: [${rdmArr140}]`
     }
   } else if (randomCount == 2) {
     for (let i = 1; i <= 4; i++) {
-      const rand141a = Math.floor(Math.random() * 15);
+      const rand141a = Math.floor(Math.random() * 10);
       rdmArr140_2.push(rand141a);
       document.getElementById("randomArrays2").innerHTML = `Random arr2: [${rdmArr140_2}]`
       //return active = 0;
     }
+  } else if (randomCount == 3) {
+    const sameNums = rdmArr140.filter(num => rdmArr140_2.includes(num));
+    answer141.textContent = `There are ${ sameNums.length} common numbers. The array are sharing (${sameNums})`
+
   }
 }
