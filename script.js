@@ -2001,7 +2001,10 @@ function randomArrays() {
 const ans142 = document.querySelector("#answer142");
 const btn142 = document.querySelector("#btn142");
 btn142.addEventListener('click', () => {
-  const in142 = document.querySelector('#in142num').value.split(' ');
-
-  ans142.textContent = in142;
+  const in142 = document.querySelector('#in142num').value;
+  ans142.textContent = dots(in142)
 })
+const dots = (in142) => {
+
+  return in142.replace(/\./g, "/");
+}
