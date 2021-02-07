@@ -1996,3 +1996,12 @@ function randomArrays() {
 
   }
 }
+//142 simplify a given absolute path for a file in Unix-style.
+// example https://www.geeksforgeeks.org/simplify-directory-path-unix-like/
+const ans142 = document.querySelector("#answer142");
+const btn142 = document.querySelector("#btn142");
+btn142.addEventListener('click', () => {
+  const in142 = document.querySelector('#in142num').value.split(' ');
+
+  ans142.textContent = in142;
+})
