@@ -2001,10 +2001,27 @@ function randomArrays() {
 const ans142 = document.querySelector("#answer142");
 const btn142 = document.querySelector("#btn142");
 btn142.addEventListener('click', () => {
-  const in142 = document.querySelector('#in142num').value;
-  ans142.textContent = dots(in142)
-})
-const dots = (in142) => {
+  const in142 = document.querySelector('#in142num').value.replace(/\./g, "/").split("");
+  // const replaceDots = ;
+  console.log(in142)
+  //const slash = "/";
+  const unixStyle = in142.map((x) => {
+    return x.indexOf("/");
+  });
 
-  return in142.replace(/\./g, "/");
-}
+  // join(",")
+  ans142.textContent = unixStyle;
+  //ans142.textContent = dots(in142)
+})
+
+
+
+
+
+// const dots = (x) => {
+//   const replaceDots = x.replace(/\./g, "/").split("");
+//   return replaceDots[2];
+// }
+// const slash = (y) => {
+//   if (y)
+// } y == "/" 
