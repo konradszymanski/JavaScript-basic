@@ -1819,9 +1819,9 @@ document.querySelector("#btn130").addEventListener("click", () => {
 })
 //131 Write a JavaScript program to create an array of prefix sums of the given array
 
-const in131 = document.querySelector("#in131num")
-const ans131 = document.querySelector("#answer131")
-const btn131 = document.querySelector("#btn131")
+const in131 = document.querySelector("#in131num");
+const ans131 = document.querySelector("#answer131");
+const btn131 = document.querySelector("#btn131");
 
 btn131.addEventListener("click", () => {
   const values = in131.value.split(" ")
@@ -2000,28 +2000,36 @@ function randomArrays() {
 // example https://www.geeksforgeeks.org/simplify-directory-path-unix-like/
 const ans142 = document.querySelector("#answer142");
 const btn142 = document.querySelector("#btn142");
+const in142 = document.querySelector("#in142num");
 btn142.addEventListener('click', () => {
-  const in142 = document.querySelector('#in142num').value.replace(/\./g, "/").split("");
-  // const replaceDots = ;
+  const in142 = document.querySelector("#in142num").value.replace(/\./g, "/").split("");
   console.log(in142)
-  //const slash = "/";
-  const unixStyle = in142.map((x) => {
-    return x.indexOf("/");
-  });
+
+  let asdads = []
+  for (let i = 01; i < in142.length; i++) {
+    asdads.push(in142[i])
+    console.log(in142[i])
+    console.log(asdads)
+    return in142[i].indexOf("/");
+  }
+  // for (element of in142) {
+  //   console.log(in142.indexOf("/")) // 0 a 1 b 2 c
+  //   // return in142.indexOf(element), element;
+  // }
+
+
+
 
   // join(",")
-  ans142.textContent = unixStyle;
+  return ans142.textContent += deleteSlash(in142);
   //ans142.textContent = dots(in142)
 })
+const deleteSlash = (arg) => {
 
+  for (let i = 0; i <= arg.length; i++) {
 
+    // console.log(arg[i])
+    return arg[i].indexOf("/");
+  }
 
-
-
-// const dots = (x) => {
-//   const replaceDots = x.replace(/\./g, "/").split("");
-//   return replaceDots[2];
-// }
-// const slash = (y) => {
-//   if (y)
-// } y == "/" 
+}
