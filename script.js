@@ -2002,19 +2002,19 @@ const ans142 = document.querySelector("#answer142");
 const btn142 = document.querySelector("#btn142");
 const in142 = document.querySelector("#in142num");
 btn142.addEventListener('click', () => {
-  //const in142 = document.querySelector("#in142num").value.split("/");
-  const in142 = document.querySelector("#in142num").value;
+  const in142 = document.querySelector("#in142num").value.split(".").join("");
   console.log(in142)
 
   return ans142.textContent += deleteSlash(in142);
   //ans142.textContent = dots(in142)
 })
 const deleteSlash = (path) => {
-  var arr = path.split('/');
-  var stack = [];
-  var len = arr.length;
-  var item = '';
-  for (var i = 0; i < len; i++) {
+  // based on https://baffinlee.com/leetcode-javascript/problem/simplify-path.html
+  let arr = path.split('/');
+  console.log(arr);
+  let stack = [];
+  let item = '';
+  for (let i = 0; i < arr.length; i++) {
     item = arr[i];
     if (item === '' || item === '.') continue;
     if (item === '..') {
