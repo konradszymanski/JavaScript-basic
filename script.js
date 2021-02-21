@@ -2002,34 +2002,26 @@ const ans142 = document.querySelector("#answer142");
 const btn142 = document.querySelector("#btn142");
 const in142 = document.querySelector("#in142num");
 btn142.addEventListener('click', () => {
-  const in142 = document.querySelector("#in142num").value.replace(/\./g, "/").split("");
+  //const in142 = document.querySelector("#in142num").value.split("/");
+  const in142 = document.querySelector("#in142num").value;
   console.log(in142)
 
-  let asdads = []
-  for (let i = 01; i < in142.length; i++) {
-    asdads.push(in142[i])
-    console.log(in142[i])
-    console.log(asdads)
-    return in142[i].indexOf("/");
-  }
-  // for (element of in142) {
-  //   console.log(in142.indexOf("/")) // 0 a 1 b 2 c
-  //   // return in142.indexOf(element), element;
-  // }
-
-
-
-
-  // join(",")
   return ans142.textContent += deleteSlash(in142);
   //ans142.textContent = dots(in142)
 })
-const deleteSlash = (arg) => {
-
-  for (let i = 0; i <= arg.length; i++) {
-
-    // console.log(arg[i])
-    return arg[i].indexOf("/");
+const deleteSlash = (path) => {
+  var arr = path.split('/');
+  var stack = [];
+  var len = arr.length;
+  var item = '';
+  for (var i = 0; i < len; i++) {
+    item = arr[i];
+    if (item === '' || item === '.') continue;
+    if (item === '..') {
+      stack.pop();
+    } else {
+      stack.push(item);
+    }
   }
-
-}
+  return '/' + stack.join('/');
+};
