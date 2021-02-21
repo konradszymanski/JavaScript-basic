@@ -2025,3 +2025,14 @@ const deleteSlash = (path) => {
   }
   return '/' + stack.join('/');
 };
+//143 program to sort the strings of a given array of strings in the order of increasing lengths. 
+const ans143 = document.querySelector("#answer143");
+const btn143 = document.querySelector("#btn143");
+const in143 = document.querySelector("#in143num");
+btn143.addEventListener('click', () => {
+  const in143 = document.querySelector("#in143num").value.split(",");
+  ans143.textContent = in143.sort(function (a, b) {
+    return a.length - b.length
+  }).join(", ");
+  console.log(in143)
+});
