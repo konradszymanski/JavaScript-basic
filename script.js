@@ -2036,3 +2036,13 @@ btn143.addEventListener('click', () => {
   }).join(", ");
   console.log(in143)
 });
+
+//144break an address of an url and put it's part into an array.
+const ans144 = document.querySelector("#answer144");
+const btn144 = document.querySelector("#btn144");
+//const in144 = document.querySelector("#in144num");
+btn144.addEventListener('click', () => {
+  const in144 = document.querySelector("#in144num").value.split("/").join(", ");
+  console.log(in144)
+  ans144.textContent = in144
+});
