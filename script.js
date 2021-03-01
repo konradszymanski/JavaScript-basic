@@ -2046,3 +2046,20 @@ btn144.addEventListener('click', () => {
   //console.log(in144arr)
   ans144.textContent = `[ ${in144arr} ]`
 });
+//145 find the maximum integer n such that 1 + 2 + ... + n <= a given integer.  
+const ans145 = document.querySelector("#answer145");
+const btn145 = document.querySelector("#btn145");
+btn145.addEventListener('click', () => {
+  const in145 = document.querySelector('#in145num').value;
+  return ans145.textContent = maxInt145(in145)
+  //  
+})
+const maxInt145 = (num) => {
+  let a = 0;
+  let i = 0
+
+  while (a <= num) {
+    a += i++
+  }
+  return i - 2;
+}
