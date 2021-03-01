@@ -2057,9 +2057,9 @@ btn145.addEventListener('click', () => {
 const maxInt145 = (num) => {
   let a = 0;
   let i = 0
-
   while (a <= num) {
     a += i++
   }
   return i - 2;
 }
+//146 compute the sum of cubes of all integer from 1 to a given integer.
