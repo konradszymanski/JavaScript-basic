@@ -2054,6 +2054,7 @@ btn145.addEventListener('click', () => {
   return ans145.textContent = maxInt145(in145)
   //  
 })
+// based on w3resource
 const maxInt145 = (num) => {
   let a = 0;
   let i = 0
@@ -2063,3 +2064,18 @@ const maxInt145 = (num) => {
   return i - 2;
 }
 //146 compute the sum of cubes of all integer from 1 to a given integer.
+const ans146 = document.querySelector("#answer146");
+const btn146 = document.querySelector("#btn146");
+btn146.addEventListener('click', () => {
+  const in146 = document.querySelector('#in146num').value;
+  return ans146.textContent = computeCubes(in146)
+  //  
+})
+const computeCubes = (num) => {
+
+  let value = 0;
+  for (let i = 1; i <= num; i++) {
+    value += Math.pow(i, 3)
+  }
+  return value
+}
