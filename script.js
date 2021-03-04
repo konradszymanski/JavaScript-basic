@@ -2069,7 +2069,6 @@ const btn146 = document.querySelector("#btn146");
 btn146.addEventListener('click', () => {
   const in146 = document.querySelector('#in146num').value;
   return ans146.textContent = computeCubes(in146)
-  //  
 })
 const computeCubes = (num) => {
 
@@ -2080,3 +2079,14 @@ const computeCubes = (num) => {
   return value
 }
 //147 compute the sum of all digits that occur in a given string
+
+const ans147 = document.querySelector("#answer147");
+const btn147 = document.querySelector("#btn147");
+btn147.addEventListener('click', () => {
+  const in147 = document.querySelector('#in147num').value;
+  return ans147.textContent = computeNumbers(in147)
+})
+const computeNumbers = (num) => {
+  num.split()
+  console.log(num)
+}
