@@ -2087,6 +2087,8 @@ btn147.addEventListener('click', () => {
   return ans147.textContent = computeNumbers(in147)
 })
 const computeNumbers = (num) => {
-  num.split()
+  console.log(num.split(""))
+  return num.split("");
+  //regex
   console.log(num)
 }
