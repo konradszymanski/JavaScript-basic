@@ -2089,6 +2089,19 @@ btn147.addEventListener('click', () => {
 const computeNumbers = (num) => {
   let numsOnly = num.replace(/\D/g, "").split("").reduce((a, b) => parseInt(a) + parseInt(b));
   return numsOnly;
-
 }
 //148 swap two halves of a given array of integers of even length.
+
+const btn148 = document.querySelector("#btn148");
+const ans148 = document.querySelector("#answer148");
+btn148.addEventListener('click', () => {
+  const in148 = document.querySelector('#in148num').value;
+  return ans148.textContent = swapArray(in148)
+})
+const swapArray = (str) => {
+ const arr =  str.split('')
+ if (arr.length % 2 === 0){
+ return arr.slice(arr.length/2 , arr.length).join('') + arr.slice(0, arr.length/2).join('')
+
+}else return false;
+}
