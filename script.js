@@ -2118,3 +2118,19 @@ const capitalization = (str) => {
   console.log(arr)
   return arr;
 }
+// 150 swap pairs of adjacent digits of a given integer of even length.
+const btn150 = document.querySelector("#btn150");
+const ans150 = document.querySelector("#answer150");
+btn150.addEventListener('click', () => {
+  const in150 = document.querySelector('#in150num').value;
+  return ans150.textContent = adjacentPairs(in150)
+});
+const adjacentPairs = (str) => {
+  const arr = str.split('');
+  console.log(arr)
+ if (arr.length % 2 == 0){
+  for (let i = 0; i < arr.length; i++){
+    return arr[i+1] + arr[i]
+  }
+ } else return false;
+}
