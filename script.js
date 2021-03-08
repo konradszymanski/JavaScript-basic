@@ -2127,10 +2127,10 @@ btn150.addEventListener('click', () => {
 });
 const adjacentPairs = (str) => {
   const arr = str.split('');
-  console.log(arr)
+  let result = ''
  if (arr.length % 2 == 0){
-  for (let i = 0; i < arr.length; i++){
-    return arr[i+1] + arr[i]
+  for (let i = 0; i <= arr.length; i++){
+    return result += arr[i+1]+arr[i];
   }
  } else return false;
 }
