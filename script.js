@@ -2113,6 +2113,8 @@ btn149.addEventListener('click', () => {
   return ans149.textContent = capitalization(in149)
 })
 const capitalization = (str) => {
- const arr =  str.split('')
- 
+  const arr = str.split('').map(a => 
+    (a === a.toUpperCase() ? a.toLowerCase() : a.toUpperCase())).join('');
+  console.log(arr)
+  return arr;
 }
