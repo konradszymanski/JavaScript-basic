@@ -2105,3 +2105,14 @@ const swapArray = (str) => {
 
 }else return false;
 }
+// 149 change the capitalization of all letters in a given string.
+const btn149 = document.querySelector("#btn149");
+const ans149 = document.querySelector("#answer149");
+btn149.addEventListener('click', () => {
+  const in149 = document.querySelector('#in149num').value;
+  return ans149.textContent = capitalization(in149)
+})
+const capitalization = (str) => {
+ const arr =  str.split('')
+ 
+}
