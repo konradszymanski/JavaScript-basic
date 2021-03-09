@@ -64,12 +64,16 @@ task4();
 // }
 // task5();
 // setInterval(task5, 1000)
-const w3 = "w3resource";
-const ans5 = document.getElementById("task5");
-setInterval(() => {
-  ans5.textContent = w3[w3.length - 1] + w3.substring(0, w3.length - 1);
-}, 1000);
 
+const ans5 = document.getElementById("task5");
+function task5(){
+let text5 = 'w3resource';
+let w3 = text5.split('')
+setInterval(() => {
+  ans5.textContent = w3[w3.length - 1] + w3.slice(0, w3.length - 1);
+}, 100);
+}
+task5();
 //task6
 function checkYear() {
   //take value
@@ -2127,7 +2131,7 @@ btn150.addEventListener('click', () => {
 });
 const adjacentPairs = (str) => {
   const arr = str.split('');
-  let result = ''
+  let result = '';
  if (arr.length % 2 == 0){
   for (let i = 0; i <= arr.length; i++){
     return result += arr[i+1]+arr[i];
