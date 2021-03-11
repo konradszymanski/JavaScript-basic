@@ -68,9 +68,14 @@ task4();
 const ans5 = document.getElementById("task5");
 function task5(){
 let text5 = 'w3resource';
-setInterval(() => {
-  ans5.textContent = text5[w3.length - 1] + text5.substr(0, w3.length - 1);
-}, 100);
+setInterval(function()  {
+  ans5.textContent = text5[text5.length - 1] + text5.substr(0, text5.length - 1);
+
+}, 1000 )
+
+// setInterval(() => {
+//   ans5.textContent = text5[text5.length - 1] + text5.substr(0, text5.length - 1);
+// }, 100);
 }
 task5();
 //task6
