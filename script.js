@@ -13,16 +13,16 @@ function task1() {
   const currentTime = new this.Date(); // take the rest of dates
   const hh =
     currentTime.getHours() < 10 ?
-    "0" + currentTime.getHours() :
-    currentTime.getHours();
+      "0" + currentTime.getHours() :
+      currentTime.getHours();
   const mm =
     currentTime.getMinutes() < 10 ?
-    "0" + currentTime.getMinutes() :
-    currentTime.getMinutes();
+      "0" + currentTime.getMinutes() :
+      currentTime.getMinutes();
   const ss =
     currentTime.getSeconds() < 10 ?
-    "0" + currentTime.getSeconds() :
-    currentTime.getSeconds();
+      "0" + currentTime.getSeconds() :
+      currentTime.getSeconds();
   // AM /PM cant be const. let is allowed.
   let amPm = " ";
   if (hh >= 12) {
@@ -56,12 +56,11 @@ function task4() {
 }
 task4();
 
-const task5 = ()=>{
+
+setInterval(function () {
   const str = "w3resource";
   document.getElementById("task5").textContent = str.slice(1) + str.slice(0, 1)
-}
-
-setInterval(task5, 100)
+}, 1000)
 
 
 //task6
@@ -922,9 +921,8 @@ task75 = () => {
 task76 = () => {
   let task76number = document.getElementById("task76").value;
   let nowy = task76number.split(" ");
-  document.getElementById("task76ans").textContent = `${nowy[0]}  ${
-    nowy[nowy.length - 1]
-  }`;
+  document.getElementById("task76ans").textContent = `${nowy[0]}  ${nowy[nowy.length - 1]
+    }`;
 };
 //test whether an array of integers of length 2 contains 1 or a 3.
 task77 = () => {
@@ -960,9 +958,8 @@ task79 = () => {
 task80 = () => {
   let task80number = document.getElementById("task80").value;
   let nowy = task80number.split(" ");
-  document.getElementById("task80ans").textContent = `${
-    nowy[nowy.length - 1]
-  },${nowy.slice(1, -1)},${nowy[0]}`;
+  document.getElementById("task80ans").textContent = `${nowy[nowy.length - 1]
+    },${nowy.slice(1, -1)},${nowy[0]}`;
 };
 //add two digits of a given positive integer of length two.
 task81 = () => {
@@ -1802,7 +1799,7 @@ document.querySelector("#btn129").addEventListener("click", () => {
     greaterResult.push(primePlus)
   }
 
-  return answer129.textContent = `The smallest prime number is: ${result[result.length-1]}, the greater will be: ${greaterResult[greaterResult.length-1] }`
+  return answer129.textContent = `The smallest prime number is: ${result[result.length - 1]}, the greater will be: ${greaterResult[greaterResult.length - 1]}`
 });
 //130 find the number of even digits in a given integer.
 in130 = document.getElementById("in130num")
@@ -1986,7 +1983,7 @@ function randomArrays() {
     }
   } else if (randomCount == 3) {
     const sameNums = rdmArr140.filter(num => rdmArr140_2.includes(num));
-    answer141.textContent = `There are ${ sameNums.length} common numbers. The array are sharing (${sameNums})`
+    answer141.textContent = `There are ${sameNums.length} common numbers. The array are sharing (${sameNums})`
 
   }
 }
@@ -2093,11 +2090,11 @@ btn148.addEventListener('click', () => {
   return ans148.textContent = swapArray(in148)
 })
 const swapArray = (str) => {
- const arr =  str.split('')
- if (arr.length % 2 === 0){
- return arr.slice(arr.length/2 , arr.length).join('') + arr.slice(0, arr.length/2).join('')
+  const arr = str.split('')
+  if (arr.length % 2 === 0) {
+    return arr.slice(arr.length / 2, arr.length).join('') + arr.slice(0, arr.length / 2).join('')
 
-}else return false;
+  } else return false;
 }
 // 149 change the capitalization of all letters in a given string.
 const btn149 = document.querySelector("#btn149");
@@ -2107,7 +2104,7 @@ btn149.addEventListener('click', () => {
   return ans149.textContent = capitalization(in149)
 })
 const capitalization = (str) => {
-  const arr = str.split('').map(a => 
+  const arr = str.split('').map(a =>
     (a === a.toUpperCase() ? a.toLowerCase() : a.toUpperCase())).join('');
   console.log(arr)
   return arr;
@@ -2122,9 +2119,9 @@ btn150.addEventListener('click', () => {
 const adjacentPairs = (str) => {
   const arr = str.split('');
   let result = '';
- if (arr.length % 2 == 0){
-  for (let i = 0; i <= arr.length; i++){
-    return result += arr[i+1]+arr[i];
-  }
- } else return false;
+  if (arr.length % 2 == 0) {
+    for (let i = 0; i <= arr.length; i++) {
+      return result += arr[i + 1] + arr[i];
+    }
+  } else return false;
 }
