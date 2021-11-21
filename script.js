@@ -31,8 +31,7 @@ function task1() {
     amPm += "AM";
   }
   // show outcome inside html element
-  const task1ans = document.getElementById("task1");
-  task1ans.innerHTML = `Today is:<br/> ${n}<br/> Current time is: <br/> ${hh}${amPm} : ${mm} : ${ss}`;
+  document.getElementById("task1").innerHTML = `Today is:<br/> ${n}<br/> Current time is: <br/> ${hh}${amPm} : ${mm} : ${ss}`;
 }
 setInterval(task1, 1000);
 task1();
@@ -57,27 +56,14 @@ function task4() {
 }
 task4();
 
-// function task5() {
-//   const w3 = "w3resource";
-//   const ans5 = document.getElementById("task5");
-//   ans5.textContent = w3[w3.length - 1] + w3.substring(0, w3.length - 1);
-// }
-// task5();
-// setInterval(task5, 1000)
-
-const ans5 = document.getElementById("task5");
-function task5(){
-let text5 = 'w3resource';
-setInterval(function()  {
-  ans5.textContent = text5[text5.length - 1] + text5.substr(0, text5.length - 1);
-
-}, 1000 )
-
-// setInterval(() => {
-//   ans5.textContent = text5[text5.length - 1] + text5.substr(0, text5.length - 1);
-// }, 100);
+const task5 = ()=>{
+  const str = "w3resource";
+  document.getElementById("task5").textContent = str.slice(1) + str.slice(0, 1)
 }
-task5();
+
+setInterval(task5, 100)
+
+
 //task6
 function checkYear() {
   //take value
